@@ -3,7 +3,10 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
+
 export default function Header() {
+  const pathname = usePathname();
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const submenuRef = useRef<HTMLDivElement>(null);
@@ -29,6 +32,13 @@ export default function Header() {
     };
   }, []);
 
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === href;
+    }
+    return pathname.startsWith(href);
+  };
+
   return (
     <header className="fixed top-0 w-full bg-blue flex justify-between items-center px-32 py-3">
       <Link href="/">
@@ -41,8 +51,13 @@ export default function Header() {
         />
       </Link>
 
-      <div className="flex flex-row gap-12 text-light text-2xl drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
-        <Link href="/o-nas" className="hover:scale-125">
+      <div className="flex flex-row text-light text-2xl drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+        <Link
+          href="/o-nas"
+          className={`hover:scale-[115%] px-7 py-2.5 ${
+            isActive("/o-nas") ? "bg-blue-light text-dark rounded-xl" : ""
+          }`}
+        >
           O nas
         </Link>
         <div
@@ -52,8 +67,12 @@ export default function Header() {
           ref={submenuRef}
         >
           <div
-            className={`flex items-center gap-1 cursor-pointer ${
-              isSubmenuOpen ? "scale-125" : "scale-100"
+            className={`flex items-center gap-1 cursor-pointer px-7 py-2.5 ${
+              isSubmenuOpen ? "scale-[115%]" : "scale-100"
+            } ${
+              isActive("/folie-okienne")
+                ? "bg-blue-light text-dark rounded-xl"
+                : ""
             }`}
           >
             <Link href="/folie-okienne">Folie okienne</Link>
@@ -117,13 +136,32 @@ export default function Header() {
             </div>
           )}
         </div>
-        <Link href="/montaz-i-wycena" className="hover:scale-125">
+        <Link
+          href="/montaz-i-wycena"
+          className={`hover:scale-[115%] px-7 py-2.5 ${
+            isActive("/montaz-i-wycena")
+              ? "bg-blue-light text-dark rounded-xl"
+              : ""
+          }`}
+        >
           Montaż i wycena
         </Link>
-        <Link href="/nasze-realizacje" className="hover:scale-125">
+        <Link
+          href="/nasze-realizacje"
+          className={`hover:scale-[115%] px-7 py-2.5 ${
+            isActive("/nasze-realizacje")
+              ? "bg-blue-light text-dark rounded-xl"
+              : ""
+          }`}
+        >
           Nasze realizacje
         </Link>
-        <Link href="/kontakt" className="hover:scale-125">
+        <Link
+          href="/kontakt"
+          className={`hover:scale-[115%] px-7 py-2.5 ${
+            isActive("/kontakt") ? "bg-blue-light text-dark rounded-xl" : ""
+          }`}
+        >
           Kontakt
         </Link>
       </div>
