@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 
-:root {
+@theme {
   --color-dark: #333333;
   --color-light: #ffffff;
   --color-gray: #6b7280;
@@ -11,9 +11,6 @@
   --color-blue: #003d66;
   --color-blue-light: #d0ebff;
   --color-blue-lighter: #e0f2ff;
-
-  --background: var(--color-gray-light);
-  --foreground: var(--color-dark);
 }
 
 body {
