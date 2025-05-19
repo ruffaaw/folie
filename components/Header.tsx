@@ -40,7 +40,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-blue flex justify-between items-center px-32 py-3">
+    <header className="fixed top-0 w-full bg-blue flex justify-between items-center px-32 py-[10px]">
       <Link href="/">
         <Image
           src="/logo.jpg"
