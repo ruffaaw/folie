@@ -1,26 +1,44 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-dark: #333333;
+  --color-light: #ffffff;
+  --color-gray: #6b7280;
+  --color-gray-dark: #555555;
+  --color-gray-light: #f3f3f3;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-blue: #003d66;
+  --color-blue-light: #d0ebff;
+  --color-blue-lighter: #e0f2ff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: var(--color-gray-light);
+  --foreground: var(--color-dark);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-family: "Archivo", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--color-gray);
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--color-gray);
 }
