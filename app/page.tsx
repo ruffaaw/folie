@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -16,6 +17,13 @@ export default function Home() {
         backgroundColor="#d0ebff"
         href="/folie-okienne"
         className="mt-8"
+      />
+      <Image
+        src="/fasada.webp"
+        alt="Fasada"
+        width={1640}
+        height={1025}
+        className="object-cover rounded-[20px] mt-8"
       />
     </div>
   );
