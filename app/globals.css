@@ -14,7 +14,7 @@
 }
 
 body {
-  background: var(--color-light);
+  background: var(--color-gray-light);
   color: var(--color-dark);
   font-family: "Archivo", Arial, Helvetica, sans-serif;
 }
