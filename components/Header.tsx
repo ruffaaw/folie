@@ -40,7 +40,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-blue flex justify-between items-center px-32 py-[10px]">
+    <header className="fixed top-0 w-full bg-blue flex justify-between items-center px-32 py-[10px] z-40">
       <Link href="/">
         <Image
           src="/logo.jpg"
@@ -101,7 +101,7 @@ export default function Header() {
                 href="/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu"
                 className="block px-4 py-2 hover:bg-blue-light hover:text-blue border-b border-blue"
               >
-                Folie przeciwsłoneczne na świetliki z poliwęglanu
+                Folie przeciwsłoneczne na świetliki z&nbsp;poliwęglanu
               </Link>
               <Link
                 href="/folie-okienne/folie-antywlamaniowe"
@@ -144,7 +144,7 @@ export default function Header() {
               : ""
           }`}
         >
-          Montaż i wycena
+          Montaż i&nbsp;wycena
         </Link>
         <Link
           href="/nasze-realizacje"
