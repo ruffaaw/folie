@@ -1,6 +1,8 @@
+"use client";
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import JumpingTextInstagram from "@/components/JumpingText";
 import { Check, Mail } from "lucide-react";
 import Image from "next/image";
 
@@ -8,7 +10,11 @@ export default function Home() {
   return (
     <div className="mt-[100px] flex flex-col items-center justify-center">
       <Header />
-      <h1 className="mt-24">Witamy Państwa na naszej stronie</h1>
+      <JumpingTextInstagram
+        text="Witamy Państwa na naszej stronie"
+        mode="character"
+        className="mt-24 text-[4rem] font-bold"
+      />
       <h2 className="mt-16 max-w-[1030px] text-center">
         Zajmujemy się montażem folii okiennych nie tylko na terenie Krakowa, ale
         również w&nbsp;całym województwie małopolskim i&nbsp;śląskim
