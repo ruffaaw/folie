@@ -7,7 +7,7 @@ const splitText = (text: string, word = false) => {
   return String(text).split(/(?:)/u);
 };
 
-export default function JumpingTextInstagram({
+export default function JumpingText({
   text = "Hello",
   mode = "word",
   className,

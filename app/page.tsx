@@ -2,7 +2,7 @@
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import JumpingTextInstagram from "@/components/JumpingText";
+import JumpingText from "@/components/JumpingText";
 import { Check, Mail } from "lucide-react";
 import Image from "next/image";
 
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="mt-[100px] flex flex-col items-center justify-center">
       <Header />
-      <JumpingTextInstagram
+      <JumpingText
         text="Witamy Państwa na naszej stronie"
         mode="character"
         className="mt-24 text-[4rem] font-bold"
