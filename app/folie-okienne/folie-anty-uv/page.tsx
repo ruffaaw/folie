@@ -2,8 +2,8 @@
 import Header from "@/components/Header";
 import JumpingText from "@/components/JumpingText";
 import Title from "@/components/Title";
-import { negative } from "@/data/folie-anty-uv";
-import { FlaskConical, TriangleAlert } from "lucide-react";
+import { negative, places } from "@/data/folie-anty-uv";
+import { FlaskConical, Layers, TriangleAlert } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -90,6 +90,32 @@ export default function Page() {
               <div className="text-light p-4 bg-gray rounded-full flex items-center justify-center w-16 h-16 shrink-0">
                 <div className="w-8 h-8 flex items-center justify-center">
                   {React.cloneElement(<TriangleAlert />, {
+                    className: "w-full h-full",
+                  })}
+                </div>
+              </div>
+              <div>
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col items-start justify-start py-7 gap-5 w-full  rounded-3xl mt-7">
+        <div className="flex flex-row items-center justify-start gap-2.5 w-full">
+          <Layers size={44} />
+          <h3>Gdzie najczęściej stosujemy folie anty-UV?</h3>
+        </div>
+        <div className="grid grid-cols-3 gap-5 w-full">
+          {places.map((item, index) => (
+            <div
+              key={index}
+              className="flex gap-5 p-7 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)]"
+            >
+              <div className="text-blue p-4 bg-blue-lighter rounded-xl flex items-center justify-center w-16 h-16 shrink-0">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  {React.cloneElement(item.icon, {
                     className: "w-full h-full",
                   })}
                 </div>
