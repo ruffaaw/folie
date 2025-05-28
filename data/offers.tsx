@@ -16,7 +16,7 @@ export const offers = [
       "Drukarnie",
       `Przemysł farmaceutyczny i${"\u00A0"}kosmetyczny`,
     ],
-    href: "/folie-anty-uv",
+    href: "/folie-okienne/folie-anty-uv",
   },
   {
     image: "/fasada.webp",
