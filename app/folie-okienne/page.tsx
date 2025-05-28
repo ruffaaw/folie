@@ -14,7 +14,7 @@ export default function Page() {
       <JumpingText
         text="Folie okienne"
         mode="character"
-        className="mt-24 text-[4rem] font-bold"
+        className="mt-16 text-[4rem] font-bold"
       />
       <h2 className="mt-10 max-w-[1030px] text-center">
         Nowoczesne rozwiązania dostosowane do Twoich potrzeb
