@@ -1,4 +1,5 @@
 "use client";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import BottomContact from "@/components/BottomContact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -6,7 +7,6 @@ import JumpingText from "@/components/JumpingText";
 import Title from "@/components/Title";
 import { places } from "@/data/folie-mrozone";
 import { LayoutGrid, Scissors } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 
 export default function Page() {
@@ -34,16 +34,13 @@ export default function Page() {
         stanowić również element dekoracyjny lub reklamowy, ponieważ idealnie
         nadaje się do ploterowania, wycinania wzorów oraz do zadruku.
       </h2>
-      <div className="w-full relative mt-7" style={{ aspectRatio: "390/200" }}>
-        <Image
-          src="/fasada.webp"
-          alt="Zdjęcie Folii Anty UV"
-          fill
-          className="object-cover w-full h-full px-32"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-          unoptimized
-        />
-      </div>
+      <BeforeAfterSlider
+        before="/przezroczysta_zewnatrz.webp"
+        altBefore="Folia przeźroczysta na oknie zewnątrz"
+        after="/folia_mrozona_zewnatrz.webp"
+        altAfter="Folia Mrożona na oknie zewnątrz"
+        sliderPos={40}
+      />
       <div className="px-32">
         <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue-light rounded-3xl mt-7">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
