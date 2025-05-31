@@ -24,7 +24,7 @@ export const features = [
   {
     icon: <EyeClosed />,
     title: "Niewidoczna ochrona",
-    description: "Zachowuje przejrzystość i estetykę szkła",
+    description: `Zachowuje przejrzystość i${"\u00A0"}estetykę szkła`,
   },
   {
     icon: <AlertTriangle />,
@@ -34,20 +34,20 @@ export const features = [
   {
     icon: <Users />,
     title: "Bezpieczeństwo publiczne",
-    description: "Chroni przed wypadkami w miejscach użyteczności publicznej",
+    description: `Chroni przed wypadkami w${"\u00A0"}miejscach użyteczności publicznej`,
   },
   {
     icon: <Zap />,
     title: "Łatwa konserwacja",
-    description: "Prosta w czyszczeniu i utrzymaniu w czystości",
+    description: `Prosta w${"\u00A0"}czyszczeniu i${"\u00A0"}utrzymaniu w${"\u00A0"}czystości`,
   },
 ];
 
 export const places = [
   {
     icon: <Home />,
-    title: "Domy z dziećmi",
-    description: "Ochrona przed skaleczeniami w przypadku stłuczenia szyb",
+    title: `Domy z${"\u00A0"}dziećmi`,
+    description: `Ochrona przed skaleczeniami w${"\u00A0"}przypadku stłuczenia szyb`,
   },
   {
     icon: <Utensils />,
@@ -63,16 +63,16 @@ export const places = [
   {
     icon: <Utensils />,
     title: "Restauracje",
-    description: "Bezpieczeństwo gości i spełnienie wymogów sanitarnych",
+    description: `Bezpieczeństwo gości i${"\u00A0"}spełnienie wymogów sanitarnych`,
   },
   {
     icon: <Building />,
     title: "Obiekty handlowe",
-    description: "Ochrona witryn sklepowych i stref gastronomicznych",
+    description: `Ochrona witryn sklepowych i${"\u00A0"}stref gastronomicznych`,
   },
   {
     icon: <Building />,
     title: "Lotniska/dworce",
-    description: "Zabezpieczenie dużych przeszkleń w miejscach publicznych",
+    description: `Zabezpieczenie dużych przeszkleń w${"\u00A0"}miejscach publicznych`,
   },
 ];
