@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Title from "@/components/Title";
 import { features, places } from "@/data/folie-matowe";
-import { Building, Sun, Brush, ShieldCheck } from "lucide-react";
+import { Building, Brush, ShieldCheck } from "lucide-react";
 import React from "react";
 
 export default function Page() {
