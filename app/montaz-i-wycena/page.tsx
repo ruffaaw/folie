@@ -13,7 +13,7 @@ import {
 
 export default function Page() {
   return (
-    <div className="mt-[100px] flex flex-col items-center justify-center">
+    <div className="mt-[100px] flex flex-col items-center justify-center overflow-hidden">
       <Header />
       <Header />
       <Title title="PROFESJONALNY MONTAŻ" />
