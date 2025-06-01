@@ -25,7 +25,7 @@ export default function Page() {
       <Title title="DOWÓD NASZEJ JAKOŚCI" />
 
       <h1 className="mt-4 md:mt-7">
-        <span className="text-blue">NASZE REALIZACJE</span>
+        <span className="text-dark">NASZE REALIZACJE</span>
       </h1>
 
       <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32">

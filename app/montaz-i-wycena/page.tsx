@@ -19,7 +19,7 @@ export default function Page() {
       <Title title="PROFESJONALNY MONTAŻ" />
 
       <h1 className="mt-4 md:mt-7">
-        <span className="text-blue">MONTAŻ I WYCENA</span>
+        <span className="text-dark">MONTAŻ I WYCENA</span>
       </h1>
 
       <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32">
