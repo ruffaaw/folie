@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { Mail, Phone, Home } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export default function Page() {
   return (
