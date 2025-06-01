@@ -189,7 +189,7 @@ export default function Header() {
               </div>
 
               {isSubmenuOpen && (
-                <div className="bg-blue-dark ml-4 mt-1 mb-2 rounded-lg">
+                <div className="bg-blue-dark px-4 sm:px-8 md:px-16 lg:px-32 mt-1 mb-2 rounded-lg">
                   {[
                     ["Folie Anty UV", "/folie-okienne/folie-anty-uv"],
                     [
