@@ -40,7 +40,7 @@ export default function Page() {
             <Brush size={44} />
             <h3>Dlaczego warto wybrać folie matowe?</h3>
           </div>
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-row gap-5 card">
             <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
               <h4 className="font-semibold">Funkcjonalność i design</h4>
               <p className="text-justify">
@@ -69,7 +69,10 @@ export default function Page() {
           </div>
           <div className="grid grid-cols-2 gap-5 w-full">
             {features.map((item, index) => (
-              <div key={index} className="flex gap-5 p-7 bg-white rounded-3xl">
+              <div
+                key={index}
+                className="flex gap-5 p-7 bg-white rounded-3xl card"
+              >
                 <div className="text-light p-4 bg-gray rounded-full flex items-center justify-center w-16 h-16 shrink-0">
                   <div className="w-8 h-8 flex items-center justify-center">
                     {React.cloneElement(item.icon, {
@@ -97,7 +100,7 @@ export default function Page() {
             {places.map((item, index) => (
               <div
                 key={index}
-                className="flex gap-5 p-7 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)]"
+                className="flex gap-5 p-7 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] card"
               >
                 <div className="text-blue p-4 bg-blue-lighter rounded-xl flex items-center justify-center w-16 h-16 shrink-0">
                   <div className="w-8 h-8 flex items-center justify-center">
