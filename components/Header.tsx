@@ -97,7 +97,7 @@ export default function Header() {
                   "/folie-okienne/folie-przeciwsloneczne",
                 ],
                 [
-                  "Na świetliki z poliwęglanu",
+                  `Na świetliki z${"\u00A0"}poliwęglanu`,
                   "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
                 ],
                 ["Folie antywłamaniowe", "/folie-okienne/folie-antywlamaniowe"],
@@ -112,7 +112,7 @@ export default function Header() {
                 <Link
                   key={href}
                   href={href}
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue text-sm border-b border-blue-light last:border-b-0"
+                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue text-lg border-b border-blue-light last:border-b-0"
                   onClick={closeAllMenus}
                 >
                   {title}
@@ -123,7 +123,7 @@ export default function Header() {
         </div>
 
         <Link
-          href={"montaz-i-wycena"}
+          href={"/montaz-i-wycena"}
           className={`hover:scale-105 transition-transform px-4 xl:px-7 py-2 ${
             isActive("/montaz-i-wycena")
               ? "bg-blue-light text-dark rounded-lg"
