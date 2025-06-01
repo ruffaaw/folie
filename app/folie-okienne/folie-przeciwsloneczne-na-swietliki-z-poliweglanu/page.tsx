@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Title from "@/components/Title";
 import BottomContact from "@/components/BottomContact";
 import Footer from "@/components/Footer";
-import JumpingText from "@/components/JumpingText";
 import Image from "next/image";
 import React from "react";
 import { Layers, Shield, Thermometer } from "lucide-react";
