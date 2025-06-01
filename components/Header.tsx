@@ -1,207 +1,252 @@
 "use client";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const pathname = usePathname();
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const submenuRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLHeadElement>(null);
 
   const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setIsSubmenuOpen(true);
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setIsSubmenuOpen(false);
-    }, 100);
+    timeoutRef.current = setTimeout(() => setIsSubmenuOpen(false), 100);
+  };
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeAllMenus = () => {
+    setIsSubmenuOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        closeAllMenus();
       }
     };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const navItemVariants = {
-    hover: { scale: 1.15 },
-    tap: { scale: 0.95 },
-  };
-
-  const submenuVariants = {
-    hidden: { opacity: 0, y: -10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 300,
-      },
-    },
-    exit: { opacity: 0, y: -10 },
-  };
-
-  const isActive = (href: string) => {
-    if (href === "/") {
-      return pathname === href;
-    }
-    return pathname.startsWith(href);
-  };
+  const isActive = (href: string) => pathname.startsWith(href);
 
   return (
-    <motion.header
-      className="fixed top-0 w-full bg-blue flex justify-between items-center px-32 py-[10px] z-40"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 100, damping: 10 }}
+    <header
+      ref={headerRef}
+      className="fixed top-0 w-full bg-blue flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-32 py-2 md:py-[10px] z-50 shadow-md"
     >
-      <Link href="/">
-        <motion.div
-          whileHover={{ scale: 1.25 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          <Image src="/logo.jpg" alt="logo" width={80} height={80} />
-        </motion.div>
+      <Link href="/" onClick={closeAllMenus}>
+        <Image
+          src="/logo.jpg"
+          alt="logo"
+          width={80}
+          height={80}
+          className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
+        />
       </Link>
 
-      <div className="flex flex-row text-light text-2xl drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+      <nav className="hidden lg:flex flex-row items-center text-light text-xl xl:text-2xl drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
         <Link
           href="/o-nas"
-          className={`hover:scale-[115%] px-7 py-2.5 ${
-            isActive("/o-nas") ? "bg-blue-light text-dark rounded-xl" : ""
+          className={`hover:scale-105 transition-transform px-4 xl:px-7 py-2 ${
+            isActive("/o-nas") ? "bg-blue-light text-dark rounded-lg" : ""
           }`}
         >
-          O nas
+          O&nbsp;nas
         </Link>
+
         <div
           className="relative"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           ref={submenuRef}
         >
-          <motion.div
-            className={`flex items-center gap-1 cursor-pointer px-7 py-2.5 ${
-              isSubmenuOpen ? "scale-[115%]" : "scale-100"
+          <div
+            className={`flex items-center gap-1 cursor-pointer px-4 xl:px-7 py-2 ${
+              isSubmenuOpen ? "scale-105" : ""
             } ${
               isActive("/folie-okienne")
-                ? "bg-blue-light text-dark rounded-xl"
+                ? "bg-blue-light text-dark rounded-lg"
                 : ""
             }`}
-            variants={navItemVariants}
-            whileHover="hover"
-            whileTap="tap"
           >
             <Link href="/folie-okienne">Folie okienne</Link>
-            <motion.div
-              animate={{ rotate: isSubmenuOpen ? 180 : 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <ChevronDown />
-            </motion.div>
-          </motion.div>
-          <AnimatePresence>
-            {isSubmenuOpen && (
-              <motion.div
-                className="absolute top-full -left-[67px] mt-2 w-76 bg-white text-dark rounded-md shadow-lg z-50"
-                variants={submenuVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              >
+            <ChevronDown className="w-4 h-4" />
+          </div>
+
+          {isSubmenuOpen && (
+            <div className="absolute top-full left-0 mt-1 w-56 bg-white text-dark rounded-md shadow-lg z-50 border border-blue-light">
+              {[
+                ["Folie Anty UV", "/folie-okienne/folie-anty-uv"],
+                [
+                  "Folie przeciwsłoneczne",
+                  "/folie-okienne/folie-przeciwsloneczne",
+                ],
+                [
+                  "Na świetliki z poliwęglanu",
+                  "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+                ],
+                ["Folie antywłamaniowe", "/folie-okienne/folie-antywlamaniowe"],
+                ["Folie bezpieczne", "/folie-okienne/folie-bezpieczne"],
+                [
+                  "Folie lustro weneckie",
+                  "/folie-okienne/folie-lustro-weneckie",
+                ],
+                ["Folie matowe", "/folie-okienne/folie-matowe"],
+                ["Folie mrożone", "/folie-okienne/folie-mrozone"],
+              ].map(([title, href]) => (
                 <Link
-                  href="/folie-okienne/folie-anty-uv"
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue rounded-t-md border-b border-blue"
+                  key={href}
+                  href={href}
+                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue text-sm border-b border-blue-light last:border-b-0"
+                  onClick={closeAllMenus}
                 >
-                  Folie Anty UV
+                  {title}
                 </Link>
-                <Link
-                  href="/folie-okienne/folie-przeciwsloneczne"
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue border-b border-blue"
-                >
-                  Folie przeciwsłoneczne
-                </Link>
-                <Link
-                  href="/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu"
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue border-b border-blue"
-                >
-                  Folie przeciwsłoneczne na świetliki z&nbsp;poliwęglanu
-                </Link>
-                <Link
-                  href="/folie-okienne/folie-antywlamaniowe"
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue border-b border-blue"
-                >
-                  Folie antywłamaniowe
-                </Link>
-                <Link
-                  href="/folie-okienne/folie-bezpieczne"
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue border-b border-blue"
-                >
-                  Folie bezpieczne
-                </Link>
-                <Link
-                  href="/folie-okienne/folie-lustro-weneckie"
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue border-b border-blue"
-                >
-                  Folie lustro weneckie
-                </Link>
-                <Link
-                  href="/folie-okienne/folie-matowe"
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue border-b border-blue"
-                >
-                  Folie matowe
-                </Link>
-                <Link
-                  href="/folie-okienne/folie-mrozone"
-                  className="block px-4 py-2 hover:bg-blue-light hover:text-blue rounded-b-md"
-                >
-                  Folie mrożone
-                </Link>
-              </motion.div>
-            )}
-          </AnimatePresence>
+              ))}
+            </div>
+          )}
         </div>
 
         <Link
-          href="/montaz-i-wycena"
-          className={`hover:scale-[115%] px-7 py-2.5 ${
+          href={"montaz-i-wycena"}
+          className={`hover:scale-105 transition-transform px-4 xl:px-7 py-2 ${
             isActive("/montaz-i-wycena")
-              ? "bg-blue-light text-dark rounded-xl"
+              ? "bg-blue-light text-dark rounded-lg"
               : ""
           }`}
         >
           Montaż i&nbsp;wycena
         </Link>
-        <Link
-          href="/nasze-realizacje"
-          className={`hover:scale-[115%] px-7 py-2.5 ${
-            isActive("/nasze-realizacje")
-              ? "bg-blue-light text-dark rounded-xl"
-              : ""
-          }`}
-        >
-          Nasze realizacje
-        </Link>
-        <Link
-          href="/kontakt"
-          className={`hover:scale-[115%] px-7 py-2.5 ${
-            isActive("/kontakt") ? "bg-blue-light text-dark rounded-xl" : ""
-          }`}
-        >
-          Kontakt
-        </Link>
-      </div>
-    </motion.header>
+        {["Nasze realizacje", "Kontakt"].map((item) => {
+          const path = item.replace(/\s+/g, "-").toLowerCase();
+          return (
+            <Link
+              key={path}
+              href={`/${path}`}
+              className={`hover:scale-105 transition-transform px-4 xl:px-7 py-2 ${
+                isActive(`/${path}`) ? "bg-blue-light text-dark rounded-lg" : ""
+              }`}
+            >
+              {item}
+            </Link>
+          );
+        })}
+      </nav>
+
+      <button
+        className="lg:hidden text-white p-2"
+        onClick={toggleMobileMenu}
+        aria-label="Menu"
+      >
+        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+
+      {isMobileMenuOpen && (
+        <div className="lg:hidden absolute top-full left-0 w-full bg-blue shadow-lg z-50">
+          <div className="flex flex-col text-light text-xl">
+            <Link
+              href="/o-nas"
+              className={`py-3 px-4 sm:px-8 md:px-16 lg:px-32 ${
+                isActive("/o-nas") ? "bg-blue-light text-dark " : ""
+              }`}
+              onClick={closeAllMenus}
+            >
+              O nas
+            </Link>
+
+            <div className="relative">
+              <div
+                className={`flex justify-between items-center py-3 px-4 sm:px-8 md:px-16 lg:px-32 ${
+                  isActive("/folie-okienne")
+                    ? "bg-blue-light text-dark rounded-lg"
+                    : ""
+                }`}
+                onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
+              >
+                <Link href="/folie-okienne" onClick={(e) => e.preventDefault()}>
+                  Folie okienne
+                </Link>
+                <ChevronDown
+                  className={`mr-2 transition-transform ${
+                    isSubmenuOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+
+              {isSubmenuOpen && (
+                <div className="bg-blue-dark ml-4 mt-1 mb-2 rounded-lg">
+                  {[
+                    ["Folie Anty UV", "/folie-okienne/folie-anty-uv"],
+                    [
+                      "Folie przeciwsłoneczne",
+                      "/folie-okienne/folie-przeciwsloneczne",
+                    ],
+                    [
+                      "Na świetliki",
+                      "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+                    ],
+                    ["Antywłamaniowe", "/folie-okienne/folie-antywlamaniowe"],
+                    ["Bezpieczne", "/folie-okienne/folie-bezpieczne"],
+                    ["Lustro weneckie", "/folie-okienne/folie-lustro-weneckie"],
+                    ["Matowe", "/folie-okienne/folie-matowe"],
+                    ["Mrożone", "/folie-okienne/folie-mrozone"],
+                  ].map(([title, href]) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className="block py-2 px-6 hover:bg-blue-light hover:text-dark text-lg"
+                      onClick={closeAllMenus}
+                    >
+                      {title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/montaz-i-wycena"
+              className={`py-3 px-4 sm:px-8 md:px-16 lg:px-32 ${
+                isActive("/montaz-i-wycena") ? "bg-blue-light text-dark " : ""
+              }`}
+              onClick={closeAllMenus}
+            >
+              Montaż i wycena{" "}
+            </Link>
+
+            {["Nasze realizacje", "Kontakt"].map((item) => {
+              const path = item.replace(/\s+/g, "-").toLowerCase();
+              return (
+                <Link
+                  key={path}
+                  href={`/${path}`}
+                  className={`py-3 px-4 sm:px-8 md:px-16 lg:px-32 ${
+                    isActive(`/${path}`) ? "bg-blue-light text-dark" : ""
+                  }`}
+                  onClick={closeAllMenus}
+                >
+                  {item}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
