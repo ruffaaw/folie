@@ -2,7 +2,6 @@
 import BottomContact from "@/components/BottomContact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import JumpingText from "@/components/JumpingText";
 import Title from "@/components/Title";
 import { negative, places } from "@/data/folie-anty-uv";
 import { FlaskConical, Layers, TriangleAlert } from "lucide-react";
