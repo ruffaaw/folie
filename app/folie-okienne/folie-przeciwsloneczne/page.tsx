@@ -31,7 +31,7 @@ export default function Page() {
         potrzebna jest skuteczna ochrona przed słońcem i&nbsp;redukcja kosztów
         klimatyzacji.
       </h2>
-      <div className="w-full relative mt-6 md:mt-8 aspect-[10/7]">
+      <div className="w-full lg:w-8/12 relative mt-6 md:mt-8 aspect-[10/7]">
         <Image
           src="/przezroczysta_zewnatrz.webp"
           alt="Zdjęcie Folii Przeźroczystej"

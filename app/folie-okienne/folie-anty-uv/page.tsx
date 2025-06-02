@@ -16,7 +16,7 @@ export default function Page() {
       <h1 className="mt-7 text-center">
         FOLIE ANTY <span className="text-blue">ULTRAFIOLETOWE</span>
       </h1>
-      <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32">
+      <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32 ">
         Ten rodzaj folii powoduje zatrzymanie szkodliwego promienia
         ultrafioletowego (UV) ze światła dziennego nawet w&nbsp;99% bez wpływu
         na inne parametry promieniowania słonecznego. Dzięki temu, swoje
@@ -24,9 +24,9 @@ export default function Page() {
         przedmioty zabezpieczając je przed żółknięciem i&nbsp;płowieniem czy
         wydłużyć atrakcyjność witryn sklepowych.
       </h2>
-      <div className="w-full relative mt-6 md:mt-8 aspect-[4/3]">
+      <div className="w-full lg:w-8/12 relative mt-6 md:mt-8 aspect-[10/7] ">
         <Image
-          src="/fasada.webp"
+          src="/folia-anty-uv.webp"
           alt="Zdjęcie Folii Anty UV"
           fill
           className="object-cover  md:px-16 lg:px-32"

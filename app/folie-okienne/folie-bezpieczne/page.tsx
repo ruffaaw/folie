@@ -21,7 +21,7 @@ export default function Page() {
         zapewniająca bezpieczeństwo w&nbsp;domach, zakładach produkujących
         żywność i&nbsp;obiektach publicznych.
       </h2>
-      <div className="w-full relative mt-7 aspect-[3/2]">
+      <div className="w-full lg:w-8/12 relative mt-7 aspect-[3/2]">
         <Image
           src="/bezpieczne.webp"
           alt="Zdjęcie folii bezpiecznej"

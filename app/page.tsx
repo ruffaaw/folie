@@ -27,7 +27,7 @@ export default function Home() {
           className="mt-6 md:mt-8"
         />
       </div>
-      <div className="relative w-full mt-6 md:mt-8 aspect-[4/3]">
+      <div className="relative w-full lg:w-8/12 mt-6 md:mt-8 aspect-[4/3]">
         <Image
           src="/fasada.webp"
           alt="Fasada budynku z foliami okiennymi"

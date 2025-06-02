@@ -30,7 +30,7 @@ export default function Page() {
         która nie wpływa na estetykę okien, zapewniając bezpieczeństwo
         i&nbsp;komfort psychiczny.
       </h2>
-      <div className="w-full relative mt-7 aspect-[1000/659]">
+      <div className="w-full lg:w-8/12 relative mt-7 aspect-[1000/659]">
         <Image
           src="/anty-wlamaniowe.webp"
           alt="Grafika folii antywłamaniowych"

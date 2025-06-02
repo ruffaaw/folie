@@ -21,7 +21,7 @@ export default function Page() {
         rozwiązanie poprawia komfort pracy, zachowując przy tym właściwości
         poliwęglanu.
       </h2>
-      <div className="w-full relative mt-6 md:mt-8 aspect-[3/2] md:aspect-[4/2]">
+      <div className="w-full lg:w-8/12 relative mt-6 md:mt-8 aspect-[3/2] md:aspect-[4/2]">
         <Image
           src="/półprzeźroczysta-błyszcząca-rulon.webp"
           alt="Zjęcie rulonu folii półprzeźroczystej"
