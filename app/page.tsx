@@ -4,30 +4,98 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Check, Mail } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+    },
+  },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { y: 50, opacity: 0 },
+  visible: (i: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.5,
+    },
+  }),
+};
 
 export default function Home() {
   return (
-    <div className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center overflow-hidden">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center overflow-hidden"
+    >
       <Header />
 
-      <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-center">
-        <h1 className="mt-8 sm:mt-12 md:mt-16 text-center">
+      <motion.div
+        variants={containerVariants}
+        className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-center"
+      >
+        <motion.h1
+          variants={itemVariants}
+          className="mt-8 sm:mt-12 md:mt-16 text-center"
+        >
           <span className="text-dark">Witamy Państwa na naszej stronie</span>
-        </h1>
-        <h2 className="mt-4 md:mt-7  max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl">
+        </motion.h1>
+
+        <motion.h2
+          variants={itemVariants}
+          className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl"
+        >
           Zajmujemy się montażem folii okiennych nie tylko na terenie Krakowa,
           ale również w&nbsp;całym województwie małopolskim i&nbsp;śląskim
-        </h2>
+        </motion.h2>
 
-        <Button
-          text="Poznaj naszą ofertę"
-          primaryColor="#003d66"
-          backgroundColor="#d0ebff"
-          href="/folie-okienne"
-          className="mt-6 md:mt-8"
-        />
-      </div>
-      <div className="relative w-full lg:w-8/12 mt-6 md:mt-8 aspect-[4/3]">
+        <motion.div variants={itemVariants} className="mt-6 md:mt-8">
+          <Button
+            text="Poznaj naszą ofertę"
+            primaryColor="#003d66"
+            backgroundColor="#d0ebff"
+            href="/folie-okienne"
+          />
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        variants={imageVariants}
+        className="relative w-full lg:w-8/12 mt-6 md:mt-8 aspect-[4/3]"
+      >
         <Image
           src="/fasada.webp"
           alt="Fasada budynku z foliami okiennymi"
@@ -36,16 +104,32 @@ export default function Home() {
           priority
           unoptimized
         />
-      </div>
+      </motion.div>
 
       <div className="w-full flex flex-col items-center bg-blue-lighter sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 lg:px-32">
-        <div className="w-full sm:mt-[200px] md:mt-[150px] lg:mt-[250px] xl:mt-[350px]">
-          <h3 className="mt-12 md:mt-24 text-2xl md:text-3xl font-bold text-center">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="w-full sm:mt-[200px] md:mt-[150px] lg:mt-[250px] xl:mt-[350px]"
+        >
+          <motion.h3
+            variants={itemVariants}
+            className="mt-12 md:mt-24 text-2xl md:text-3xl font-bold text-center"
+          >
             Dlaczego warto nam zaufać?
-          </h3>
+          </motion.h3>
 
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-12 mt-8 md:mt-16 w-full">
-            <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full">
+          <motion.div
+            variants={containerVariants}
+            className="flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-12 mt-8 md:mt-16 w-full"
+          >
+            <motion.div
+              custom={0}
+              variants={cardVariants}
+              className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full"
+            >
               <div className="flex-shrink-0 bg-blue/10 p-3 rounded-full">
                 <Mail className="text-dark size-8 md:size-12 lg:size-16 stroke-1" />
               </div>
@@ -61,9 +145,13 @@ export default function Home() {
                   w&nbsp;naszej stałej ofercie.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full ">
+            <motion.div
+              custom={1}
+              variants={cardVariants}
+              className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full"
+            >
               <div className="flex-shrink-0 bg-blue/10 p-3 rounded-full">
                 <Check className="text-dark size-8 md:size-12 lg:size-16 stroke-1" />
               </div>
@@ -79,12 +167,12 @@ export default function Home() {
                   czynników atmosferycznych.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
 
       <Footer />
-    </div>
+    </motion.div>
   );
 }
