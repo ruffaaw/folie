@@ -91,23 +91,17 @@ export default function Header() {
           {isSubmenuOpen && (
             <div className="absolute top-full left-0 mt-1 w-56 bg-white text-dark rounded-md shadow-lg z-50 border border-blue-light">
               {[
-                ["Folie Anty UV", "/folie-okienne/folie-anty-uv"],
-                [
-                  "Folie przeciwsłoneczne",
-                  "/folie-okienne/folie-przeciwsloneczne",
-                ],
+                ["Anty UV", "/folie-okienne/folie-anty-uv"],
+                ["Przeciwsłoneczne", "/folie-okienne/folie-przeciwsloneczne"],
                 [
                   `Na świetliki z${"\u00A0"}poliwęglanu`,
                   "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
                 ],
-                ["Folie antywłamaniowe", "/folie-okienne/folie-antywlamaniowe"],
-                ["Folie bezpieczne", "/folie-okienne/folie-bezpieczne"],
-                [
-                  "Folie lustro weneckie",
-                  "/folie-okienne/folie-lustro-weneckie",
-                ],
-                ["Folie matowe", "/folie-okienne/folie-matowe"],
-                ["Folie mrożone", "/folie-okienne/folie-mrozone"],
+                ["Antywłamaniowe", "/folie-okienne/folie-antywlamaniowe"],
+                ["Bezpieczne", "/folie-okienne/folie-bezpieczne"],
+                ["Lustro weneckie", "/folie-okienne/folie-lustro-weneckie"],
+                ["Matowe", "/folie-okienne/folie-matowe"],
+                ["Mrożone", "/folie-okienne/folie-mrozone"],
               ].map(([title, href]) => (
                 <Link
                   key={href}
@@ -191,13 +185,13 @@ export default function Header() {
               {isSubmenuOpen && (
                 <div className="bg-blue-dark px-4 sm:px-8 md:px-16 lg:px-32 mt-1 mb-2 rounded-lg">
                   {[
-                    ["Folie Anty UV", "/folie-okienne/folie-anty-uv"],
+                    ["Anty UV", "/folie-okienne/folie-anty-uv"],
                     [
-                      "Folie przeciwsłoneczne",
+                      "Przeciwsłoneczne",
                       "/folie-okienne/folie-przeciwsloneczne",
                     ],
                     [
-                      "Na świetliki",
+                      `Na świetliki z${"\u00A0"}poliwęglanu`,
                       "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
                     ],
                     ["Antywłamaniowe", "/folie-okienne/folie-antywlamaniowe"],
