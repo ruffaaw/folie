@@ -1,3 +1,5 @@
+"use client";
+
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import BottomContact from "@/components/BottomContact";
 import Footer from "@/components/Footer";
@@ -6,15 +8,65 @@ import Title from "@/components/Title";
 import { places } from "@/data/folie-lustro-weneckie";
 import { Building, EyeOff, GlassWater } from "lucide-react";
 import React from "react";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      duration: 0.6,
+    },
+  },
+};
+
+const card = {
+  hidden: { y: 50, opacity: 0 },
+  visible: (i: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.5,
+    },
+  }),
+  hover: {
+    y: -5,
+    transition: { duration: 0.3 },
+  },
+};
+
 export default function Page() {
   return (
-    <div className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center overflow-hidden">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center overflow-hidden"
+    >
       <Header />
       <Title title="PRYWATNOŚĆ I STYL" />
-      <h1 className="mt-7 text-center">
+      <motion.h1 variants={item} className="mt-7 text-center">
         FOLIE <span className="text-blue">LUSTRO WENECKIE</span>
-      </h1>
-      <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32">
+      </motion.h1>
+      <motion.h2
+        variants={item}
+        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32"
+      >
         Unikalne folie stworzone dla tych, którzy cenią sobie prywatność
         i&nbsp;elegancki wygląd. Działają na zasadzie lustra weneckiego -
         widzisz na zewnątrz, podczas gdy osoby z&nbsp;zewnątrz widzą tylko swoje
@@ -29,7 +81,7 @@ export default function Page() {
           tutaj
         </a>
         .
-      </h2>
+      </motion.h2>
       <BeforeAfterSlider
         before="/przezroczysta_zewnatrz.webp"
         altBefore="Folia przeźroczysta na oknie zewnątrz"
@@ -37,41 +89,86 @@ export default function Page() {
         altAfter="Folia Lustro Weneckie na oknie zewnątrz"
         sliderPos={40}
       />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
+      <motion.div
+        variants={container}
+        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+      >
+        <motion.div
+          variants={item}
+          className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card"
+        >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <EyeOff className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Jak działa lustro weneckie?</h3>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full"
+          >
+            <motion.div
+              variants={card}
+              custom={0}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
+              className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
+            >
               <h4 className="font-semibold">Efekt optyczny</h4>
               <p className="text-justify">
                 Warstwa metalizowana folii odbija światło z&nbsp;zewnątrz,
                 tworząc efekt lustra. Jednocześnie przepuszcza światło
                 z&nbsp;wnętrza, umożliwiając obserwację otoczenia.
               </p>
-            </div>
-            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
+            </motion.div>
+            <motion.div
+              custom={1}
+              variants={card}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
+              className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
+            >
               <h4 className="font-semibold">Warunki działania</h4>
               <p className="text-justify">
                 Efekt lustra działa tylko gdy natężenie światła na zewnątrz jest
                 większe niż wewnątrz. Wieczorem warto użyć dodatkowych zasłon
                 dla zachowania prywatności.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light card">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+      >
+        <motion.div
+          variants={item}
+          className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light card"
+        >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <GlassWater className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Dostępne stopnie intensywności</h3>
           </div>
-          <div className="flex flex-row gap-5 w-full">
-            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl flex-1">
+          <motion.div
+            variants={container}
+            className="flex flex-row gap-5 w-full"
+          >
+            <motion.div
+              variants={card}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
+              className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl flex-1"
+            >
               <h4 className="font-semibold">3 warianty efektu lustra</h4>
               <p className="text-justify">
                 Oferujemy folie w trzech stopniach intensywności efektu
@@ -79,21 +176,38 @@ export default function Page() {
                 światła. Im silniejszy efekt lustra, tym większa redukcja
                 światła i lepsze chłodzenie pomieszczenia.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start py-7 gap-5 w-full  rounded-3xl mt-6 md:mt-8">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+      >
+        <motion.div
+          variants={item}
+          className="flex flex-col items-start justify-start py-7 gap-5 w-full  rounded-3xl mt-6 md:mt-8"
+        >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <Building className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Gdzie najczęściej stosujemy folie lustro weneckie?</h3>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-5 w-full">
+          <motion.div
+            variants={container}
+            className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-5 w-full"
+          >
             {places.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
+                custom={index}
+                variants={card}
+                initial="hidden"
+                whileInView="visible"
+                whileHover={{ scale: 1.03 }}
+                viewport={{ once: true }}
                 className="flex flex-col sm:flex-row gap-4 p-4 sm:p-5 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] card"
               >
                 <div className="text-blue p-4 bg-blue-lighter rounded-xl flex items-center justify-center w-16 h-16 shrink-0">
@@ -107,14 +221,26 @@ export default function Page() {
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col items-center justify-center mt-6 md:mt-8 w-full px-4 sm:px-8 md:px-16 lg:px-32">
+          </motion.div>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        className="flex flex-col items-center justify-center mt-6 md:mt-8 w-full px-4 sm:px-8 md:px-16 lg:px-32"
+      >
         <h3 className="text-center">Cena folii lustrzanych z&nbsp;montażem</h3>
-        <div className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-4 md:py-5 w-full max-w-2xl border-y border-t-dark mt-4">
+        <motion.div
+          variants={item}
+          initial="hidden"
+          whileInView="visible"
+          whileHover={{ scale: 1.03 }}
+          className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-4 md:py-5 w-full max-w-2xl border-y border-t-dark mt-4"
+        >
           <div className="flex flex-row items-baseline p-2.5 gap-2.5">
             <h3>230-280 </h3>
             <p>zł/m²</p>
@@ -122,10 +248,10 @@ export default function Page() {
           <p className="text-center">
             Cena zależy od wybranego wariantu i&nbsp;powierzchni montażu
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <BottomContact title="Chcesz eleganckiej prywatności?" className="mt-7" />
       <Footer />
-    </div>
+    </motion.div>
   );
 }

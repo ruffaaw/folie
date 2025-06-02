@@ -2,6 +2,19 @@
 
 import Image from "next/image";
 import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+
+const image = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function BeforeAfterSlider({
   before = "",
@@ -49,7 +62,8 @@ export default function BeforeAfterSlider({
   };
 
   return (
-    <div
+    <motion.div
+      variants={image}
       className="w-full relative md:px-16 lg:px-32 mt-6 md:mt-8"
       onMouseUp={handleEnd}
       onMouseLeave={handleEnd}
@@ -97,6 +111,6 @@ export default function BeforeAfterSlider({
           <div className="bg-blue-light absolute rounded-full h-3 w-3 -left-1 top-[calc(50%-5px)]" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

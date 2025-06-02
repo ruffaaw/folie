@@ -7,36 +7,111 @@ import { negative, places } from "@/data/folie-anty-uv";
 import { FlaskConical, Layers, TriangleAlert } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      duration: 0.6,
+    },
+  },
+};
+
+const card = {
+  hidden: { y: 50, opacity: 0 },
+  visible: (i: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.5,
+    },
+  }),
+  hover: {
+    y: -5,
+    transition: { duration: 0.3 },
+  },
+};
+
+const image = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 export default function Page() {
   return (
-    <div className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center overflow-hidden">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center overflow-hidden"
+    >
       <Header />
+
       <Title title="Ochrona przed UV" />
-      <h1 className="mt-7 text-center">
+
+      <motion.h1 variants={item} className="mt-7 text-center">
         FOLIE ANTY <span className="text-blue">ULTRAFIOLETOWE</span>
-      </h1>
-      <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32 ">
+      </motion.h1>
+
+      <motion.h2
+        variants={item}
+        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32"
+      >
         Ten rodzaj folii powoduje zatrzymanie szkodliwego promienia
         ultrafioletowego (UV) ze światła dziennego nawet w&nbsp;99% bez wpływu
         na inne parametry promieniowania słonecznego. Dzięki temu, swoje
         zastosowanie znajdują wszędzie tam, gdzie chcemy ochronić cenne
         przedmioty zabezpieczając je przed żółknięciem i&nbsp;płowieniem czy
         wydłużyć atrakcyjność witryn sklepowych.
-      </h2>
-      <div className="w-full lg:w-8/12 relative mt-6 md:mt-8 aspect-[10/7] ">
+      </motion.h2>
+
+      <motion.div
+        variants={image}
+        whileHover={{ scale: 1.03 }}
+        className="w-full lg:w-8/12 relative mt-6 md:mt-8 aspect-[10/7]"
+      >
         <Image
           src="/folia-anty-uv.webp"
           alt="Zdjęcie Folii Anty UV"
           fill
-          className="object-cover  md:px-16 lg:px-32"
+          className="object-cover md:px-16 lg:px-32"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           priority
           unoptimized
         />
-      </div>
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-5 lg:p-7 mt-6 md:mt-8 gap-5 w-full bg-blue-light rounded-3xl">
+      </motion.div>
+
+      <motion.div
+        variants={container}
+        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+      >
+        <motion.div
+          variants={item}
+          className="flex flex-col items-start justify-start p-5 lg:p-7 mt-6 md:mt-8 gap-5 w-full bg-blue-light rounded-3xl"
+        >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <svg
               width="36"
@@ -55,38 +130,79 @@ export default function Page() {
             </svg>
             <h3>Jak działa promieniowanie UV przez szyby?</h3>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
+
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full"
+          >
+            <motion.div
+              variants={card}
+              custom={0}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
+              className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
+            >
               <h4 className="font-semibold">Przepuszczalność promieni</h4>
               <p className="text-justify">
                 Standardowe szyby przepuszczają znaczną część promieni UV.
                 Dopiero specjalne szkło laminowane lub z&nbsp;filtrem UV
                 zapewnia lepszą ochronę, ale jego wymiana jest kosztowna.
               </p>
-            </div>
-            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
+            </motion.div>
+
+            <motion.div
+              custom={1}
+              variants={card}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
+              className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
+            >
               <h4 className="font-semibold">Rozwiązanie: folie anty-UV</h4>
               <p className="text-justify">
                 Nasze folie blokują UV-A i&nbsp;UV-B do 410 nm, stanowiąc
                 ekonomiczną alternatywę dla wymiany szyb. Można je dopasować do
                 konkretnych potrzeb, zachowując przy tym przejrzystość szkła.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+      >
+        <motion.div
+          variants={item}
+          className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light"
+        >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <FlaskConical size={44} />
             <h3>Negatywny wpływ UV na zdrowie</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full">
+
+          <motion.div
+            variants={container}
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full"
+          >
             {negative.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="flex flex-col sm:flex-row gap-4 p-4 sm:p-5  bg-white rounded-3xl card"
+                custom={index}
+                variants={card}
+                initial="hidden"
+                whileInView="visible"
+                whileHover={{ scale: 1.03 }}
+                viewport={{ once: true }}
+                className="flex flex-col sm:flex-row gap-4 p-4 sm:p-5 bg-white rounded-3xl card"
               >
                 <div className="text-white p-3 bg-gray rounded-full flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shrink-0">
                   <TriangleAlert className="w-6 h-6 sm:w-7 sm:h-7" />
@@ -95,22 +211,40 @@ export default function Page() {
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start py-7 gap-5 w-full  rounded-3xl mt-6 md:mt-8">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+      >
+        <motion.div
+          variants={item}
+          className="flex flex-col items-start justify-start py-7 gap-5 w-full rounded-3xl mt-6 md:mt-8"
+        >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <Layers size={44} />
             <h3>Gdzie najczęściej stosujemy folie anty-UV?</h3>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 w-full">
+
+          <motion.div
+            variants={container}
+            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 w-full"
+          >
             {places.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
+                custom={index}
+                variants={card}
+                initial="hidden"
+                whileInView="visible"
+                whileHover={{ scale: 1.03 }}
+                viewport={{ once: true }}
                 className="flex flex-col sm:flex-row gap-4 p-4 sm:p-5 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] card"
               >
                 <div className="text-blue p-3 bg-blue-lighter rounded-lg flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shrink-0">
@@ -122,16 +256,28 @@ export default function Page() {
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col items-center justify-center mt-6 md:mt-8 w-full px-4 sm:px-8">
+          </motion.div>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        className="flex flex-col items-center justify-center mt-6 md:mt-8 w-full px-4 sm:px-8"
+      >
         <h3 className="text-xl md:text-2xl text-center">
           Cena folii anty-UV z montażem
         </h3>
-        <div className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-4 md:py-5 w-full max-w-2xl border-y border-t-dark mt-4">
+        <motion.div
+          variants={item}
+          initial="hidden"
+          whileInView="visible"
+          whileHover={{ scale: 1.03 }}
+          className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-4 md:py-5 w-full max-w-2xl border-y border-t-dark mt-4"
+        >
           <div className="flex flex-row items-baseline gap-2">
             <h3 className="text-2xl md:text-3xl">120-160</h3>
             <p className="text-xl md:text-2xl">zł/m²</p>
@@ -139,10 +285,11 @@ export default function Page() {
           <p className="text-center text-lg md:text-xl mt-2">
             Cena obejmuje folię anty-UV oraz profesjonalny montaż
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
+
       <BottomContact title="Chcesz chronić się przed UV?" className="mt-7" />
       <Footer />
-    </div>
+    </motion.div>
   );
 }

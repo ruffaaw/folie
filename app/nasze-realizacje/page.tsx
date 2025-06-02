@@ -10,6 +10,60 @@ import Footer from "@/components/Footer";
 import BottomContact from "@/components/BottomContact";
 import { Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      duration: 0.6,
+    },
+  },
+};
+
+const card = {
+  hidden: { y: 50, opacity: 0 },
+  visible: (i: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.5,
+    },
+  }),
+  hover: {
+    y: -5,
+    transition: { duration: 0.3 },
+  },
+};
+
+const image = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function Page() {
   const galleryImages = [
@@ -20,19 +74,26 @@ export default function Page() {
   ];
 
   return (
-    <div className="mt-[100px] flex flex-col items-center justify-center">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      className="mt-[100px] flex flex-col items-center justify-center"
+    >
       <Header />
       <Title title="DOWÓD NASZEJ JAKOŚCI" />
 
-      <h1 className="mt-4 md:mt-7">
+      <motion.h1 variants={item} className="mt-4 md:mt-7">
         <span className="text-dark">NASZE REALIZACJE</span>
-      </h1>
+      </motion.h1>
 
-      <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32">
+      <motion.h2
+        variants={item}
+        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32"
+      >
         Zobacz przykłady naszych prac i&nbsp;inspiracje dla Twojego projektu
-      </h2>
+      </motion.h2>
 
-      <div className="w-full lg:w-4/6 mt-4 md:mt-7">
+      <motion.div variants={image} className="w-full lg:w-4/6 mt-4 md:mt-7">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
@@ -59,15 +120,35 @@ export default function Page() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
 
-      <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32 mt-12 md:mt-16">
-        <div className="flex flex-col items-center justify-center p-6 md:p-8 bg-dark rounded-xl lg:rounded-2xl text-light">
-          <h3 className="text-center mb-4 md:mb-6">
+      <motion.div
+        variants={container}
+        className="w-full px-4 sm:px-8 md:px-16 lg:px-32 mt-12 md:mt-16"
+      >
+        <motion.div
+          variants={item}
+          className="flex flex-col items-center justify-center p-6 md:p-8 bg-dark rounded-xl lg:rounded-2xl text-light"
+        >
+          <motion.h3
+            variants={card}
+            custom={0}
+            initial="hidden"
+            whileInView="visible"
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
+            className="text-center mb-4 md:mb-6"
+          >
             Śledź nasze najnowsze realizacje w&nbsp;social media
-          </h3>
+          </motion.h3>
           <div className="flex gap-6 md:gap-8">
-            <a
+            <motion.a
+              variants={card}
+              custom={1}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -75,8 +156,14 @@ export default function Page() {
               aria-label="Nasz Instagram"
             >
               <Instagram className="w-6 h-6 md:w-7 md:h-7" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={card}
+              custom={2}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -84,13 +171,22 @@ export default function Page() {
               aria-label="Nasz Facebook"
             >
               <Facebook className="w-6 h-6 md:w-7 md:h-7" />
-            </a>
+            </motion.a>
           </div>
-          <p className="mt-4 md:mt-6 text-center" style={{ color: "#fff" }}>
-            Codziennie nowe zdjęcia i&nbsp;inspiracje #TwojaMarka
-          </p>
-        </div>
-      </div>
+          <motion.p
+            variants={card}
+            custom={3}
+            initial="hidden"
+            whileInView="visible"
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
+            className="mt-4 md:mt-6 text-center"
+            style={{ color: "#fff" }}
+          >
+            Codziennie nowe zdjęcia i&nbsp;inspiracje
+          </motion.p>
+        </motion.div>
+      </motion.div>
 
       <BottomContact
         title="Zainspirowany naszymi realizacjami?"
@@ -98,6 +194,6 @@ export default function Page() {
       />
 
       <Footer />
-    </div>
+    </motion.div>
   );
 }

@@ -4,8 +4,65 @@ import { Check, Heart, Shield, Sun, Users } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
 
 export default function Page() {
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.6 },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: (i: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.15,
+        duration: 0.5,
+      },
+    }),
+  };
+
+  const checkItem = {
+    hidden: { x: -20, opacity: 0 },
+    visible: (i: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+      },
+    }),
+  };
+
   const points = [
     {
       icon: <Shield />,
@@ -30,38 +87,71 @@ export default function Page() {
     },
   ];
   return (
-    <div className="mt-[80px] md:mt-[100px] flex flex-col">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      className="mt-[80px] md:mt-[100px] flex flex-col"
+    >
       <Header />
-      <h1 className="mt-8 sm:mt-12 md:mt-16 px-4 sm:px-8 md:px-16 lg:px-32">
+
+      <motion.h1
+        variants={item}
+        className="mt-8 sm:mt-12 md:mt-16 px-4 sm:px-8 md:px-16 lg:px-32"
+        style={{ textAlign: "justify" }}
+      >
         Dragon <span className="text-blue">Folie</span>
-      </h1>
-      <div className="flex flex-col lg:flex-row items-start justify-between gap-8 px-4 sm:px-8 md:px-16 lg:px-32">
+      </motion.h1>
+
+      <motion.div
+        variants={container}
+        className="flex flex-col lg:flex-row items-start justify-between gap-8 px-4 sm:px-8 md:px-16 lg:px-32"
+      >
         <div className="w-full lg:w-2/3 max-w-full lg:max-w-[900px]">
-          <h2 className="text-justify">
+          <motion.h2
+            variants={item}
+            className="text-justify"
+            style={{ textAlign: "justify" }}
+          >
             Jako firma dopiero raczkujemy, jednak w&nbsp;montażu folii możemy
-            pochwalić się wieloletnim doświadczeniem. Nasi monterzy to
+            pochwalić się wieloletnim doświadczeniem. Nasi monterzy to
             wykwalifikowani specjaliści, którzy:
-            <div className="flex flex-row items-center gap-2 mt-4">
+            <motion.div
+              variants={checkItem}
+              custom={0}
+              className="flex flex-row items-center gap-2 mt-4"
+            >
               <Check />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
                 Dobiorą idealną folię do Twoich potrzeb
               </h4>
-            </div>
-            <div className="flex flex-row items-center gap-2 mt-4">
+            </motion.div>
+            <motion.div
+              variants={checkItem}
+              custom={1}
+              className="flex flex-row items-center gap-2 mt-4"
+            >
               <Check />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
                 Wyjaśnią wszystkie techniczne szczegóły
               </h4>
-            </div>
-            <div className="flex flex-row items-center gap-2 mt-4">
+            </motion.div>
+            <motion.div
+              variants={checkItem}
+              custom={2}
+              className="flex flex-row items-center gap-2 mt-4"
+            >
               <Check />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
                 Zadbają o&nbsp;perfekcyjny montaż
               </h4>
-            </div>
-          </h2>
+            </motion.div>
+          </motion.h2>
         </div>
-        <div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
+
+        <motion.div
+          variants={fadeIn}
+          className="w-full lg:w-1/3 flex justify-center lg:justify-end"
+        >
           <Image
             src="/logo.jpg"
             alt="Logo Dragon Folie"
@@ -71,18 +161,35 @@ export default function Page() {
             priority
             unoptimized
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32 flex justify-center items-center flex-col bg-blue-lighter mt-8 md:mt-10 py-8 md:py-16">
-        <h3 className="mb-8 md:mb-16 text-2xl md:text-3xl font-bold text-center">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={container}
+        className="px-4 sm:px-8 md:px-16 lg:px-32 flex justify-center items-center flex-col bg-blue-lighter mt-8 md:mt-10 py-8 md:py-16"
+      >
+        <motion.h3
+          variants={item}
+          className="mb-8 md:mb-16 text-2xl md:text-3xl font-bold text-center"
+        >
           Dlaczego warto nam zaufać?
-        </h3>
+        </motion.h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full">
+        <motion.div
+          variants={container}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full"
+        >
           {points.map((point, index) => (
-            <div
+            <motion.div
               key={index}
+              custom={index}
+              variants={cardVariants}
+              whileHover={{ y: -5 }}
+              initial="hidden"
+              whileInView="visible"
               className="flex flex-col sm:flex-row gap-4 p-5 md:p-7 bg-white rounded-xl md:rounded-2xl shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="text-blue p-3 sm:p-4 bg-blue-lighter rounded-full flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
@@ -98,11 +205,12 @@ export default function Page() {
                   {point.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
+
       <Footer />
-    </div>
+    </motion.div>
   );
 }
