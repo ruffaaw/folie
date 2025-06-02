@@ -40,8 +40,8 @@ export default function Page() {
             <Brush className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Dlaczego warto wybrać folie matowe?</h3>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-5 card">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Funkcjonalność i&nbsp;design</h4>
               <p className="text-justify">
                 Obustronny efekt zasłonięcia z jednoczesnym przepuszczaniem
@@ -49,7 +49,7 @@ export default function Page() {
                 i&nbsp;refleksy, co wpływa kojąco na oczy.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Praktyczne zalety</h4>
               <p className="text-justify">
                 Łatwe w utrzymaniu czystości - nie pozostawiają odcisków palców.

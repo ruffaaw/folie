@@ -37,8 +37,8 @@ export default function Page() {
             <Scissors className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Dlaczego warto wybrać folie mrożone?</h3>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full ">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Uniwersalne zastosowanie</h4>
               <p className="text-justify">
                 Możliwość zastosowania zarówno jako element dekoracyjny, jak
@@ -46,7 +46,7 @@ export default function Page() {
                 do wycinania wzorów i&nbsp;nadruków reklamowych.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Łatwy montaż i&nbsp;demontaż</h4>
               <p className="text-justify">
                 Folie nie uszkadzają szyb i&nbsp;można je w&nbsp;każdej chwili

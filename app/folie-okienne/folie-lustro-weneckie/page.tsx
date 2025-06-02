@@ -43,7 +43,7 @@ export default function Page() {
             <h3>Jak działa lustro weneckie?</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Efekt optyczny</h4>
               <p className="text-justify">
                 Warstwa metalizowana folii odbija światło z&nbsp;zewnątrz,
@@ -51,7 +51,7 @@ export default function Page() {
                 z&nbsp;wnętrza, umożliwiając obserwację otoczenia.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Warunki działania</h4>
               <p className="text-justify">
                 Efekt lustra działa tylko gdy natężenie światła na zewnątrz jest

@@ -48,7 +48,7 @@ export default function Page() {
             <h3>Dlaczego warto wybrać folie antywłamaniowe?</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Niewidoczna ochrona</h4>
               <p className="text-justify">
                 W&nbsp;przeciwieństwie do krat czy rolet, folia jest całkowicie
@@ -56,7 +56,7 @@ export default function Page() {
                 zaskoczenia dla potencjalnych włamywaczy.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Wielofunkcyjność</h4>
               <p className="text-justify">
                 Oprócz ochrony przed włamaniem, folia zabezpiecza przed falą
@@ -190,7 +190,7 @@ export default function Page() {
           Cena folii antywłamaniowych z&nbsp;montażem
         </h3>
         <div className="flex flex-col items-center justify-center px-12 py-5 w-full lg:w-[80vw] border-y border-t-dark ">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-16">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-16">
             <div className="flex flex-col items-center justify-center">
               <h3 className="text-center">Folia antywłamaniowa klasy P1A</h3>
               <div className="flex flex-row items-baseline p-2.5 gap-2.5">

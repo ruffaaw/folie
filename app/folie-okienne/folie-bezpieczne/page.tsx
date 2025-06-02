@@ -38,7 +38,7 @@ export default function Page() {
             <h3>Standard HACCP</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Co to jest HACCP?</h4>
               <p className="text-justify">
                 System Analizy Zagrożeń i Krytycznych Punktów Kontroli (Hazard
@@ -47,7 +47,7 @@ export default function Page() {
                 odłamkami szkła.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl">
+            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Wymagania prawne</h4>
               <p className="text-justify">
                 Wszystkie firmy branży spożywczej mają obowiązek stosowania
