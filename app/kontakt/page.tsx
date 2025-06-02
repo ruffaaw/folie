@@ -15,6 +15,48 @@ import {
   Text,
 } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      duration: 0.6,
+    },
+  },
+};
+
+const card = {
+  hidden: { y: 50, opacity: 0 },
+  visible: (i: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.5,
+    },
+  }),
+  hover: {
+    y: -5,
+    transition: { duration: 0.3 },
+  },
+};
 
 export default function Page() {
   const [formData, setFormData] = useState({
@@ -49,22 +91,48 @@ export default function Page() {
   };
 
   return (
-    <div className="mt-[100px] flex flex-col items-center justify-center ">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      className="mt-[100px] flex flex-col items-center justify-center "
+    >
       <Header />
-      <h1 className="mt-4 md:mt-7">
+      <motion.h1 variants={item} className="mt-4 md:mt-7">
         <span className="text-dark">KONTAKT</span>
-      </h1>
-      <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32">
+      </motion.h1>
+      <motion.h2
+        variants={item}
+        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32"
+      >
         Skontaktuj się z nami, a pomożemy dobrać idealne rozwiązanie dla Twoich
         potrzeb.
-      </h2>
-      <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col lg:flex-col gap-8 mt-4 md:mt-7 mb-7">
-        <div className="w-full bg-blue-lighter p-6 md:p-8 rounded-xl shadow-md">
-          <form onSubmit={handleSubmit} className="space-y-4">
+      </motion.h2>
+      <motion.div
+        variants={container}
+        className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col lg:flex-col gap-8 mt-4 md:mt-7 mb-7"
+      >
+        <motion.div
+          variants={item}
+          className="w-full bg-blue-lighter p-6 md:p-8 rounded-xl shadow-md"
+        >
+          <motion.form
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            onSubmit={handleSubmit}
+            className="space-y-4"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
               <div className="flex flex-row gap-3 items-center w-full">
                 <User className="w-8 h-8 mt-8" />
-                <div className="w-full">
+                <motion.div
+                  variants={card}
+                  custom={0}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="w-full"
+                >
                   <label
                     htmlFor="name"
                     className="block text-sm md:text-lg font-medium mb-1"
@@ -80,9 +148,16 @@ export default function Page() {
                     value={formData.name}
                     onChange={handleChange}
                   />
-                </div>
+                </motion.div>
               </div>
-              <div className="flex flex-row gap-3 items-center w-full">
+              <motion.div
+                variants={card}
+                custom={1}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="flex flex-row gap-3 items-center w-full"
+              >
                 <Mail className="w-8 h-8 mt-8" />
                 <div className="w-full">
                   <label
@@ -101,9 +176,16 @@ export default function Page() {
                     onChange={handleChange}
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
-            <div className="flex flex-row gap-3 items-center w-full">
+            <motion.div
+              variants={card}
+              custom={2}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex flex-row gap-3 items-center w-full"
+            >
               <Phone className="w-8 h-8 mt-8" />
               <div className="w-full">
                 <label
@@ -122,10 +204,17 @@ export default function Page() {
                   onChange={handleChange}
                 />
               </div>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex flex-row gap-3 items-center w-full">
+              <motion.div
+                variants={card}
+                custom={3}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="flex flex-row gap-3 items-center w-full"
+              >
                 <Ruler className="w-8 h-8 mt-8" />
                 <div className="w-full">
                   <label
@@ -144,8 +233,15 @@ export default function Page() {
                     placeholder="np. 100x120"
                   />
                 </div>
-              </div>
-              <div className="flex flex-row gap-3 items-center w-full">
+              </motion.div>
+              <motion.div
+                variants={card}
+                custom={4}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="flex flex-row gap-3 items-center w-full"
+              >
                 <FileDigit className="w-8 h-8 mt-8" />
                 <div className="w-full">
                   <label
@@ -164,9 +260,16 @@ export default function Page() {
                     onChange={handleChange}
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
-            <div className="flex flex-row gap-3 items-center w-full">
+            <motion.div
+              variants={card}
+              custom={5}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex flex-row gap-3 items-center w-full"
+            >
               <MapPin className="w-8 h-8 mt-8" />
               <div className="w-full">
                 <label
@@ -185,8 +288,15 @@ export default function Page() {
                   placeholder="Miejscowość, ulica"
                 />
               </div>
-            </div>
-            <div className="flex flex-row gap-3 items-center w-full">
+            </motion.div>
+            <motion.div
+              variants={card}
+              custom={6}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex flex-row gap-3 items-center w-full"
+            >
               <MousePointer className="w-8 h-8 mt-8" />
               <div className="w-full">
                 <label
@@ -221,8 +331,15 @@ export default function Page() {
                   <option value="mrozone">Folie mrożone</option>
                 </select>
               </div>
-            </div>
-            <div className="flex flex-row gap-3 items-center w-full">
+            </motion.div>
+            <motion.div
+              variants={card}
+              custom={7}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex flex-row gap-3 items-center w-full"
+            >
               <Camera className="w-8 h-8 mt-8" />
               <div className="w-full">
                 <label
@@ -241,8 +358,15 @@ export default function Page() {
                   onChange={handleChange}
                 />
               </div>
-            </div>
-            <div className="flex flex-row gap-3 items-start w-full">
+            </motion.div>
+            <motion.div
+              variants={card}
+              custom={8}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex flex-row gap-3 items-start w-full"
+            >
               <Text className="w-8 h-8 mt-8" />
               <div className="w-full">
                 <label
@@ -260,9 +384,16 @@ export default function Page() {
                   onChange={handleChange}
                 ></textarea>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center">
+            <motion.div
+              variants={card}
+              custom={0}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex items-center"
+            >
               <div className="flex items-center h-5">
                 <input
                   id="privacyPolicy"
@@ -286,30 +417,61 @@ export default function Page() {
                   *
                 </label>
               </div>
-            </div>
+            </motion.div>
 
-            <button
+            <motion.button
+              variants={card}
+              custom={1}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
               type="submit"
               className="w-full bg-blue text-white py-3 px-6 rounded-lg hover:bg-blue-dark transition-colors font-medium text-sm md:text-lg"
             >
               Wyślij wiadomość
-            </button>
-          </form>
-        </div>
-        <div className="border-t border-dark pt-8 text-center">
-          <h3 className="text-xl font-semibold mb-4">
+            </motion.button>
+          </motion.form>
+        </motion.div>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          className="border-t border-dark pt-8 text-center"
+        >
+          <motion.h3
+            custom={0}
+            variants={card}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-xl font-semibold mb-4"
+          >
             Dragon Folie - Karol Jaskorski
-          </h3>
+          </motion.h3>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-6">
-            <div className="flex items-center hover:scale-110">
+            <motion.div
+              custom={1}
+              variants={card}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex items-center hover:scale-110"
+            >
               <Phone className="text-blue mr-2" />
               <a href="tel:607935863" className="hover:text-blue">
                 607 935 863
               </a>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center hover:scale-110">
+            <motion.div
+              custom={2}
+              variants={card}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex items-center hover:scale-110"
+            >
               <Mail className="text-blue mr-2" />
               <a
                 href="mailto:dragon.folie@gmail.com"
@@ -317,33 +479,50 @@ export default function Page() {
               >
                 dragon.folie@gmail.com
               </a>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center">
+            <motion.div
+              custom={3}
+              variants={card}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex items-center"
+            >
               <MapPin className="text-blue mr-2" />
               <span>Małopolskie/Śląskie</span>
-            </div>
+            </motion.div>
           </div>
 
           <div className="flex justify-center space-x-6">
-            <a
+            <motion.a
+              custom={4}
+              variants={card}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
               href="#"
               className="text-blue hover:text-blue hover:scale-110"
               aria-label="Instagram"
             >
               <Instagram className="h-10 w-10" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              custom={5}
+              variants={card}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
               href="#"
               className="text-blue hover:text-blue hover:scale-110"
               aria-label="Facebook"
             >
               <Facebook className="h-10 w-10" />
-            </a>
+            </motion.a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <Footer />
-    </div>
+    </motion.div>
   );
 }
