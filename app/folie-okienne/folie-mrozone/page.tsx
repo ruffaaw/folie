@@ -19,10 +19,11 @@ export default function Page() {
       <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32">
         Folie mrożone, nazywane inaczej mrożonką lub szybami mlecznymi to
         specjalny materiał dający efekt mrożonej szyby podobny do odbicia
-        światła od zmrożonej powierzchni z maleńkimi kryształkami lodu. Mrożona
-        folia stosowana jest, aby przesłonić widok do środka pomieszczenia. Może
-        stanowić również element dekoracyjny lub reklamowy, ponieważ idealnie
-        nadaje się do ploterowania, wycinania wzorów oraz do zadruku.
+        światła od zmrożonej powierzchni z&nbsp;maleńkimi kryształkami lodu.
+        Mrożona folia stosowana jest, aby przesłonić widok do środka
+        pomieszczenia. Może stanowić również element dekoracyjny lub reklamowy,
+        ponieważ idealnie nadaje się do ploterowania, wycinania wzorów oraz do
+        zadruku.
       </h2>
       <BeforeAfterSlider
         before="/przezroczysta_zewnatrz.webp"
@@ -32,13 +33,13 @@ export default function Page() {
         sliderPos={40}
       />
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <Scissors className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Dlaczego warto wybrać folie mrożone?</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full ">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Uniwersalne zastosowanie</h4>
               <p className="text-justify">
                 Możliwość zastosowania zarówno jako element dekoracyjny, jak
@@ -46,7 +47,7 @@ export default function Page() {
                 do wycinania wzorów i&nbsp;nadruków reklamowych.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Łatwy montaż i&nbsp;demontaż</h4>
               <p className="text-justify">
                 Folie nie uszkadzają szyb i&nbsp;można je w&nbsp;każdej chwili
@@ -66,7 +67,7 @@ export default function Page() {
             {places.map((item, index) => (
               <div
                 key={index}
-                className="flex gap-5 p-7 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] card"
+                className="flex gap-5 p-5 lg:p-7 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] card"
               >
                 <div className="text-blue p-4 bg-blue-lighter rounded-xl flex items-center justify-center w-16 h-16 shrink-0">
                   <div className="w-8 h-8 flex items-center justify-center">

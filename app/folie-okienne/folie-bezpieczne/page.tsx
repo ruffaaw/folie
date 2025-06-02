@@ -21,38 +21,38 @@ export default function Page() {
         zapewniająca bezpieczeństwo w&nbsp;domach, zakładach produkujących
         żywność i&nbsp;obiektach publicznych.
       </h2>
-      <div className="w-full relative mt-7 aspect-[390/200]">
+      <div className="w-full relative mt-7 aspect-[3/2]">
         <Image
           src="/bezpieczne.webp"
           alt="Zdjęcie folii bezpiecznej"
           fill
-          className="object-cover h-full px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+          className="object-cover h-full md:px-16 lg:px-32 w-full"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           unoptimized
         />
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <ShieldCheck className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Standard HACCP</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Co to jest HACCP?</h4>
               <p className="text-justify">
-                System Analizy Zagrożeń i Krytycznych Punktów Kontroli (Hazard
-                Analysis and Critical Control Points) to międzynarodowy standard
-                bezpieczeństwa żywności, wymagający zabezpieczenia przed
-                odłamkami szkła.
+                System Analizy Zagrożeń i&nbsp;Krytycznych Punktów Kontroli
+                (Hazard Analysis and Critical Control Points) to międzynarodowy
+                standard bezpieczeństwa żywności, wymagający zabezpieczenia
+                przed odłamkami szkła.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Wymagania prawne</h4>
               <p className="text-justify">
                 Wszystkie firmy branży spożywczej mają obowiązek stosowania
                 rozwiązań spełniających standard HACCP. Nasze folie zapewniają
-                pełną zgodność z przepisami.
+                pełną zgodność z&nbsp;przepisami.
               </p>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function Page() {
       </div>
 
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <GlassWater className="w-8 h-8 md:w-10 md:h-10 text-light" />
             <h3>Kluczowe właściwości</h3>

@@ -26,7 +26,7 @@ export default function Page() {
     {
       icon: <Sun />,
       head: "Miła atmosfera",
-      description: `Nasi monterzy przeprowadzają prace w ciszy i${"\u00A0"}czystości. Spełniają przy tym Państwa oczekiwania w${"\u00A0"}zakresie kultury osobistej jednocześnie zachowując profesjonalne podejście`,
+      description: `Nasi monterzy przeprowadzają prace w${"\u00A0"}ciszy i${"\u00A0"}czystości. Spełniają przy tym Państwa oczekiwania w${"\u00A0"}zakresie kultury osobistej jednocześnie zachowując profesjonalne podejście`,
     },
   ];
   return (
@@ -69,6 +69,7 @@ export default function Page() {
             height={300}
             className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] rounded-lg shadow-md"
             priority
+            unoptimized
           />
         </div>
       </div>

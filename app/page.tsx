@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center">
+    <div className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center overflow-hidden">
       <Header />
 
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-center">
@@ -26,20 +26,19 @@ export default function Home() {
           href="/folie-okienne"
           className="mt-6 md:mt-8"
         />
-
-        <div className="relative w-full mt-6 md:mt-8 aspect-video max-w-[1640px]">
-          <Image
-            src="/fasada.webp"
-            alt="Fasada budynku z foliami okiennymi"
-            fill
-            className="object-cover rounded-lg md:rounded-[20px] z-10"
-            priority
-            unoptimized
-          />
-        </div>
+      </div>
+      <div className="relative w-full mt-6 md:mt-8 aspect-[4/3]">
+        <Image
+          src="/fasada.webp"
+          alt="Fasada budynku z foliami okiennymi"
+          fill
+          className="object-cover h-full w-full md:px-16 lg:px-32"
+          priority
+          unoptimized
+        />
       </div>
 
-      <div className="w-full flex flex-col items-center bg-blue-lighter rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 mt-6 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="w-full flex flex-col items-center bg-blue-lighter sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 lg:px-32">
         <div className="w-full sm:mt-[200px] md:mt-[150px] lg:mt-[250px] xl:mt-[350px]">
           <h3 className="mt-12 md:mt-24 text-2xl md:text-3xl font-bold text-center">
             Dlaczego warto nam zaufać?
@@ -56,10 +55,10 @@ export default function Home() {
                 </h4>
                 <p className="text-justify text-base md:text-lg">
                   Jeśli oczekujecie Państwo innego rodzaju folii prosimy
-                  o&nbsp;przesłanie maila z&nbsp;zapytaniem. Jesteśmy w stanie
-                  wykonać usługę montażu folii z&nbsp;wybranego przez Państwa
-                  materiału, innego niż znajdującego się w&nbsp;naszej stałej
-                  ofercie.
+                  o&nbsp;przesłanie maila z&nbsp;zapytaniem. Jesteśmy
+                  w&nbsp;stanie wykonać usługę montażu folii z&nbsp;wybranego
+                  przez Państwa materiału, innego niż znajdującego się
+                  w&nbsp;naszej stałej ofercie.
                 </p>
               </div>
             </div>

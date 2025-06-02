@@ -35,13 +35,13 @@ export default function Page() {
       />
 
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <Brush className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Dlaczego warto wybrać folie matowe?</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Funkcjonalność i&nbsp;design</h4>
               <p className="text-justify">
                 Obustronny efekt zasłonięcia z jednoczesnym przepuszczaniem
@@ -49,7 +49,7 @@ export default function Page() {
                 i&nbsp;refleksy, co wpływa kojąco na oczy.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Praktyczne zalety</h4>
               <p className="text-justify">
                 Łatwe w utrzymaniu czystości - nie pozostawiają odcisków palców.
@@ -62,7 +62,7 @@ export default function Page() {
       </div>
 
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <ShieldCheck className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Kluczowe właściwości folii matowej</h3>
@@ -71,7 +71,7 @@ export default function Page() {
             {features.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col sm:flex-row gap-5 p-7 bg-white rounded-3xl card"
+                className="flex flex-col sm:flex-row gap-5 p-5 lg:p-7 bg-white rounded-3xl card"
               >
                 <div className="text-light p-4 bg-gray rounded-full flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shrink-0">
                   <div className="w-6 h-6 sm:w-7 sm:h-7 items-center justify-center">

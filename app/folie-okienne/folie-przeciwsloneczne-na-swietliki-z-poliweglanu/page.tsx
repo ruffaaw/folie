@@ -21,24 +21,24 @@ export default function Page() {
         rozwiązanie poprawia komfort pracy, zachowując przy tym właściwości
         poliwęglanu.
       </h2>
-      <div className="w-full md:w-1/2 relative mt-6 md:mt-8 aspect-[390/250] md:aspect-[390/200]">
+      <div className="w-full relative mt-6 md:mt-8 aspect-[3/2] md:aspect-[4/2]">
         <Image
           src="/półprzeźroczysta-błyszcząca-rulon.webp"
           alt="Zjęcie rulonu folii półprzeźroczystej"
           fill
-          className="object-cover w-full h-full px-4 sm:px-8 md:px-16 lg:px-32"
+          className="object-cover w-full h-full md:px-16 lg:px-32"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           unoptimized
         />
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <Thermometer size={44} />
             <h3>Dlaczego warto wybrać nasze folie?</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Specjalna konstrukcja</h4>
               <p className="text-justify">
                 Mikrospory w folii zapewniają rozszerzalność cieplną identyczną
@@ -46,7 +46,7 @@ export default function Page() {
                 gazów i idealne dopasowanie do powierzchni.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Kompleksowa ochrona</h4>
               <p className="text-justify">
                 Zapobiega żółknięciu poliwęglanu dzięki cząsteczkom odbijającym
@@ -58,7 +58,7 @@ export default function Page() {
         </div>
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <Shield className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Kluczowe właściwości</h3>
@@ -114,7 +114,7 @@ export default function Page() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center mt-6 md:mt-8 w-full px-4 sm:px-8">
-        <h3>Cena folii na świetliki z montażem</h3>
+        <h3 className="text-center">Cena folii na świetliki z montażem</h3>
         <div className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-4 md:py-5 w-full max-w-3xl border-y border-t-dark mt-4">
           <div className="flex flex-row items-baseline p-2.5 gap-2.5 text-center">
             <h3>90-120 </h3>

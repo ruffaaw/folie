@@ -24,18 +24,19 @@ export default function Page() {
         przedmioty zabezpieczając je przed żółknięciem i&nbsp;płowieniem czy
         wydłużyć atrakcyjność witryn sklepowych.
       </h2>
-      <div className="w-full relative mt-6 md:mt-8 aspect-video">
+      <div className="w-full relative mt-6 md:mt-8 aspect-[4/3]">
         <Image
           src="/fasada.webp"
           alt="Zdjęcie Folii Anty UV"
           fill
-          className="object-cover rounded-lg px-4 sm:px-8 md:px-16 lg:px-32"
+          className="object-cover  md:px-16 lg:px-32"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           priority
+          unoptimized
         />
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 mt-6 md:mt-8 gap-5 w-full bg-blue-light rounded-3xl">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 mt-6 md:mt-8 gap-5 w-full bg-blue-light rounded-3xl">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <svg
               width="36"
@@ -55,7 +56,7 @@ export default function Page() {
             <h3>Jak działa promieniowanie UV przez szyby?</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Przepuszczalność promieni</h4>
               <p className="text-justify">
                 Standardowe szyby przepuszczają znaczną część promieni UV.
@@ -63,7 +64,7 @@ export default function Page() {
                 zapewnia lepszą ochronę, ale jego wymiana jest kosztowna.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Rozwiązanie: folie anty-UV</h4>
               <p className="text-justify">
                 Nasze folie blokują UV-A i&nbsp;UV-B do 410 nm, stanowiąc
@@ -76,7 +77,7 @@ export default function Page() {
       </div>
 
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <FlaskConical size={44} />
             <h3>Negatywny wpływ UV na zdrowie</h3>
@@ -127,7 +128,9 @@ export default function Page() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center mt-6 md:mt-8 w-full px-4 sm:px-8">
-        <h3 className="text-xl md:text-2xl">Cena folii anty-UV z montażem</h3>
+        <h3 className="text-xl md:text-2xl text-center">
+          Cena folii anty-UV z montażem
+        </h3>
         <div className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-4 md:py-5 w-full max-w-2xl border-y border-t-dark mt-4">
           <div className="flex flex-row items-baseline gap-2">
             <h3 className="text-2xl md:text-3xl">120-160</h3>

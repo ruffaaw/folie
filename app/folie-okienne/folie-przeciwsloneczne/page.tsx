@@ -31,27 +31,24 @@ export default function Page() {
         potrzebna jest skuteczna ochrona przed słońcem i&nbsp;redukcja kosztów
         klimatyzacji.
       </h2>
-      <div
-        className="w-full relative mt-6 md:mt-8"
-        style={{ aspectRatio: "390/200" }}
-      >
+      <div className="w-full relative mt-6 md:mt-8 aspect-[10/7]">
         <Image
           src="/przezroczysta_zewnatrz.webp"
           alt="Zdjęcie Folii Przeźroczystej"
           fill
-          className="object-cover w-full h-full px-32"
+          className="object-cover w-full h-full md:px-16 lg:px-32"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           unoptimized
         />
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <Thermometer className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Korzyści z&nbsp;folii przeciwsłonecznych</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Oszczędności energii</h4>
               <p className="text-justify">
                 Redukcja kosztów klimatyzacji nawet o&nbsp;30-50%. W&nbsp;zimie
@@ -59,7 +56,7 @@ export default function Page() {
                 ogrzewania.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Komfort termiczny</h4>
               <p className="text-justify">
                 Obniżenie temperatury wewnątrz pomieszczeń nawet o&nbsp;10°C.
@@ -71,7 +68,7 @@ export default function Page() {
         </div>
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <Shield className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Kluczowe właściwości</h3>
@@ -99,7 +96,7 @@ export default function Page() {
         </div>
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue rounded-3xl mt-6 md:mt-8 card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue rounded-3xl mt-6 md:mt-8 card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <LayoutList className="w-8 h-8 md:w-10 md:h-10 text-light" />
             <h3 style={{ color: "white" }}>Rodzaje folii przeciwsłonecznych</h3>
@@ -189,7 +186,9 @@ export default function Page() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center mt-6 md:mt-8 w-full px-4 sm:px-8">
-        <h3>Cena folii przeciwsłonecznych z montażem</h3>
+        <h3 className="text-center">
+          Cena folii przeciwsłonecznych z montażem
+        </h3>
         <div className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-4 md:py-5 w-full max-w-2xl border-y border-t-dark mt-4">
           <div className="flex flex-row items-baseline p-2.5 gap-2.5">
             <h3>230-280 </h3>

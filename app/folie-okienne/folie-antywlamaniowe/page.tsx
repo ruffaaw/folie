@@ -27,28 +27,28 @@ export default function Page() {
       <h2 className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32">
         Przezroczysta folia poliestrowa o wysokiej wytrzymałości, która zamienia
         zwykłe szyby w skuteczną barierę antywłamaniową. Niewidoczna ochrona,
-        która nie wpływa na estetykę okien, zapewniając bezpieczeństwo i komfort
-        psychiczny.
+        która nie wpływa na estetykę okien, zapewniając bezpieczeństwo
+        i&nbsp;komfort psychiczny.
       </h2>
-      <div className="w-full relative mt-7 aspect-[390/200]">
+      <div className="w-full relative mt-7 aspect-[1000/659]">
         <Image
           src="/anty-wlamaniowe.webp"
           alt="Grafika folii antywłamaniowych"
           fill
-          className="object-cover w-full h-full px-4 sm:px-8 md:px-16 lg:px-32"
+          className="object-cover w-full h-full md:px-16 lg:px-32"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           unoptimized
         />
       </div>
 
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <ShieldCheck className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Dlaczego warto wybrać folie antywłamaniowe?</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Niewidoczna ochrona</h4>
               <p className="text-justify">
                 W&nbsp;przeciwieństwie do krat czy rolet, folia jest całkowicie
@@ -56,7 +56,7 @@ export default function Page() {
                 zaskoczenia dla potencjalnych włamywaczy.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Wielofunkcyjność</h4>
               <p className="text-justify">
                 Oprócz ochrony przed włamaniem, folia zabezpiecza przed falą
@@ -67,7 +67,7 @@ export default function Page() {
         </div>
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <FlaskConical className="w-8 h-8 md:w-10 md:h-10 text-light" />
             <h3>Negatywny wpływ UV na zdrowie</h3>
@@ -95,7 +95,7 @@ export default function Page() {
         </div>
       </div>
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue rounded-3xl mt-7 card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue rounded-3xl mt-7 card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <AlertOctagon className="w-8 h-8 md:w-10 md:h-10 text-light" />
             <h3 style={{ color: "white" }}>Jak działa ochrona?</h3>

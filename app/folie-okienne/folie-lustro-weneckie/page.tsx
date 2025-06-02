@@ -20,7 +20,8 @@ export default function Page() {
         widzisz na zewnątrz, podczas gdy osoby z&nbsp;zewnątrz widzą tylko swoje
         odbicie. Idealne rozwiązanie łączące funkcjonalność z&nbsp;designem.Jest
         to rodzaj folii przeciwsłonecznej, dlatego jej właściwości będą takie
-        same jak foli przeciwsłonecznych o których możecie Państwo przeczytać{" "}
+        same jak foli przeciwsłonecznych o&nbsp;których możecie Państwo
+        przeczytać{" "}
         <a
           href="/folie-okienne/folie-przeciwsloneczne"
           className="text-blue underline"
@@ -37,13 +38,13 @@ export default function Page() {
         sliderPos={40}
       />
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <EyeOff className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Jak działa lustro weneckie?</h3>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Efekt optyczny</h4>
               <p className="text-justify">
                 Warstwa metalizowana folii odbija światło z&nbsp;zewnątrz,
@@ -51,7 +52,7 @@ export default function Page() {
                 z&nbsp;wnętrza, umożliwiając obserwację otoczenia.
               </p>
             </div>
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl w-full">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full">
               <h4 className="font-semibold">Warunki działania</h4>
               <p className="text-justify">
                 Efekt lustra działa tylko gdy natężenie światła na zewnątrz jest
@@ -64,13 +65,13 @@ export default function Page() {
       </div>
 
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 w-full">
-        <div className="flex flex-col items-start justify-start p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light card">
+        <div className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-gray rounded-3xl mt-6 md:mt-8 text-light card">
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <GlassWater className="w-8 h-8 md:w-10 md:h-10" />
             <h3>Dostępne stopnie intensywności</h3>
           </div>
           <div className="flex flex-row gap-5 w-full">
-            <div className="flex flex-col p-7 gap-3 bg-light rounded-3xl flex-1">
+            <div className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl flex-1">
               <h4 className="font-semibold">3 warianty efektu lustra</h4>
               <p className="text-justify">
                 Oferujemy folie w trzech stopniach intensywności efektu
