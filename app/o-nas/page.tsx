@@ -97,7 +97,7 @@ export default function Page() {
       <motion.h1
         variants={item}
         className="mt-8 sm:mt-12 md:mt-16 px-4 sm:px-8 md:px-16 lg:px-32"
-        style={{ textAlign: "left" }}
+        style={{ textAlign: "justify" }}
       >
         Dragon <span className="text-blue">Folie</span>
       </motion.h1>
@@ -110,7 +110,7 @@ export default function Page() {
           <motion.h2
             variants={item}
             className="text-justify"
-            style={{ textAlign: "left" }}
+            style={{ textAlign: "justify" }}
           >
             Jako firma dopiero raczkujemy, jednak w&nbsp;montażu folii możemy
             pochwalić się wieloletnim doświadczeniem. Nasi monterzy to
