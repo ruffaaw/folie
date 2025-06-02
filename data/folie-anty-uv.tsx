@@ -15,7 +15,7 @@ export const negative = [
   },
   {
     title: "Oparzenia słoneczne",
-    description: `Nawet przez szyby! UVB powoduje bolesne poparzenia i uszkodzenia naskórka.`,
+    description: `Nawet przez szyby! UVB powoduje bolesne poparzenia i${"\u00A0"}uszkodzenia naskórka.`,
   },
   {
     title: "Osłabienie odporności",
@@ -32,7 +32,7 @@ export const places = [
   {
     icon: <BookOpen />,
     title: `Muzea i${"\u00A0"}biblioteki`,
-    description: `Ochrona cennych eksponatów i${"\u00A0"}zbiorów przed żółknięciem i degradacją spowodowaną promieniowaniem UV.`,
+    description: `Ochrona cennych eksponatów i${"\u00A0"}zbiorów przed żółknięciem i${"\u00A0"}degradacją spowodowaną promieniowaniem UV.`,
   },
   {
     icon: <ShoppingBag />,
