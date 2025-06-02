@@ -1,7 +1,6 @@
 "use client";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import JumpingText from "@/components/JumpingText";
 import { offers } from "@/data/offers";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -9,17 +8,15 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="mt-[100px] flex flex-col items-center justify-center">
+    <div className="mt-[80px] md:mt-[100px] flex flex-col items-center justify-center overflow-hidden">
       <Header />
-      <JumpingText
-        text="Folie okienne"
-        mode="character"
-        className="mt-16 text-[4rem] font-bold"
-      />
-      <h2 className="mt-10 max-w-[1030px] text-center">
+      <h1 className="mt-8 sm:mt-12 md:mt-16 text-center">
+        <span className="text-dark">Folie okienne</span>
+      </h1>
+      <h2 className="mt-4 md:mt-7  max-w-[90vw] md:max-w-[1030px] text-center">
         Nowoczesne rozwiązania dostosowane do Twoich potrzeb
       </h2>
-      <div className="grid grid-cols-4 w-full justify-items-center px-32 gap-5 my-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 w-full justify-items-center px-4 sm:px-8 md:px-16 lg:px-32 gap-5 my-10 ">
         {offers.map((offer, index) => (
           <div
             key={index}
@@ -32,6 +29,7 @@ export default function Page() {
                 fill
                 className="object-cover w-full h-full rounded-t-[12px]"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                unoptimized
               />
             </div>
             <div className="flex flex-col p-6 gap-2 items-stretch h-full justify-between">

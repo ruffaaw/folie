@@ -2,7 +2,6 @@
 import Header from "@/components/Header";
 import { Check, Heart, Shield, Sun, Users } from "lucide-react";
 import Image from "next/image";
-import JumpingText from "@/components/JumpingText";
 import React from "react";
 import Footer from "@/components/Footer";
 
@@ -31,23 +30,14 @@ export default function Page() {
     },
   ];
   return (
-    <div className="mt-[104px]">
+    <div className="mt-[80px] md:mt-[100px] flex flex-col">
       <Header />
-      <div className="flex flex-row items-start justify-start mt-8 px-32">
-        <JumpingText
-          text="Dragon "
-          mode="character"
-          className="mt-24 text-[4rem] font-bold text-blue"
-        />
-        <JumpingText
-          text="Folie"
-          mode="character"
-          className="mt-24 text-[4rem] font-bold"
-        />
-      </div>
-      <div className="flex flex-row items-start justify-between px-32">
-        <div className="w-2/3 max-w-[900px] text-justify">
-          <h2>
+      <h1 className="mt-8 sm:mt-12 md:mt-16 px-4 sm:px-8 md:px-16 lg:px-32">
+        Dragon <span className="text-blue">Folie</span>
+      </h1>
+      <div className="flex flex-col lg:flex-row items-start justify-between gap-8 px-4 sm:px-8 md:px-16 lg:px-32">
+        <div className="w-full lg:w-2/3 max-w-full lg:max-w-[900px]">
+          <h2 className="text-justify">
             Jako firma dopiero raczkujemy, jednak w&nbsp;montażu folii możemy
             pochwalić się wieloletnim doświadczeniem. Nasi monterzy to
             wykwalifikowani specjaliści, którzy:
@@ -71,33 +61,41 @@ export default function Page() {
             </div>
           </h2>
         </div>
-        <Image
-          src="/logo.jpg"
-          alt="Logo"
-          width={300}
-          height={300}
-          className="w-1/3"
-        />
+        <div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
+          <Image
+            src="/logo.jpg"
+            alt="Logo Dragon Folie"
+            width={300}
+            height={300}
+            className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] rounded-lg shadow-md"
+            priority
+          />
+        </div>
       </div>
 
-      <div className="px-32 flex justify-center items-center flex-col bg-blue-lighter mt-10 py-16">
-        <h3 className="mb-16">Dlaczego warto nam zaufać?</h3>
-        <div className="grid grid-cols-2 gap-5">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-32 flex justify-center items-center flex-col bg-blue-lighter mt-8 md:mt-10 py-8 md:py-16">
+        <h3 className="mb-8 md:mb-16 text-2xl md:text-3xl font-bold text-center">
+          Dlaczego warto nam zaufać?
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full">
           {points.map((point, index) => (
             <div
               key={index}
-              className="flex gap-5 p-7 bg-white rounded-3xl drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)]"
+              className="flex flex-col sm:flex-row gap-4 p-5 md:p-7 bg-white rounded-xl md:rounded-2xl shadow-md hover:shadow-lg transition-shadow"
             >
-              <div className="text-blue p-4 bg-blue-lighter rounded-full flex items-center justify-center w-16 h-16 shrink-0">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  {React.cloneElement(point.icon, {
-                    className: "w-full h-full",
-                  })}
-                </div>
+              <div className="text-blue p-3 sm:p-4 bg-blue-lighter rounded-full flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+                {React.cloneElement(point.icon, {
+                  className: "w-6 h-6 sm:w-8 sm:h-8",
+                })}
               </div>
               <div>
-                <h4 className="font-semibold">{point.head}</h4>
-                <p className="text-justify">{point.description}</p>
+                <h4 className="font-semibold text-lg md:text-xl mb-2 md:mb-3">
+                  {point.head}
+                </h4>
+                <p className="text-justify text-base md:text-lg text-gray-600">
+                  {point.description}
+                </p>
               </div>
             </div>
           ))}

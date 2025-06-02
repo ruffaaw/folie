@@ -30,15 +30,19 @@ export default function Page() {
     privacyPolicy: false,
   });
 
-  const handleChange = (e: any) => {
-    const { name, value, type, checked, files } = e.target;
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value, type, checked, files } = e.target as HTMLInputElement;
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : type === "file" ? files : value,
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Tutaj logika wysyłania formularza
     console.log(formData);

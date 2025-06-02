@@ -1,6 +1,6 @@
 export const offers = [
   {
-    image: "/fasada.webp",
+    image: "/przezroczysta-rulon.webp",
     title: "Folie anty UV",
     description: "Ochrona przed szkodliwym promieniowaniem UV do 99%",
     advantages: [
@@ -19,7 +19,7 @@ export const offers = [
     href: "/folie-okienne/folie-anty-uv",
   },
   {
-    image: "/fasada.webp",
+    image: "/półprzeźroczysta-błyszcząca-rulon.webp",
     title: "Folie przeciwsłoneczne",
     description: `Redukcja nagrzewania pomieszczeń nawet o${"\u00A0"}86%`,
     advantages: [
@@ -37,10 +37,10 @@ export const offers = [
       "Obiekty zabytkowe",
       "Przeszklone fasady",
     ],
-    href: "/folie-przeciwsłoneczne",
+    href: "/folie-okienne/folie-przeciwsloneczne",
   },
   {
-    image: "/fasada.webp",
+    image: "/półprzeźroczysta-błyszcząca-rulon.webp",
     title: `Folie na świetliki z${"\u00A0"}poliwęglanu`,
     description: `Obniżenie temperatury pod świetlikami o${"\u00A0"}3-5°C`,
     advantages: [
@@ -55,10 +55,10 @@ export const offers = [
       "Obiekty sportowe",
       "Dachy przeszkolone",
     ],
-    href: "/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+    href: "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
   },
   {
-    image: "/fasada.webp",
+    image: "/przezroczysta-rulon.webp",
     title: "Folie antywłamaniowe",
     description: `Zabezpieczenie przed wtargnięciem i${"\u00A0"}rozbiciem szkła`,
     advantages: [
@@ -73,10 +73,10 @@ export const offers = [
       `Sklepy i${"\u00A0"}biura`,
       `Domy i${"\u00A0"}mieszkania`,
     ],
-    href: "/folie-antywlamaniowe",
+    href: "/folie-okienne/folie-antywlamaniowe",
   },
   {
-    image: "/fasada.webp",
+    image: "/przezroczysta-rulon.webp",
     title: "Folie bezpieczne",
     description: "Zapobiegają rozprzestrzenianiu się odłamków szkła",
     advantages: [
@@ -91,10 +91,10 @@ export const offers = [
       `Szpitale i${"\u00A0"}gabinety`,
       `Dom z${"\u00A0"}dziećmi/zwierzętami`,
     ],
-    href: "/folie-bezpieczne",
+    href: "/folie-okienne/folie-bezpieczne",
   },
   {
-    image: "/fasada.webp",
+    image: "/lustrzana-rulon.webp",
     title: "Folie lustro weneckie",
     description: `Efekt lustra z${"\u00A0"}zachowaniem widoczności od wewnątrz`,
     advantages: [
@@ -109,10 +109,10 @@ export const offers = [
       "Salony kosmetyczne",
       "Mieszkania (balkony)",
     ],
-    href: "/folie-lustro-weneckie",
+    href: "/folie-okienne/folie-lustro-weneckie",
   },
   {
-    image: "/fasada.webp",
+    image: "/matowa-rulon.webp",
     title: "Folie matowe",
     description: `Dekoracyjne rozwiązanie z${"\u00A0"}zachowaniem prywatności`,
     advantages: [
@@ -127,10 +127,10 @@ export const offers = [
       "Szklane ściany",
       `Balkony i${"\u00A0"}tarasy`,
     ],
-    href: "/folie-matowe",
+    href: "/folie-okienne/folie-matowe",
   },
   {
-    image: "/fasada.webp",
+    image: "/mrozona-rulon.webp",
     title: "Folie mrożone",
     description: `Efekt mrożonej szyby z${"\u00A0"}możliwością personalizacji`,
     advantages: [
@@ -145,6 +145,6 @@ export const offers = [
       `Toalety i${"\u00A0"}szatnie`,
       "Witryny sklepowe",
     ],
-    href: "/folie-mrozone",
+    href: "/folie-okienne/folie-mrozone",
   },
 ];

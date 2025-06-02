@@ -9,7 +9,7 @@ export default function BottomContact({
 }) {
   return (
     <div
-      className={`flex flex-col items-center justify-center px-32 py-8 gap-6 w-full bg-blue-light ${className} text-center`}
+      className={`flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 py-8 gap-6 w-full bg-blue-light ${className} text-center`}
     >
       <h3>{title}</h3>
       <h4 style={{ fontWeight: "normal" }}>
