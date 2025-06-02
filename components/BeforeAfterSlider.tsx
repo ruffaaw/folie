@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function BeforeAfterSlider({
   before = "",
@@ -18,34 +18,50 @@ export default function BeforeAfterSlider({
 }) {
   const [sliderPosition, setSliderPosition] = useState(sliderPos);
   const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (!isDragging) return;
+  const handleMove = (clientX: number) => {
+    if (!containerRef.current) return;
 
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = Math.max(0, Math.min(event.clientX - rect.left, rect.width));
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
     const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
 
     setSliderPosition(percent);
   };
 
-  const handleMouseDown = () => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    handleMove(event.clientX);
+  };
+
+  const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    handleMove(event.touches[0].clientX);
+  };
+
+  const handleStart = () => {
     setIsDragging(true);
   };
 
-  const handleMouseUp = () => {
+  const handleEnd = () => {
     setIsDragging(false);
   };
 
   return (
     <div
       className="w-full relative px-4 sm:px-8 md:px-16 lg:px-32 mt-6 md:mt-8"
-      onMouseUp={handleMouseUp}
+      onMouseUp={handleEnd}
+      onMouseLeave={handleEnd}
     >
       <div
-        className="relative w-full aspect-[390/200] m-auto overflow-hidden select-none"
-        onMouseMove={handleMove}
-        onMouseDown={handleMouseDown}
+        ref={containerRef}
+        className="relative w-full aspect-[390/200] m-auto overflow-hidden select-none touch-none"
+        onMouseMove={handleMouseMove}
+        onMouseDown={handleStart}
+        onTouchStart={handleStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleEnd}
       >
         <Image
           alt={altAfter}
@@ -71,7 +87,7 @@ export default function BeforeAfterSlider({
           />
         </div>
         <div
-          className="absolute top-0 bottom-0 w-1 bg-blue-light cursor-ew-resize"
+          className="absolute top-0 bottom-0 w-1 bg-blue-light cursor-ew-resize touch-none"
           style={{
             left: `calc(${sliderPosition}% - 1px)`,
           }}
