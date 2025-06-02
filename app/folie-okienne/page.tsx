@@ -12,7 +12,7 @@ const container = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
       when: "beforeChildren",
     },
   },
@@ -32,16 +32,13 @@ const item = {
 };
 
 const cardVariants = {
-  hidden: { y: 50, opacity: 0, scale: 0.95 },
+  hidden: { y: 50, opacity: 0 },
   visible: (i: number) => ({
     y: 0,
     opacity: 1,
-    scale: 1,
     transition: {
-      delay: i * 0.1,
+      delay: i * 0.15,
       duration: 0.5,
-      type: "spring",
-      stiffness: 100,
     },
   }),
 };
@@ -51,7 +48,7 @@ const badgeVariants = {
   visible: {
     scale: 1,
     transition: {
-      type: "spring",
+      type: "easeInOut",
       stiffness: 200,
     },
   },
@@ -86,7 +83,8 @@ export default function Page() {
             key={index}
             custom={index}
             variants={cardVariants}
-            whileHover="hover"
+            initial="hidden"
+            whileInView="visible"
             className="bg-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] rounded-[12px] flex flex-col overflow-hidden"
           >
             <motion.div
@@ -153,7 +151,10 @@ export default function Page() {
                 </motion.div>
               </div>
 
-              <motion.div whileHover={{ x: 5 }}>
+              <motion.div
+                whileTap={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05 }}
+              >
                 <Link
                   href={offer.href}
                   className="flex items-center gap-1 text-blue w-fit mt-4"
