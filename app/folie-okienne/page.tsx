@@ -1,7 +1,6 @@
 "use client";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import JumpingText from "@/components/JumpingText";
 import { offers } from "@/data/offers";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";

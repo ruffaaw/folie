@@ -2,7 +2,6 @@
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import JumpingText from "@/components/JumpingText";
 import { Check, Mail } from "lucide-react";
 import Image from "next/image";
 

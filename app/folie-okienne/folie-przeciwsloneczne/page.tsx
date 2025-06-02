@@ -63,8 +63,8 @@ export default function Page() {
               <h4 className="font-semibold">Komfort termiczny</h4>
               <p className="text-justify">
                 Obniżenie temperatury wewnątrz pomieszczeń nawet o&nbsp;10°C.
-                Eliminacja "efektu sauny" w&nbsp;pomieszczeniach z&nbsp;dużymi
-                przeszkleniami.
+                Eliminacja &quot;efektu sauny&quot; w&nbsp;pomieszczeniach
+                z&nbsp;dużymi przeszkleniami.
               </p>
             </div>
           </div>
