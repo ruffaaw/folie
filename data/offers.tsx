@@ -1,6 +1,6 @@
 export const offers = [
   {
-    image: "/przezroczysta-rulon.webp",
+    image: "/przezroczysta_zewnatrz.webp",
     title: "Folie anty UV",
     description: "Ochrona przed szkodliwym promieniowaniem UV do 99%",
     advantages: [
@@ -19,7 +19,7 @@ export const offers = [
     href: "/folie-okienne/folie-anty-uv",
   },
   {
-    image: "/półprzeźroczysta-błyszcząca-rulon.webp",
+    image: "/fasada.webp",
     title: "Folie przeciwsłoneczne",
     description: `Redukcja nagrzewania pomieszczeń nawet o${"\u00A0"}86%`,
     advantages: [
@@ -58,7 +58,7 @@ export const offers = [
     href: "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
   },
   {
-    image: "/przezroczysta-rulon.webp",
+    image: "/anty-wlamaniowe.webp",
     title: "Folie antywłamaniowe",
     description: `Zabezpieczenie przed wtargnięciem i${"\u00A0"}rozbiciem szkła`,
     advantages: [
@@ -76,7 +76,7 @@ export const offers = [
     href: "/folie-okienne/folie-antywlamaniowe",
   },
   {
-    image: "/przezroczysta-rulon.webp",
+    image: "/bezpieczne.webp",
     title: "Folie bezpieczne",
     description: "Zapobiegają rozprzestrzenianiu się odłamków szkła",
     advantages: [
@@ -94,7 +94,7 @@ export const offers = [
     href: "/folie-okienne/folie-bezpieczne",
   },
   {
-    image: "/lustrzana-rulon.webp",
+    image: "/folia_lustrzana_zewnatrz.webp",
     title: "Folie lustro weneckie",
     description: `Efekt lustra z${"\u00A0"}zachowaniem widoczności od wewnątrz`,
     advantages: [

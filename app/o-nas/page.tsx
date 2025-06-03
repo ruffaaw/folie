@@ -96,7 +96,7 @@ export default function Page() {
 
       <motion.h1
         variants={item}
-        className="mt-8 sm:mt-12 md:mt-16 px-4 sm:px-8 md:px-16 lg:px-32"
+        className="mt-8 sm:mt-12 md:mt-16 px-4 sm:px-8 md:px-16"
         style={{ textAlign: "justify" }}
       >
         Dragon <span className="text-blue">Folie</span>
@@ -104,7 +104,7 @@ export default function Page() {
 
       <motion.div
         variants={container}
-        className="flex flex-col lg:flex-row items-start justify-between gap-8 px-4 sm:px-8 md:px-16 lg:px-32"
+        className="flex flex-col lg:flex-row items-start justify-between gap-8 px-4 sm:px-8 md:px-16"
       >
         <div className="w-full lg:w-2/3 max-w-full lg:max-w-[900px]">
           <motion.h2
@@ -112,9 +112,12 @@ export default function Page() {
             className="text-justify"
             style={{ textAlign: "justify" }}
           >
-            Jako firma dopiero raczkujemy, jednak w&nbsp;montażu folii możemy
-            pochwalić się wieloletnim doświadczeniem. Nasi monterzy to
-            wykwalifikowani specjaliści, którzy:
+            <span style={{ fontWeight: "bold", fontSize: "2.5rem" }}>
+              Dragon Folie{" "}
+            </span>
+            to nowa firma na Polskim rynku, jednak w montażu folii możemy
+            pochwalić się wieloletnim doświadczeniem. <br />
+            Nasi monterzy to wykwalifikowani specjaliści, którzy:
             <motion.div
               variants={checkItem}
               custom={0}
@@ -122,7 +125,7 @@ export default function Page() {
             >
               <Check />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
-                Dobiorą idealną folię do Twoich potrzeb
+                dobiorą idealną folię do Twoich potrzeb,
               </h4>
             </motion.div>
             <motion.div
@@ -132,7 +135,7 @@ export default function Page() {
             >
               <Check />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
-                Wyjaśnią wszystkie techniczne szczegóły
+                wyjaśnią wszystkie techniczne szczegóły,
               </h4>
             </motion.div>
             <motion.div
@@ -142,7 +145,7 @@ export default function Page() {
             >
               <Check />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
-                Zadbają o&nbsp;perfekcyjny montaż
+                zadbają o&nbsp;perfekcyjny montaż.
               </h4>
             </motion.div>
           </motion.h2>
@@ -150,14 +153,15 @@ export default function Page() {
 
         <motion.div
           variants={fadeIn}
+          whileHover={{ scale: 1.1 }}
           className="w-full lg:w-1/3 flex justify-center lg:justify-end"
         >
           <Image
             src="/logo.jpg"
             alt="Logo Dragon Folie"
-            width={300}
-            height={300}
-            className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] rounded-lg shadow-md"
+            width={400}
+            height={400}
+            className="w-full max-w-[350px] md:max-w-[400px] rounded-lg shadow-md"
             priority
             unoptimized
           />
@@ -165,43 +169,58 @@ export default function Page() {
       </motion.div>
 
       <motion.div
+        variants={fadeIn}
+        className="w-full flex justify-center my-8 md:my-12"
+      ></motion.div>
+
+      <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={container}
-        className="px-4 sm:px-8 md:px-16 lg:px-32 flex justify-center items-center flex-col bg-blue-lighter mt-8 md:mt-10 py-8 md:py-16"
+        className="px-4 sm:px-8 md:px-16 flex justify-center items-center flex-col bg-gradient-to-b from-white to-blue-50 mt-8 md:mt-10 py-12 md:py-20 relative overflow-hidden"
       >
+        <div className="absolute -bottom-20 -right-20 w-40 h-40 rounded-full bg-blue-light"></div>
+        <div className="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-blue-light"></div>
+        <div className="absolute top-1/4 -right-10 w-24 h-24 rounded-lg bg-blue-light rotate-45"></div>
+
         <motion.h3
           variants={item}
-          className="mb-8 md:mb-16 text-2xl md:text-3xl font-bold text-center"
+          className="mb-12 md:mb-20 text-2xl md:text-3xl font-bold text-center relative z-10"
         >
-          Dlaczego warto nam zaufać?
+          <span className="relative inline-block">
+            <span className="relative z-10">Dlaczego warto nam zaufać?</span>
+            <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-light -z-0"></span>
+          </span>
         </motion.h3>
 
         <motion.div
           variants={container}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-6xl relative z-10"
         >
           {points.map((point, index) => (
             <motion.div
               key={index}
               custom={index}
               variants={cardVariants}
-              whileHover={{ y: -5 }}
               initial="hidden"
+              whileHover={{
+                scale: 1.02,
+                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05)",
+              }}
               whileInView="visible"
-              className="flex flex-col sm:flex-row gap-4 p-5 md:p-7 bg-white rounded-xl md:rounded-2xl shadow-md hover:shadow-lg transition-shadow"
+              className="flex flex-col sm:flex-row gap-5 p-6 md:p-8 bg-white rounded-xl md:rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100"
             >
-              <div className="text-blue p-3 sm:p-4 bg-blue-lighter rounded-full flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+              <div className="text-blue p-3 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center shadow-inner">
                 {React.cloneElement(point.icon, {
                   className: "w-6 h-6 sm:w-8 sm:h-8",
                 })}
               </div>
               <div>
-                <h4 className="font-semibold text-lg md:text-xl mb-2 md:mb-3">
+                <h4 className="font-semibold text-lg md:text-xl mb-2 md:mb-3 text-gray-800">
                   {point.head}
                 </h4>
-                <p className="text-justify text-base md:text-lg text-gray-600">
+                <p className="text-justify text-base md:text-lg text-gray-600 leading-relaxed">
                   {point.description}
                 </p>
               </div>

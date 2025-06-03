@@ -101,10 +101,10 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 15 }}
       ref={headerRef}
-      className="fixed top-0 w-full bg-blue flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-32 py-2 md:py-[10px] z-50 shadow-md"
+      className="fixed top-0 w-full bg-blue flex justify-between items-center px-4 sm:px-8 md:px-16 py-2 md:py-[10px] z-50 shadow-md"
     >
-      <Link href="/" onClick={closeAllMenus}>
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+      <Link href="/" onClick={closeAllMenus} >
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex flex-row gap-2 items-center">
           <Image
             src="/logo.jpg"
             alt="logo"
@@ -112,6 +112,7 @@ export default function Header() {
             height={80}
             className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
           />
+          <span className="text-light font-bold text-xl xl:text-2xl">DRAGON FOLIE</span>
         </motion.div>
       </Link>
 
@@ -199,6 +200,7 @@ export default function Header() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center"
               >
                 <Link
                   href={item.href}
@@ -238,7 +240,7 @@ export default function Header() {
             <div className="flex flex-col text-light text-xl">
               <Link
                 href="/o-nas"
-                className={`py-3 px-4 sm:px-8 md:px-16 lg:px-32 ${
+                className={`py-3 px-4 sm:px-8 md:px-16  ${
                   isActive("/o-nas") ? "bg-blue-light text-dark " : ""
                 }`}
                 onClick={closeAllMenus}
@@ -248,7 +250,7 @@ export default function Header() {
 
               <div className="relative">
                 <div
-                  className={`flex justify-between items-center py-3 px-4 sm:px-8 md:px-16 lg:px-32 ${
+                  className={`flex justify-between items-center py-3 px-4 sm:px-8 md:px-16  ${
                     isActive("/folie-okienne")
                       ? "bg-blue-light text-dark rounded-lg"
                       : ""
@@ -276,7 +278,7 @@ export default function Header() {
                       animate="open"
                       exit="closed"
                       variants={submenuVariants}
-                      className="bg-blue-dark px-4 sm:px-8 md:px-16 lg:px-32 mt-1 mb-2 rounded-lg"
+                      className="bg-blue-dark px-4 sm:px-8 md:px-16 mt-1 mb-2 rounded-lg"
                     >
                       {[
                         ["Anty UV", "/folie-okienne/folie-anty-uv"],
@@ -317,7 +319,7 @@ export default function Header() {
 
               <Link
                 href="/montaz-i-wycena"
-                className={`py-3 px-4 sm:px-8 md:px-16 lg:px-32 ${
+                className={`py-3 px-4 sm:px-8 md:px-16  ${
                   isActive("/montaz-i-wycena") ? "bg-blue-light text-dark " : ""
                 }`}
                 onClick={closeAllMenus}

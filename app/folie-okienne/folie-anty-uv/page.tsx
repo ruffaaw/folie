@@ -8,6 +8,7 @@ import { FlaskConical, Layers, TriangleAlert } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 const container = {
   hidden: { opacity: 0 },
@@ -72,13 +73,21 @@ export default function Page() {
 
       <Title title="Ochrona przed UV" />
 
-      <motion.h1 variants={item} className="mt-7 text-center">
-        FOLIE ANTY <span className="text-blue">ULTRAFIOLETOWE</span>
+      <motion.h1
+        variants={item}
+        className="mt-7 text-center px-4 sm:px-8 md:px-16"
+      >
+        <span className="text-dark relative inline-block">
+          <span>
+            FOLIE ANTY <span className="text-blue">ULTRAFIOLETOWE</span>
+          </span>
+          <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-light -z-0"></span>
+        </span>
       </motion.h1>
 
       <motion.h2
         variants={item}
-        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32"
+        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 "
       >
         Ten rodzaj folii powoduje zatrzymanie szkodliwego promienia
         ultrafioletowego (UV) ze światła dziennego nawet w&nbsp;99% bez wpływu
@@ -87,26 +96,16 @@ export default function Page() {
         przedmioty zabezpieczając je przed żółknięciem i&nbsp;płowieniem czy
         wydłużyć atrakcyjność witryn sklepowych.
       </motion.h2>
-
-      <motion.div
-        variants={image}
-        whileHover={{ scale: 1.03 }}
-        className="w-full lg:w-8/12 relative mt-6 md:mt-8 aspect-[10/7]"
-      >
-        <Image
-          src="/folia-anty-uv.webp"
-          alt="Zdjęcie Folii Anty UV"
-          fill
-          className="object-cover md:px-16 lg:px-32"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-          priority
-          unoptimized
-        />
-      </motion.div>
-
+      <BeforeAfterSlider
+        before="/przezroczysta_zewnatrz.webp"
+        altBefore="Przeźroczysta szyba przed aplikacją folii"
+        after="/przezroczysta_zewnatrz.webp"
+        altAfter="Efekt po aplikacji folii matowej"
+        sliderPos={40}
+      />
       <motion.div
         variants={container}
-        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+        className="px-4 sm:px-8 md:px-16  w-full"
       >
         <motion.div
           variants={item}
@@ -173,12 +172,26 @@ export default function Page() {
           </motion.div>
         </motion.div>
       </motion.div>
-
+      <motion.div
+        variants={image}
+        whileHover={{ scale: 1.03 }}
+        className="w-full relative mt-6 md:mt-8 aspect-[10/7] "
+      >
+        <Image
+          src="/folia-anty-uv.webp"
+          alt="Zdjęcie Folii Anty UV"
+          fill
+          className="object-cover md:px-16"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+          priority
+          unoptimized
+        />
+      </motion.div>
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+        className="px-4 sm:px-8 md:px-16 w-full"
       >
         <motion.div
           variants={item}
@@ -221,7 +234,7 @@ export default function Page() {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="px-4 sm:px-8 md:px-16 lg:px-32 w-full"
+        className="px-4 sm:px-8 md:px-16 w-full"
       >
         <motion.div
           variants={item}
@@ -271,20 +284,39 @@ export default function Page() {
         <h3 className="text-xl md:text-2xl text-center">
           Cena folii anty-UV z montażem
         </h3>
+
         <motion.div
           variants={item}
-          initial="hidden"
-          whileInView="visible"
-          whileHover={{ scale: 1.03 }}
-          className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 py-4 md:py-5 w-full max-w-2xl border-y border-t-dark mt-4"
+          className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 w-full max-w-4xl p-6 md:p-8 mt-4 border-y border-t-dark"
         >
-          <div className="flex flex-row items-baseline gap-2">
-            <h3 className="text-2xl md:text-3xl">120-160</h3>
-            <p className="text-xl md:text-2xl">zł/m²</p>
-          </div>
-          <p className="text-center text-lg md:text-xl mt-2">
-            Cena obejmuje folię anty-UV oraz profesjonalny montaż
-          </p>
+          <motion.div
+            variants={image}
+            whileHover={{ scale: 1.03 }}
+            className="w-full md:w-1/2 aspect-[3/2] relative overflow-hidden"
+          >
+            <Image
+              src="/przezroczysta-rulon.webp"
+              alt="Folia anty-UV w rolce"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            className="w-full md:w-1/2 flex flex-col justify-center"
+          >
+            <div className="flex flex-row items-baseline gap-2 justify-center">
+              <h3 className="text-2xl md:text-3xl font-bold ">120-160</h3>
+              <p>zł/m²</p>
+            </div>
+
+            <p className="text-center mt-6">
+              Cena obejmuje folię anty-UV oraz profesjonalny montaż
+            </p>
+          </motion.div>
         </motion.div>
       </motion.div>
 
