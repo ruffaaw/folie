@@ -1,6 +1,6 @@
 export const offers = [
   {
-    image: "/przezroczysta_zewnatrz.webp",
+    image: "/antyUV.webp",
     title: "Folie anty UV",
     description: "Ochrona przed szkodliwym promieniowaniem UV do 99%",
     advantages: [
@@ -19,7 +19,7 @@ export const offers = [
     href: "/folie-okienne/folie-anty-uv",
   },
   {
-    image: "/fasada.webp",
+    image: "/przeciwsloneczne.webp",
     title: "Folie przeciwsłoneczne",
     description: `Redukcja nagrzewania pomieszczeń nawet o${"\u00A0"}86%`,
     advantages: [
@@ -40,7 +40,7 @@ export const offers = [
     href: "/folie-okienne/folie-przeciwsloneczne",
   },
   {
-    image: "/półprzeźroczysta-błyszcząca-rulon.webp",
+    image: "/swietliki.webp",
     title: `Folie na świetliki z${"\u00A0"}poliwęglanu`,
     description: `Obniżenie temperatury pod świetlikami o${"\u00A0"}3-5°C`,
     advantages: [
@@ -58,7 +58,7 @@ export const offers = [
     href: "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
   },
   {
-    image: "/anty-wlamaniowe.webp",
+    image: "/antywlamaniowe.webp",
     title: "Folie antywłamaniowe",
     description: `Zabezpieczenie przed wtargnięciem i${"\u00A0"}rozbiciem szkła`,
     advantages: [
@@ -94,7 +94,7 @@ export const offers = [
     href: "/folie-okienne/folie-bezpieczne",
   },
   {
-    image: "/folia_lustrzana_zewnatrz.webp",
+    image: "/lustro-weneckie.webp",
     title: "Folie lustro weneckie",
     description: `Efekt lustra z${"\u00A0"}zachowaniem widoczności od wewnątrz`,
     advantages: [
@@ -112,7 +112,7 @@ export const offers = [
     href: "/folie-okienne/folie-lustro-weneckie",
   },
   {
-    image: "/matowa-rulon.webp",
+    image: "/matowe.webp",
     title: "Folie matowe",
     description: `Dekoracyjne rozwiązanie z${"\u00A0"}zachowaniem prywatności`,
     advantages: [
@@ -130,7 +130,7 @@ export const offers = [
     href: "/folie-okienne/folie-matowe",
   },
   {
-    image: "/mrozona-rulon.webp",
+    image: "/mrozone.webp",
     title: "Folie mrożone",
     description: `Efekt mrożonej szyby z${"\u00A0"}możliwością personalizacji`,
     advantages: [
