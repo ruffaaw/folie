@@ -4,7 +4,7 @@ import { Check, Heart, Shield, Sun, Users } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import Footer from "@/components/Footer";
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Page() {
   const container = {
