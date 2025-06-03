@@ -70,15 +70,16 @@ export default function Page() {
 
       <motion.h2
         variants={item}
-        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32"
+        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16"
       >
         Folie montujemy na terenie województwa małopolskiego i&nbsp;województwa
-        śląskiego.
+        śląskiego, jednak w&nbsp;przypadku większych zleceń jesteśmy
+        w&nbsp;stanie dojechać w&nbsp;każdy zakątek Polski.
       </motion.h2>
 
       <motion.div
         variants={container}
-        className="w-full px-4 sm:px-8 md:px-16 lg:px-32 mt-8 md:mt-12"
+        className="w-full px-4 sm:px-8 md:px-16 mt-8 md:mt-12"
       >
         <motion.div
           variants={item}
@@ -109,7 +110,9 @@ export default function Page() {
               </div>
               <div>
                 <h4>Wymiary szyb</h4>
-                <p>Dokładne wymiary szyb okiennych w cm</p>
+                <p style={{ textAlign: "justify" }}>
+                  Dokładne wymiary szyb okiennych w cm
+                </p>
               </div>
             </motion.div>
 
@@ -127,7 +130,9 @@ export default function Page() {
               </div>
               <div>
                 <h4>Ilość okien</h4>
-                <p>Liczba okien do oklejenia</p>
+                <p style={{ textAlign: "justify" }}>
+                  Liczba okien do oklejenia
+                </p>
               </div>
             </motion.div>
 
@@ -145,7 +150,9 @@ export default function Page() {
               </div>
               <div>
                 <h4>Miejsce montażu</h4>
-                <p>Adres lub lokalizacja montażu</p>
+                <p style={{ textAlign: "justify" }}>
+                  Adres lub lokalizacja montażu
+                </p>
               </div>
             </motion.div>
 
@@ -162,8 +169,11 @@ export default function Page() {
                 <Image className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11" />
               </div>
               <div>
-                <h4>Zdjęcia okien</h4>
-                <p>Aktualny stan okien (opcjonalne)</p>
+                <h4>Zdjęcia szyb</h4>
+                <p style={{ textAlign: "justify" }}>
+                  Aktualny stan szyb, które planujecie Państwo okleić i&nbsp;ich
+                  otoczenie (dostępność).
+                </p>
               </div>
             </motion.div>
           </motion.div>
@@ -174,7 +184,7 @@ export default function Page() {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="w-full px-4 sm:px-8 md:px-16 lg:px-32 mt-8 md:mt-12"
+        className="w-full px-4 sm:px-8 md:px-16 mt-8 md:mt-12"
       >
         <motion.div
           variants={item}
