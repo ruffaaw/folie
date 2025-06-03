@@ -64,13 +64,13 @@ export default function BeforeAfterSlider({
   return (
     <motion.div
       variants={image}
-      className="w-full relative md:px-16 lg:px-32 mt-6 md:mt-8"
+      className="w-full relative md:px-16 mt-6 md:mt-8"
       onMouseUp={handleEnd}
       onMouseLeave={handleEnd}
     >
       <div
         ref={containerRef}
-        className="relative w-full lg:w-3/4 aspect-[10/7] m-auto overflow-hidden select-none touch-none"
+        className="relative w-full aspect-[10/7] overflow-hidden select-none touch-none"
         onMouseMove={handleMouseMove}
         onMouseDown={handleStart}
         onTouchStart={handleStart}
@@ -83,13 +83,13 @@ export default function BeforeAfterSlider({
           fill
           draggable={false}
           priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw "
           className="object-cover"
           unoptimized
         />
 
         <div
-          className="absolute top-0 left-0 right-0 w-full aspect-[10/7] m-auto overflow-hidden select-none"
+          className="absolute top-0 left-0 right-0 w-full aspect-[10/7] overflow-hidden select-none"
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
           <Image
