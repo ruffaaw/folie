@@ -65,48 +65,53 @@ export default function Home() {
 
       <motion.div
         variants={containerVariants}
-        className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-center"
+        className="w-full px-4 sm:px-8 md:px-16 flex flex-col items-center"
       >
         <motion.h1
           variants={itemVariants}
           className="mt-8 sm:mt-12 md:mt-16 text-center"
         >
-          <span className="text-dark">Witamy Państwa na naszej stronie</span>
+          <span className="text-dark">Witamy Państwa na naszej stronie!</span>
         </motion.h1>
-
-        <motion.h2
-          variants={itemVariants}
-          className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl"
-        >
-          Zajmujemy się montażem folii okiennych nie tylko na terenie Krakowa,
-          ale również w&nbsp;całym województwie małopolskim i&nbsp;śląskim
-        </motion.h2>
-
-        <motion.div variants={itemVariants} className="mt-6 md:mt-8">
-          <Button
-            text="Poznaj naszą ofertę"
-            primaryColor="#003d66"
-            backgroundColor="#d0ebff"
-            href="/folie-okienne"
-          />
-        </motion.div>
       </motion.div>
 
       <motion.div
         variants={imageVariants}
-        className="relative w-full lg:w-8/12 mt-6 md:mt-8 aspect-[4/3]"
+        className="relative w-full mt-6 md:mt-8 aspect-[4/3] flex justify-center"
       >
+        <div className="absolute t-0 flex flex-col justify-center items-center w-full">
+          <motion.h2
+            variants={itemVariants}
+            className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.1)]"
+            style={{ color: "#333", fontWeight: 500 }}
+          >
+            Zajmujemy się montażem folii okiennych na terenie całego województwa
+            małopolskiego i&nbsp;śląskiego.
+          </motion.h2>
+
+          <motion.div
+            variants={itemVariants}
+            className="mt-6 md:mt-8 z-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)]"
+          >
+            <Button
+              text="Poznaj naszą ofertę"
+              primaryColor="#003d66"
+              backgroundColor="#d0ebff"
+              href="/folie-okienne"
+            />
+          </motion.div>
+        </div>
         <Image
           src="/fasada.webp"
           alt="Fasada budynku z foliami okiennymi"
           fill
-          className="object-cover h-full w-full md:px-16 lg:px-32"
+          className="object-cover h-full w-full "
           priority
           unoptimized
         />
       </motion.div>
 
-      <div className="w-full flex flex-col items-center bg-blue-lighter sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="w-full flex flex-col items-center bg-blue-lighter sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 ">
         <motion.div
           initial="hidden"
           whileInView="visible"
