@@ -40,13 +40,16 @@ export default function Page() {
   };
 
   const cardVariants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { y: 40, opacity: 0, scale: 0.95 },
     visible: (i: number) => ({
       y: 0,
       opacity: 1,
+      scale: 1,
       transition: {
         delay: i * 0.15,
-        duration: 0.5,
+        type: "spring",
+        stiffness: 70,
+        damping: 12,
       },
     }),
   };
@@ -112,9 +115,7 @@ export default function Page() {
             className="text-justify"
             style={{ textAlign: "justify" }}
           >
-            <span style={{ fontWeight: "bold", fontSize: "2.5rem" }}>
-              Dragon Folie{" "}
-            </span>
+            <span id="dragonH2">Dragon Folie </span>
             to nowa firma na Polskim rynku, jednak w montażu folii możemy
             pochwalić się wieloletnim doświadczeniem. <br />
             Nasi monterzy to wykwalifikowani specjaliści, którzy:
@@ -153,7 +154,6 @@ export default function Page() {
 
         <motion.div
           variants={fadeIn}
-          whileHover={{ scale: 1.1 }}
           className="w-full lg:w-1/3 flex justify-center lg:justify-end"
         >
           <Image
@@ -174,8 +174,6 @@ export default function Page() {
       ></motion.div>
 
       <motion.div
-        initial="hidden"
-        whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={container}
         className="px-4 sm:px-8 md:px-16 flex justify-center items-center flex-col bg-gradient-to-b from-white to-blue-50 mt-8 md:mt-10 py-12 md:py-20 relative overflow-hidden"
@@ -204,11 +202,8 @@ export default function Page() {
               custom={index}
               variants={cardVariants}
               initial="hidden"
-              whileHover={{
-                scale: 1.02,
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05)",
-              }}
               whileInView="visible"
+              viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-5 p-6 md:p-8 bg-white rounded-xl md:rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100"
             >
               <div className="text-blue p-3 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center shadow-inner">

@@ -17,41 +17,86 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
+const containerVariantsTwo = {
+  hidden: { opacity: 0 },
   visible: {
-    y: 0,
     opacity: 1,
     transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 10,
+      delay: 0.9,
+      staggerChildren: 0.2,
+      when: "beforeChildren",
     },
   },
 };
 
-const imageVariants = {
+const itemVariants = {
+  hidden: { y: 30, opacity: 0, scale: 0.95 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 12,
+    },
+  },
+};
+
+const itemVariantsAltOne = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "tween", duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const itemVariantsAltTwo = {
+  hidden: { opacity: 0, x: 50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "tween", duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const headlineVariant = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const subHeadlineVariant = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: "easeOut", delay: 0.3 },
+  },
+};
+
+const buttonVariant = {
   hidden: { opacity: 0, scale: 0.9 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
+    transition: { type: "spring", stiffness: 300, damping: 20, delay: 0.6 },
   },
 };
 
-const cardVariants = {
-  hidden: { y: 50, opacity: 0 },
-  visible: (i: number) => ({
-    y: 0,
+const imageReveal = {
+  hidden: { opacity: 0, y: 50, scale: 1.05 },
+  visible: {
     opacity: 1,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.5,
-    },
-  }),
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.7, ease: "easeOut", delay: 0.8 },
+  },
 };
 
 export default function Home() {
@@ -68,39 +113,38 @@ export default function Home() {
         className="w-full px-4 sm:px-8 md:px-16 flex flex-col items-center"
       >
         <motion.h1
-          variants={itemVariants}
+          variants={headlineVariant}
           className="mt-8 sm:mt-12 md:mt-16 text-center"
         >
           <span className="text-dark">Witamy Państwa na naszej stronie!</span>
         </motion.h1>
       </motion.div>
+      <motion.div variants={containerVariants}>
+        <motion.h2
+          variants={subHeadlineVariant}
+          className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20"
+          style={{ color: "#333", fontWeight: 500, textAlign: "center" }}
+        >
+          Zajmujemy się montażem folii okiennych na terenie całego województwa
+          małopolskiego i&nbsp;śląskiego.
+        </motion.h2>
+      </motion.div>
+
+      <motion.div variants={containerVariants}>
+        <motion.div variants={buttonVariant} className="mt-10 md:mt-12 z-20">
+          <Button
+            text="Poznaj naszą ofertę"
+            primaryColor="#003d66"
+            backgroundColor="#d0ebff"
+            href="/folie-okienne"
+          />
+        </motion.div>
+      </motion.div>
 
       <motion.div
-        variants={imageVariants}
-        className="relative w-full mt-6 md:mt-8 aspect-video flex justify-center"
+        variants={imageReveal}
+        className="relative w-full mt-10 md:mt-12 aspect-video flex justify-center z-30"
       >
-        <div className="absolute t-0 flex flex-col justify-center items-center w-full text-center">
-          <motion.h2
-            variants={itemVariants}
-            className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
-            style={{ color: "#333", fontWeight: 500, textAlign: "center" }}
-          >
-            Zajmujemy się montażem folii okiennych na terenie całego województwa
-            małopolskiego i&nbsp;śląskiego.
-          </motion.h2>
-
-          <motion.div
-            variants={itemVariants}
-            className="mt-6 md:mt-8 z-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)]"
-          >
-            <Button
-              text="Poznaj naszą ofertę"
-              primaryColor="#003d66"
-              backgroundColor="#d0ebff"
-              href="/folie-okienne"
-            />
-          </motion.div>
-        </div>
         <Image
           src="/fasada.webp"
           alt="Fasada budynku z foliami okiennymi"
@@ -111,14 +155,14 @@ export default function Home() {
         />
       </motion.div>
 
-      <div className="w-full flex flex-col items-center bg-blue-lighter sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 ">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-          className="w-full sm:mt-[200px] md:mt-[150px] lg:mt-[250px] xl:mt-[350px]"
-        >
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariantsTwo}
+        className="w-full flex flex-col items-center bg-gradient-to-t from-[#d0ebff] via-white to-white sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 z-10"
+      >
+        <div className="w-full sm:mt-[200px] md:mt-[150px] lg:mt-[250px] xl:mt-[350px]">
           <motion.h3
             variants={itemVariants}
             className="mt-12 md:mt-24 text-2xl md:text-3xl font-bold text-center"
@@ -131,8 +175,7 @@ export default function Home() {
             className="flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-12 mt-8 md:mt-16 w-full"
           >
             <motion.div
-              custom={0}
-              variants={cardVariants}
+              variants={itemVariantsAltOne}
               className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full"
             >
               <div className="flex-shrink-0 bg-blue/10 p-3 rounded-full">
@@ -153,8 +196,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              custom={1}
-              variants={cardVariants}
+              variants={itemVariantsAltTwo}
               className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full"
             >
               <div className="flex-shrink-0 bg-blue/10 p-3 rounded-full">
@@ -174,8 +216,8 @@ export default function Home() {
               </div>
             </motion.div>
           </motion.div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
       <Footer />
     </motion.div>
