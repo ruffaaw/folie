@@ -80,7 +80,12 @@ export default function Page() {
         <motion.h1 variants={item}>
           <span className="text-dark relative inline-block">
             <span className="relative z-10">Folie okienne</span>
-            <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-light -z-0"></span>
+            <motion.span
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+              className="absolute bottom-0 left-0 w-full h-2 bg-blue-light origin-left"
+            />{" "}
           </span>
         </motion.h1>
 
