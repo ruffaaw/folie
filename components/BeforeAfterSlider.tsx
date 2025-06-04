@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 const image = {
-  hidden: { opacity: 0, scale: 0.95 },
+  hidden: { opacity: 0, scale: 0.9 },
   visible: {
     opacity: 1,
     scale: 1,
@@ -70,7 +70,7 @@ export default function BeforeAfterSlider({
     >
       <div
         ref={containerRef}
-        className="relative w-full aspect-[10/7] overflow-hidden select-none touch-none"
+        className="relative w-full aspect-video overflow-hidden select-none touch-none"
         onMouseMove={handleMouseMove}
         onMouseDown={handleStart}
         onTouchStart={handleStart}
@@ -89,7 +89,7 @@ export default function BeforeAfterSlider({
         />
 
         <div
-          className="absolute top-0 left-0 right-0 w-full aspect-[10/7] overflow-hidden select-none"
+          className="absolute top-0 left-0 right-0 w-full aspect-video overflow-hidden select-none"
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
           <Image

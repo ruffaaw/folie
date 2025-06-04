@@ -141,9 +141,6 @@ export default function Page() {
 
                 <motion.div
                   variants={container}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
                   className="flex flex-wrap gap-2 mb-3"
                 >
                   {offer.advantages.map((advantage, advIndex) => (
@@ -160,9 +157,6 @@ export default function Page() {
 
                 <motion.div
                   variants={container}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
                   className="flex flex-wrap gap-2"
                 >
                   {offer.places.map((place, placeIndex) => (
@@ -184,7 +178,7 @@ export default function Page() {
               >
                 <Link
                   href={offer.href}
-                  className="flex items-center gap-1 text-blue w-fit mt-4"
+                  className="flex items-center gap-1 text-blue w-fit mt-4 max-lg:hidden"
                 >
                   Zobacz szczegóły <ArrowRight />
                 </Link>
