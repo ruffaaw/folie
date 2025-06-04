@@ -17,18 +17,6 @@ const containerVariants = {
   },
 };
 
-const containerVariantsTwo = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.9,
-      staggerChildren: 0.2,
-      when: "beforeChildren",
-    },
-  },
-};
-
 const itemVariants = {
   hidden: { y: 30, opacity: 0, scale: 0.95 },
   visible: {
@@ -159,7 +147,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariantsTwo}
+        variants={containerVariants}
         className="w-full flex flex-col items-center bg-gradient-to-t from-[#d0ebff] via-white to-white sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 z-10"
       >
         <div className="w-full sm:mt-[200px] md:mt-[150px] lg:mt-[250px] xl:mt-[350px]">
