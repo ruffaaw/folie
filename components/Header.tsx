@@ -103,8 +103,12 @@ export default function Header() {
       ref={headerRef}
       className="fixed top-0 w-full bg-blue flex justify-between items-center px-4 sm:px-8 md:px-16 py-2 md:py-[10px] z-50 shadow-md"
     >
-      <Link href="/" onClick={closeAllMenus} >
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex flex-row gap-2 items-center">
+      <Link href="/" onClick={closeAllMenus}>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex flex-row gap-2 items-center"
+        >
           <Image
             src="/logo.jpg"
             alt="logo"
@@ -112,7 +116,9 @@ export default function Header() {
             height={80}
             className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
           />
-          <span className="text-light font-bold text-xl xl:text-2xl">DRAGON FOLIE</span>
+          <span className="text-light font-bold text-xl xl:text-2xl">
+            DRAGON FOLIE
+          </span>
         </motion.div>
       </Link>
 
@@ -120,7 +126,7 @@ export default function Header() {
         {[
           { name: "O nas", href: "/o-nas" },
           { name: "Folie okienne", href: "/folie-okienne", submenu: true },
-          { name: "Montaż i wycena", href: "/montaz-i-wycena" },
+          { name: `Montaż i${"\u00A0"}wycena`, href: "/montaz-i-wycena" },
           { name: "Nasze realizacje", href: "/nasze-realizacje" },
           { name: "Kontakt", href: "/kontakt" },
         ].map((item) => (
