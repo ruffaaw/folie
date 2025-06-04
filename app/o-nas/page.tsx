@@ -102,7 +102,15 @@ export default function Page() {
         className="mt-8 sm:mt-12 md:mt-16 px-4 sm:px-8 md:px-16"
         style={{ textAlign: "justify" }}
       >
-        Dragon <span className="text-blue">Folie</span>
+        <span className="text-dark relative inline-block">
+          Dragon <span className="text-blue">Folie</span>
+          <motion.span
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+            className="absolute bottom-0 left-0 w-full h-2 bg-blue-light origin-left"
+          />
+        </span>
       </motion.h1>
 
       <motion.div
@@ -176,6 +184,8 @@ export default function Page() {
       <motion.div
         viewport={{ once: true, margin: "-100px" }}
         variants={container}
+        initial="hidden"
+        whileInView="visible"
         className="px-4 sm:px-8 md:px-16 flex justify-center items-center flex-col bg-gradient-to-b from-white to-blue-50 mt-8 md:mt-10 py-12 md:py-20 relative overflow-hidden"
       >
         <div className="absolute -bottom-20 -right-20 w-40 h-40 rounded-full bg-blue-light"></div>
@@ -188,7 +198,6 @@ export default function Page() {
         >
           <span className="relative inline-block">
             <span className="relative z-10">Dlaczego warto nam zaufać?</span>
-            <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-light -z-0"></span>
           </span>
         </motion.h3>
 
