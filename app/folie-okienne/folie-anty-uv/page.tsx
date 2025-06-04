@@ -65,9 +65,29 @@ const image = {
     opacity: 1,
     scale: 1,
     transition: {
+      delay: 0.2,
       duration: 0.8,
       ease: "easeOut",
     },
+  },
+};
+
+const headline = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const sub = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: "easeOut", delay: 0.3 },
   },
 };
 
@@ -83,7 +103,7 @@ export default function Page() {
       <Title title="Ochrona przed UV" />
 
       <motion.h1
-        variants={item}
+        variants={headline}
         className="mt-7 text-center px-4 sm:px-8 md:px-16"
       >
         <span className="text-dark relative inline-block">
@@ -100,7 +120,7 @@ export default function Page() {
       </motion.h1>
 
       <motion.h2
-        variants={item}
+        variants={sub}
         className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 "
       >
         Ten rodzaj folii powoduje zatrzymanie szkodliwego promienia
