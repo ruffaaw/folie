@@ -93,7 +93,7 @@ export default function Page() {
           <motion.span
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
             className="absolute bottom-0 left-0 w-full h-2 bg-blue-light origin-left"
           />{" "}
         </span>
