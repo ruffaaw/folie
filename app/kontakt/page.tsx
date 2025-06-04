@@ -446,7 +446,7 @@ export default function Page() {
             viewport={{ once: true }}
             className="text-xl font-semibold mb-4"
           >
-            Dragon Folie - Karol Jaskorski
+            Dragon Folie
           </motion.h3>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-6">
@@ -487,10 +487,17 @@ export default function Page() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex items-center"
+              className="flex items-center hover:scale-110"
             >
               <MapPin className="text-blue mr-2" />
-              <span>Małopolskie/Śląskie</span>
+              <a
+                href="https://maps.app.goo.gl/TW4CQtPvfUZrAb5R6"
+                target="_blank"
+                className="text-left hover:text-blue"
+              >
+                ul. Polnych kwiatów 9, <br />
+                32-070 Wołowice
+              </a>
             </motion.div>
           </div>
 
@@ -502,6 +509,7 @@ export default function Page() {
               whileInView="visible"
               viewport={{ once: true }}
               href="#"
+              target="_blank"
               className="text-blue hover:text-blue hover:scale-110"
               aria-label="Instagram"
             >
@@ -514,6 +522,7 @@ export default function Page() {
               whileInView="visible"
               viewport={{ once: true }}
               href="#"
+              target="_blank"
               className="text-blue hover:text-blue hover:scale-110"
               aria-label="Facebook"
             >
