@@ -1,4 +1,9 @@
-import { BookOpen, House, Pill, Printer, ShoppingBag, Sun } from "lucide-react";
+import HomeIcon from "@/public/icons/antyUV/HomeIcon";
+import MuseumIcon from "@/public/icons/antyUV/MuseumIcon";
+import OfficeIcon from "@/public/icons/antyUV/OfficeIcon";
+import PillIcon from "@/public/icons/antyUV/PillIcon";
+import PrintingIcon from "@/public/icons/antyUV/PrintingIcon";
+import ShopIcon from "@/public/icons/antyUV/ShopIcon";
 
 export const negative = [
   {
@@ -30,33 +35,33 @@ export const negative = [
 
 export const places = [
   {
-    icon: <BookOpen />,
+    icon: <MuseumIcon />,
     title: `Muzea i${"\u00A0"}biblioteki`,
     description: `Ochrona cennych eksponatów i${"\u00A0"}zbiorów przed żółknięciem i${"\u00A0"}degradacją spowodowaną promieniowaniem UV.`,
   },
   {
-    icon: <ShoppingBag />,
+    icon: <ShopIcon />,
     title: `Sklepy z${"\u00A0"}odzieżą i${"\u00A0"}obuwiem`,
     description: `Zabezpieczenie witryn przed płowieniem produktów, zachowanie żywych kolorów wystawowej odzieży i${"\u00A0"}obuwia.`,
   },
   {
-    icon: <House />,
+    icon: <HomeIcon />,
     title: `Mieszkania i${"\u00A0"}domy`,
     description: `Ochrona mebli, podłóg i${"\u00A0"}dzieł sztuki przed blaknięciem w${"\u00A0"}miejscach nasłonecznionych.`,
   },
   {
-    icon: <Printer />,
+    icon: <PrintingIcon />,
     title: "Drukarnie",
     description:
       "Zabezpieczenie materiałów drukowanych szczególnie wrażliwych na działanie światła słonecznego.",
   },
   {
-    icon: <Pill />,
+    icon: <PillIcon />,
     title: "Przemysł farmaceutyczny",
     description: `Ochrona leków i${"\u00A0"}substancji wrażliwych na światło, które mogą tracić właściwości pod wpływem UV.`,
   },
   {
-    icon: <Sun />,
+    icon: <OfficeIcon />,
     title: `Biura i${"\u00A0"}przestrzenie biurowe`,
     description: `Zmniejszenie nagrzewania pomieszczeń i${"\u00A0"}ochrona pracowników przed szkodliwym promieniowaniem.`,
   },
