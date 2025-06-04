@@ -66,6 +66,35 @@ export default function Page() {
     }),
   };
 
+  const headline = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const sub = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: "easeOut", delay: 0.3 },
+    },
+  };
+
+  const imageReveal = {
+    hidden: { opacity: 0, y: 50, scale: 1.05 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.7, ease: "easeOut", delay: 0.8 },
+    },
+  };
+
   const points = [
     {
       icon: <Shield />,
@@ -98,7 +127,7 @@ export default function Page() {
       <Header />
 
       <motion.h1
-        variants={item}
+        variants={headline}
         className="mt-8 sm:mt-12 md:mt-16 px-4 sm:px-8 md:px-16"
         style={{ textAlign: "justify" }}
       >
@@ -119,7 +148,7 @@ export default function Page() {
       >
         <div className="w-full lg:w-2/3 max-w-full lg:max-w-[900px]">
           <motion.h2
-            variants={item}
+            variants={sub}
             className="text-justify"
             style={{ textAlign: "justify" }}
           >
@@ -161,7 +190,7 @@ export default function Page() {
         </div>
 
         <motion.div
-          variants={fadeIn}
+          variants={imageReveal}
           className="w-full lg:w-1/3 flex justify-center lg:justify-end"
         >
           <Image
