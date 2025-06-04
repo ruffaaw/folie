@@ -6,18 +6,23 @@ import { Check, Mail } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const containerVariants = {
+const container = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
       when: "beforeChildren",
+      delay:
+        typeof window !== "undefined" &&
+        window.matchMedia("(min-width: 768px").matches
+          ? 0.9
+          : 0,
     },
   },
 };
 
-const itemVariants = {
+const item = {
   hidden: { y: 30, opacity: 0, scale: 0.95 },
   visible: {
     y: 0,
@@ -31,7 +36,7 @@ const itemVariants = {
   },
 };
 
-const itemVariantsAltOne = {
+const itemAltOne = {
   hidden: { opacity: 0, x: -50 },
   visible: {
     opacity: 1,
@@ -40,7 +45,7 @@ const itemVariantsAltOne = {
   },
 };
 
-const itemVariantsAltTwo = {
+const itemAltTwo = {
   hidden: { opacity: 0, x: 50 },
   visible: {
     opacity: 1,
@@ -49,7 +54,7 @@ const itemVariantsAltTwo = {
   },
 };
 
-const headlineVariant = {
+const headline = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
   visible: {
     opacity: 1,
@@ -59,7 +64,7 @@ const headlineVariant = {
   },
 };
 
-const subHeadlineVariant = {
+const sub = {
   hidden: { opacity: 0, x: -50 },
   visible: {
     opacity: 1,
@@ -68,7 +73,7 @@ const subHeadlineVariant = {
   },
 };
 
-const buttonVariant = {
+const button = {
   hidden: { opacity: 0, scale: 0.9 },
   visible: {
     opacity: 1,
@@ -97,19 +102,27 @@ export default function Home() {
       <Header />
 
       <motion.div
-        variants={containerVariants}
+        variants={container}
         className="w-full px-4 sm:px-8 md:px-16 flex flex-col items-center"
       >
         <motion.h1
-          variants={headlineVariant}
+          variants={headline}
           className="mt-8 sm:mt-12 md:mt-16 text-center"
         >
-          <span className="text-dark">Witamy Państwa na naszej stronie!</span>
+          <span className="text-dark relative inline-block">
+            <span className="text-dark">Witamy Państwa na naszej stronie!</span>
+            <motion.span
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+              className="absolute bottom-0 left-0 w-full h-2 bg-blue-light origin-left"
+            />
+          </span>
         </motion.h1>
       </motion.div>
-      <motion.div variants={containerVariants}>
+      <motion.div variants={container}>
         <motion.h2
-          variants={subHeadlineVariant}
+          variants={sub}
           className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20"
           style={{ color: "#333", fontWeight: 500, textAlign: "center" }}
         >
@@ -118,8 +131,8 @@ export default function Home() {
         </motion.h2>
       </motion.div>
 
-      <motion.div variants={containerVariants}>
-        <motion.div variants={buttonVariant} className="mt-10 md:mt-12 z-20">
+      <motion.div variants={container}>
+        <motion.div variants={button} className="mt-10 md:mt-12 z-20">
           <Button
             text="Poznaj naszą ofertę"
             primaryColor="#003d66"
@@ -147,23 +160,23 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariants}
+        variants={container}
         className="w-full flex flex-col items-center bg-gradient-to-t from-[#d0ebff] via-white to-white sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 z-10"
       >
         <div className="w-full sm:mt-[200px] md:mt-[150px] lg:mt-[250px] xl:mt-[350px]">
           <motion.h3
-            variants={itemVariants}
+            variants={item}
             className="mt-12 md:mt-24 text-2xl md:text-3xl font-bold text-center"
           >
             Dlaczego warto nam zaufać?
           </motion.h3>
 
           <motion.div
-            variants={containerVariants}
+            variants={container}
             className="flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-12 mt-8 md:mt-16 w-full"
           >
             <motion.div
-              variants={itemVariantsAltOne}
+              variants={itemAltOne}
               className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full"
             >
               <div className="flex-shrink-0 bg-blue/10 p-3 rounded-full">
@@ -184,7 +197,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              variants={itemVariantsAltTwo}
+              variants={itemAltTwo}
               className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full"
             >
               <div className="flex-shrink-0 bg-blue/10 p-3 rounded-full">
