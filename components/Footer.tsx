@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer className="w-full">
       <div className="w-full h-full flex flex-col">
-        <div className="flex flex-col md:flex-row justify-between items-center py-2 bg-gray-dark px-4 sm:px-8 md:px-16 lg:px-32">
+        <div className="flex flex-col md:flex-row justify-between items-center py-2 bg-gray-dark px-4 sm:px-8 md:px-16">
           <p className="my-2 text-center md:text-left" id="footer-text">
             2025 Policrafts ©
           </p>
