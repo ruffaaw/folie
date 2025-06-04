@@ -77,13 +77,13 @@ export default function Home() {
 
       <motion.div
         variants={imageVariants}
-        className="relative w-full mt-6 md:mt-8 aspect-[4/3] flex justify-center"
+        className="relative w-full mt-6 md:mt-8 aspect-video flex justify-center"
       >
-        <div className="absolute t-0 flex flex-col justify-center items-center w-full">
+        <div className="absolute t-0 flex flex-col justify-center items-center w-full text-center">
           <motion.h2
             variants={itemVariants}
-            className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.1)]"
-            style={{ color: "#333", fontWeight: 500 }}
+            className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+            style={{ color: "#333", fontWeight: 500, textAlign: "center" }}
           >
             Zajmujemy się montażem folii okiennych na terenie całego województwa
             małopolskiego i&nbsp;śląskiego.
