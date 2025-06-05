@@ -18,20 +18,6 @@ const container = {
   },
 };
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 10,
-      duration: 0.6,
-    },
-  },
-};
-
 const cardVariants = {
   hidden: { y: 30, opacity: 0 },
   visible: (i: number) => ({
