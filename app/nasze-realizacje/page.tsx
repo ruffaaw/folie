@@ -113,14 +113,14 @@ export default function Page() {
 
       <motion.h2
         variants={sub}
-        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 lg:px-32"
+        className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 "
       >
         Zobacz przykłady naszych prac i&nbsp;inspiracje dla Twojego projektu
       </motion.h2>
 
       <motion.div
         variants={imageReveal}
-        className="w-full lg:w-4/6 mt-4 md:mt-7"
+        className="w-full md:px-16 mt-4 md:mt-7"
       >
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -152,7 +152,7 @@ export default function Page() {
 
       <motion.div
         variants={container}
-        className="w-full px-4 sm:px-8 md:px-16 lg:px-32 mt-12 md:mt-16"
+        className="w-full px-4 sm:px-8 md:px-16  mt-12 md:mt-16"
       >
         <motion.div
           variants={item}
@@ -216,12 +216,19 @@ export default function Page() {
         </motion.div>
       </motion.div>
 
-      <BottomContact
-        title="Zainspirowany naszymi realizacjami?"
-        className="mt-12 md:mt-16"
-      />
-
-      <Footer />
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="w-full"
+      >
+        <BottomContact
+          title="Zainspirowany naszymi realizacjami?"
+          className="mt-12 md:mt-16"
+        />
+        <Footer />
+      </motion.div>
     </motion.div>
   );
 }
