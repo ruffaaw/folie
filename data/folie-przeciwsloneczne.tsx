@@ -1,43 +1,44 @@
-import {
-  Thermometer,
-  Home,
-  Building,
-  Snowflake,
-  Shield,
-  Droplets,
-  Zap,
-  Leaf,
-  Clock,
-} from "lucide-react";
+import ClockIcon from "@/public/icons/foliePrzeciwsloneczne/ClockIcon";
+import DropletsIcon from "@/public/icons/foliePrzeciwsloneczne/DropletsIcon";
+import HomeIcon from "@/public/icons/foliePrzeciwsloneczne/HomeIcon";
+import LeafIcon from "@/public/icons/foliePrzeciwsloneczne/LeafIcon";
+import MonumentIcon from "@/public/icons/foliePrzeciwsloneczne/MonumentIcon";
+import OfficeIcon from "@/public/icons/foliePrzeciwsloneczne/OfficeIcon";
+import RestaurantIcon from "@/public/icons/foliePrzeciwsloneczne/RestaurantIcon";
+import SchoolIcon from "@/public/icons/foliePrzeciwsloneczne/SchoolIcon";
+import ShieldIcon from "@/public/icons/foliePrzeciwsloneczne/ShieldIcon";
+import ShoppingCentereIcon from "@/public/icons/foliePrzeciwsloneczne/ShoppingCentereIcon";
+import ThermometerIcon from "@/public/icons/foliePrzeciwsloneczne/ThermometerIcon";
+import ZapIcon from "@/public/icons/foliePrzeciwsloneczne/ZapIcon";
 
 export const features = [
   {
-    icon: <Thermometer />,
+    icon: <ThermometerIcon />,
     title: "Obniżenie temperatury",
     description: "Redukcja nagrzewania pomieszczeń",
   },
   {
-    icon: <Zap />,
+    icon: <ZapIcon />,
     title: "Oszczędność energii",
     description: "Znaczne zmniejszenie kosztów klimatyzacji",
   },
   {
-    icon: <Shield />,
+    icon: <ShieldIcon />,
     title: "Ochrona UV",
     description: "Ochrona przed szkodliwymi promieniami UV",
   },
   {
-    icon: <Leaf />,
+    icon: <LeafIcon />,
     title: "Ochrona wnętrz",
     description: `Zapobiega blaknięciu mebli i${"\u00A0"}podłóg`,
   },
   {
-    icon: <Droplets />,
+    icon: <DropletsIcon />,
     title: "Eliminacja refleksów",
     description: `Poprawa widoczności w${"\u00A0"}słoneczne dni`,
   },
   {
-    icon: <Clock />,
+    icon: <ClockIcon />,
     title: "Długotrwałość",
     description: `Żywotność 5-10 lat w${"\u00A0"}zależności od produktu`,
   },
@@ -45,35 +46,35 @@ export const features = [
 
 export const places = [
   {
-    icon: <Building />,
+    icon: <OfficeIcon />,
     title: "Nowoczesne biurowce",
     description:
       "Rozwiązanie problemu przegrzewania się przeszklonych powierzchni bez konieczności montażu żaluzji.",
   },
   {
-    icon: <Home />,
+    icon: <HomeIcon />,
     title: `Domy i${"\u00A0"}mieszkania`,
     description: `Ochrona przed nadmiernym nagrzewaniem pomieszczeń od strony południowej i${"\u00A0"}zachodniej.`,
   },
   {
-    icon: <Snowflake />,
+    icon: <MonumentIcon />,
     title: "Zabytkowe budynki",
     description:
       "Efekt odświeżenia elewacji przy zachowaniu charakteru budynku.",
   },
   {
-    icon: <Building />,
+    icon: <ShoppingCentereIcon />,
     title: "Obiekty handlowe",
     description: `Ochrona towarów przed blaknięciem i${"\u00A0"}zmniejszenie kosztów klimatyzacji.`,
   },
   {
-    icon: <Home />,
+    icon: <RestaurantIcon />,
     title: `Restauracje i${"\u00A0"}hotele`,
     description:
       "Zapewnienie komfortu termicznego gościom bez ograniczania widoku na zewnątrz.",
   },
   {
-    icon: <Building />,
+    icon: <SchoolIcon />,
     title: `Szkoły i${"\u00A0"}przedszkola`,
     description: `Tworzenie komfortowych warunków do nauki i${"\u00A0"}zabawy w słoneczne dni.`,
   },
