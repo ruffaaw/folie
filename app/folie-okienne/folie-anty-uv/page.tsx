@@ -8,10 +8,10 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import AntyUVIcon from "@/public/icons/antyUV/AntyUVIcon";
-import Flask from "@/public/icons/antyUV/Flask";
-import TriangleAlert from "@/public/icons/antyUV/TriangleAlert";
-import PlacesIcon from "@/public/icons/antyUV/PlacesIcon";
+import AntyUVIcon from "@/public/icons/AntyUVIcon";
+import Flask from "@/public/icons/Flask";
+import TriangleAlert from "@/public/icons/TriangleAlert";
+import PlacesIcon from "@/public/icons/PlacesIcon";
 
 const container = {
   hidden: { opacity: 0 },

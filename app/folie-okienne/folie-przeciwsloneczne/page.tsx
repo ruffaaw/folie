@@ -8,13 +8,13 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import ThermometerIcon from "@/public/icons/foliePrzeciwsloneczne/ThermometerIcon";
-import ShieldIcon from "@/public/icons/o-nas/ShieldIcon";
-import LayoutIcon from "@/public/icons/foliePrzeciwsloneczne/LayoutIcon";
-import SunIcon from "@/public/icons/foliePrzeciwsloneczne/SunIcon";
-import HomeIcon from "@/public/icons/foliePrzeciwsloneczne/HomeIcon";
-import CheckIcon from "@/public/icons/foliePrzeciwsloneczne/CheckIcon";
-import PlacesIcon from "@/public/icons/foliePrzeciwsloneczne/PlacesIcon";
+import ThermometerIcon from "@/public/icons/ThermometerIcon";
+import ShieldIcon from "@/public/icons/ShieldIcon";
+import LayoutIcon from "@/public/icons/LayoutIcon";
+import SunIcon from "@/public/icons/SunIcon";
+import HomeIcon from "@/public/icons/HomeIcon";
+import CheckIcon from "@/public/icons/CheckIcon";
+import PlacesIcon from "@/public/icons/PlacesIcon";
 
 const container = {
   hidden: { opacity: 0 },

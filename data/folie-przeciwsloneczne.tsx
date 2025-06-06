@@ -1,15 +1,15 @@
-import ClockIcon from "@/public/icons/foliePrzeciwsloneczne/ClockIcon";
-import DropletsIcon from "@/public/icons/foliePrzeciwsloneczne/DropletsIcon";
-import HomeIcon from "@/public/icons/foliePrzeciwsloneczne/HomeIcon";
-import LeafIcon from "@/public/icons/foliePrzeciwsloneczne/LeafIcon";
-import MonumentIcon from "@/public/icons/foliePrzeciwsloneczne/MonumentIcon";
-import OfficeIcon from "@/public/icons/foliePrzeciwsloneczne/OfficeIcon";
-import RestaurantIcon from "@/public/icons/foliePrzeciwsloneczne/RestaurantIcon";
-import SchoolIcon from "@/public/icons/foliePrzeciwsloneczne/SchoolIcon";
-import ShieldIcon from "@/public/icons/foliePrzeciwsloneczne/ShieldIcon";
-import ShoppingCentereIcon from "@/public/icons/foliePrzeciwsloneczne/ShoppingCentereIcon";
-import ThermometerIcon from "@/public/icons/foliePrzeciwsloneczne/ThermometerIcon";
-import ZapIcon from "@/public/icons/foliePrzeciwsloneczne/ZapIcon";
+import ClockIcon from "@/public/icons/ClockIcon";
+import DropletsIcon from "@/public/icons/DropletsIcon";
+import HomeIcon from "@/public/icons/HomeIcon";
+import LeafIcon from "@/public/icons/LeafIcon";
+import MonumentIcon from "@/public/icons/MonumentIcon";
+import OfficeIcon from "@/public/icons/OfficeIcon";
+import RestaurantIcon from "@/public/icons/RestaurantIcon";
+import SchoolIcon from "@/public/icons/SchoolIcon";
+import ShieldIcon from "@/public/icons/ShieldIcon";
+import ShoppingCentereIcon from "@/public/icons/ShoppingCentereIcon";
+import ThermometerIcon from "@/public/icons/ThermometerIcon";
+import ZapIcon from "@/public/icons/ZapIcon";
 
 export const features = [
   {

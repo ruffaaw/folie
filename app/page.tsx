@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import EnvelopeIcon from "@/public/icons/homePage/EnvelopeIcon";
-import CheckIcon from "@/public/icons/homePage/CheckIcon";
+import EnvelopeIcon from "@/public/icons/EnvelopeIcon";
+import CheckIcon from "@/public/icons/CheckIcon50";
 
 const container = {
   hidden: { opacity: 0 },

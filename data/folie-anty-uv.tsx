@@ -1,9 +1,9 @@
-import HomeIcon from "@/public/icons/antyUV/HomeIcon";
-import MuseumIcon from "@/public/icons/antyUV/MuseumIcon";
-import OfficeIcon from "@/public/icons/antyUV/OfficeIcon";
-import PillIcon from "@/public/icons/antyUV/PillIcon";
-import PrintingIcon from "@/public/icons/antyUV/PrintingIcon";
-import ShopIcon from "@/public/icons/antyUV/ShopIcon";
+import HomeIcon from "@/public/icons/HomeIcon";
+import MuseumIcon from "@/public/icons/MuseumIcon";
+import OfficeIcon from "@/public/icons/OfficeIcon";
+import PillIcon from "@/public/icons/PillIcon";
+import PrintingIcon from "@/public/icons/PrintingIcon";
+import ShopIcon from "@/public/icons/ShopIcon";
 
 export const negative = [
   {

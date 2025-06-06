@@ -4,11 +4,11 @@ import Image from "next/image";
 import React from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import ShieldIcon from "@/public/icons/o-nas/ShieldIcon";
-import UserIcon from "@/public/icons/o-nas/UserIcon";
-import HeartIcon from "@/public/icons/o-nas/HeartIcon";
-import SunIcon from "@/public/icons/o-nas/SunIcon";
-import CheckIcon from "@/public/icons/o-nas/CheckIcon";
+import ShieldIcon from "@/public/icons/ShieldIcon";
+import UserIcon from "@/public/icons/UserIcon";
+import HeartIcon from "@/public/icons/HeartIcon";
+import SunIcon from "@/public/icons/SunIcon";
+import CheckIcon from "@/public/icons/CheckIcon";
 
 export default function Page() {
   const container = {
