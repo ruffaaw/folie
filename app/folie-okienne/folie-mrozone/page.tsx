@@ -234,13 +234,12 @@ export default function Page() {
                 viewport={{ once: true, margin: "-100px" }}
                 className="flex gap-5 p-5 lg:p-7 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] card"
               >
-                <div className="text-blue p-4 bg-blue-lighter rounded-xl flex items-center justify-center w-16 h-16 shrink-0">
-                  <div className="w-8 h-8 flex items-center justify-center">
-                    {React.cloneElement(item.icon, {
-                      className: "w-6 h-6 sm:w-7 sm:h-7",
-                    })}
-                  </div>
+                <div className=" p-3 rounded-lg flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shrink-0">
+                  {React.cloneElement(item.icon, {
+                    className: "w-6 h-6 sm:w-7 sm:h-7",
+                  })}
                 </div>
+
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
