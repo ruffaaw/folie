@@ -1,10 +1,14 @@
 "use client";
 import Header from "@/components/Header";
-import { Check, Heart, Shield, Sun, Users } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import ShieldIcon from "@/public/icons/o-nas/ShieldIcon";
+import UserIcon from "@/public/icons/o-nas/UserIcon";
+import HeartIcon from "@/public/icons/o-nas/HeartIcon";
+import SunIcon from "@/public/icons/o-nas/SunIcon";
+import CheckIcon from "@/public/icons/o-nas/CheckIcon";
 
 export default function Page() {
   const container = {
@@ -47,9 +51,9 @@ export default function Page() {
       scale: 1,
       transition: {
         delay: i * 0.15,
+        duration: 0.6,
         type: "spring",
-        stiffness: 70,
-        damping: 12,
+        ease: "easeOut",
       },
     }),
   };
@@ -97,23 +101,23 @@ export default function Page() {
 
   const points = [
     {
-      icon: <Shield />,
+      icon: <ShieldIcon />,
       head: "Najwyższa jakość",
       description:
         "Używamy tylko sprawdzonych materiałów, które zapewniają długotrwały efekt.",
     },
     {
-      icon: <Users />,
+      icon: <UserIcon />,
       head: "Indywidualne podejście",
       description: `Do każdej realizacji podchodzimy w${"\u00A0"}sposób indywidualny, aby najlepiej dostosować rodzaj folii do oczekiwań i${"\u00A0"}potrzeb klienta. Naszym celem jest zwiększenie komfortu pracy.`,
     },
     {
-      icon: <Heart />,
+      icon: <HeartIcon />,
       head: "Zadowoleni klienci",
       description: `Mimo krótkiego stażu firmy możemy pochwalić się wieloma udanymi realizacjami i${"\u00A0"}pozytywnym odzewem od strony naszych klientów, a${"\u00A0"}także brakiem zgłoszeń reklamacji wykonanych przez nas usług.`,
     },
     {
-      icon: <Sun />,
+      icon: <SunIcon />,
       head: "Miła atmosfera",
       description: `Nasi monterzy przeprowadzają prace w${"\u00A0"}ciszy i${"\u00A0"}czystości. Spełniają przy tym Państwa oczekiwania w${"\u00A0"}zakresie kultury osobistej jednocześnie zachowując profesjonalne podejście`,
     },
@@ -161,7 +165,7 @@ export default function Page() {
               custom={0}
               className="flex flex-row items-center gap-2 mt-4"
             >
-              <Check />
+              <CheckIcon />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
                 dobiorą idealną folię do Twoich potrzeb,
               </h4>
@@ -171,7 +175,7 @@ export default function Page() {
               custom={1}
               className="flex flex-row items-center gap-2 mt-4"
             >
-              <Check />
+              <CheckIcon />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
                 wyjaśnią wszystkie techniczne szczegóły,
               </h4>
@@ -181,7 +185,7 @@ export default function Page() {
               custom={2}
               className="flex flex-row items-center gap-2 mt-4"
             >
-              <Check />
+              <CheckIcon />
               <h4 style={{ color: "#6b7280", fontWeight: "normal" }}>
                 zadbają o&nbsp;perfekcyjny montaż.
               </h4>
@@ -211,10 +215,10 @@ export default function Page() {
       ></motion.div>
 
       <motion.div
-        viewport={{ once: true, margin: "-100px" }}
         variants={container}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
         className="px-4 sm:px-8 md:px-16 flex justify-center items-center flex-col bg-gradient-to-b from-white to-blue-50 mt-8 md:mt-10 py-12 md:py-20 relative overflow-hidden"
       >
         <div className="absolute -bottom-20 -right-20 w-40 h-40 rounded-full bg-blue-light"></div>
@@ -241,7 +245,7 @@ export default function Page() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="flex flex-col sm:flex-row gap-5 p-6 md:p-8 bg-white rounded-xl md:rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100"
             >
               <div className="text-blue p-3 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center shadow-inner">
