@@ -45,7 +45,6 @@ export default function Header() {
 
   const isActive = (href: string) => pathname.startsWith(href);
 
-  // Animacje
   const mobileMenuVariants = {
     open: {
       opacity: 1,
@@ -110,15 +109,12 @@ export default function Header() {
           className="flex flex-row gap-2 items-center"
         >
           <Image
-            src="/logo.jpg"
+            src="/logo-białe.webp"
             alt="logo"
             width={80}
             height={80}
-            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
+            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
           />
-          <span className="text-light font-bold text-xl xl:text-2xl">
-            DRAGON FOLIE
-          </span>
         </motion.div>
       </Link>
 

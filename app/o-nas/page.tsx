@@ -198,21 +198,16 @@ export default function Page() {
           className="w-full lg:w-1/3 flex justify-center lg:justify-end"
         >
           <Image
-            src="/logo.jpg"
+            src="/logo-czarne.webp"
             alt="Logo Dragon Folie"
             width={400}
             height={400}
-            className="w-full max-w-[350px] md:max-w-[400px] rounded-lg shadow-md"
+            className="w-full max-w-[350px] md:max-w-[400px] rounded-lg drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
             priority
             unoptimized
           />
         </motion.div>
       </motion.div>
-
-      <motion.div
-        variants={fadeIn}
-        className="w-full flex justify-center my-8 md:my-12"
-      ></motion.div>
 
       <motion.div
         variants={container}
