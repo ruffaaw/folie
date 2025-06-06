@@ -287,19 +287,28 @@ export default function Page() {
               </div>
               <ul className="space-y-3 text-gray-700 ">
                 <li className="flex items-center gap-2">
-                  <CheckIcon />
+                  <div className="w-[25px] h-[25px]">
+                    <CheckIcon />
+                  </div>
+
                   <p style={{ color: "#333333" }}>
                     Zapobiega natychmiastowemu rozkruszeniu szyby
                   </p>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon />
+                  <div className="w-[25px] h-[25px]">
+                    <CheckIcon />
+                  </div>
+
                   <p style={{ color: "#333333" }}>
                     Wymaga użycia specjalistycznych narzędzi
                   </p>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon />
+                  <div className="w-[25px] h-[25px]">
+                    <CheckIcon />
+                  </div>
+
                   <p style={{ color: "#333333" }}>
                     Znacznie wydłuża czas potrzebny na sforsowanie
                     zabezpieczenia
@@ -322,19 +331,28 @@ export default function Page() {
               </div>{" "}
               <ul className="space-y-3 text-gray-700 ">
                 <li className="flex items-center gap-2">
-                  <CheckIcon />
+                  <div className="w-[25px] h-[25px]">
+                    <CheckIcon />
+                  </div>
+
                   <p style={{ color: "#333333" }}>
                     Ochrona przed falą uderzeniową wybuchu
                   </p>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon />
+                  <div className="w-[25px] h-[25px]">
+                    <CheckIcon />
+                  </div>
+
                   <p style={{ color: "#333333" }}>
                     Zabezpieczenie przed przypadkowym stłuczeniem szkła
                   </p>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon />
+                  <div className="w-[25px] h-[25px]">
+                    <CheckIcon />
+                  </div>
+
                   <p style={{ color: "#333333" }}>
                     Zmniejszenie kosztów ubezpieczenia nieruchomości
                   </p>
