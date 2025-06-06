@@ -1,44 +1,44 @@
-import {
-  Shield,
-  Lock,
-  Home,
-  Briefcase,
-  Factory,
-  AlertOctagon,
-  Zap,
-  Clock,
-  EyeOff,
-  Landmark,
-} from "lucide-react";
+import BankIcon from "@/public/icons/BankIcon";
+import ClockIcon from "@/public/icons/ClockIcon";
+import EyeOffIcon from "@/public/icons/EyeOffIcon";
+import HomeIcon from "@/public/icons/HomeIcon";
+import JewellerIcon from "@/public/icons/JewellerIcon";
+import LockIcon from "@/public/icons/LockIcon";
+import OfficeIcon from "@/public/icons/OfficeIcon";
+import ProductionFloorIcon from "@/public/icons/ProductionFloorIcon";
+import PublishInstitutionIcon from "@/public/icons/PublicInstitutionIcon";
+import ShieldIcon from "@/public/icons/ShieldIcon";
+import TriangleAlert from "@/public/icons/TriangleAlert44";
+import ZapIcon from "@/public/icons/ZapIcon";
 
 export const features = [
   {
-    icon: <Shield />,
+    icon: <ShieldIcon />,
     title: "Odporność na uderzenia",
     description: `Wytrzymałość na rozbicie i${"\u00A0"}rozciąganie`,
   },
   {
-    icon: <EyeOff />,
+    icon: <EyeOffIcon />,
     title: "Niewidoczna ochrona",
     description: `Zachowuje przejrzystość i${"\u00A0"}estetykę okna`,
   },
   {
-    icon: <Zap />,
+    icon: <ZapIcon />,
     title: "Ochrona przed wybuchem",
     description: "Zabezpieczenie przed falą uderzeniową",
   },
   {
-    icon: <Clock />,
+    icon: <ClockIcon />,
     title: "Długotrwałość",
     description: `Trwałość porównywalna z${"\u00A0"}żywotnością okna`,
   },
   {
-    icon: <Lock />,
+    icon: <LockIcon />,
     title: "Zalecana przez ubezpieczycieli",
     description: "Możliwość obniżenia składek ubezpieczeniowych",
   },
   {
-    icon: <AlertOctagon />,
+    icon: <TriangleAlert />,
     title: "Psychologiczny efekt",
     description: "Zniechęca włamywaczy do prób sforsowania",
   },
@@ -46,32 +46,32 @@ export const features = [
 
 export const places = [
   {
-    icon: <Landmark />,
+    icon: <BankIcon />,
     title: "Placówki bankowe",
     description: `Podstawowe zabezpieczenie szyb i${"\u00A0"}witryn w obiektach finansowych.`,
   },
   {
-    icon: <Briefcase />,
+    icon: <PublishInstitutionIcon />,
     title: "Instytucje publiczne",
     description: `Ochrona budynków administracji i${"\u00A0"}obiektów użyteczności publicznej.`,
   },
   {
-    icon: <Home />,
+    icon: <HomeIcon />,
     title: `Domy i${"\u00A0"}mieszkania`,
     description: `Niewidoczna ochrona okien parterowych i${"\u00A0"}balkonowych.`,
   },
   {
-    icon: <Briefcase />,
+    icon: <OfficeIcon />,
     title: `Biura i${"\u00A0"}sklepy`,
     description: `Zabezpieczenie witryn sklepowych i${"\u00A0"}biurowych.`,
   },
   {
-    icon: <Factory />,
+    icon: <ProductionFloorIcon />,
     title: "Hale produkcyjne",
     description: `Ochrona dużych przeszkleń w${"\u00A0"}obiektach przemysłowych.`,
   },
   {
-    icon: <Home />,
+    icon: <JewellerIcon />,
     title: "Obiekty komercyjne",
     description: `Apteki, jubilerzy i${"\u00A0"}inne punkty wymagające szczególnej ochrony.`,
   },
