@@ -2,27 +2,12 @@
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Check, Mail } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import EnvelopeIcon from "@/public/icons/homePage/EnvelopeIcon";
+import CheckIcon from "@/public/icons/homePage/CheckIcon";
 
 const container = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      when: "beforeChildren",
-      delay:
-        typeof window !== "undefined" &&
-        window.matchMedia("(min-width: 768px").matches
-          ? 0.9
-          : 0,
-    },
-  },
-};
-
-const containerMain = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -113,7 +98,7 @@ export default function Home() {
       <Header />
 
       <motion.div
-        variants={containerMain}
+        variants={container}
         className="w-full px-4 sm:px-8 md:px-16 flex flex-col items-center"
       >
         <motion.h1
@@ -135,7 +120,7 @@ export default function Home() {
           </span>
         </motion.h1>
       </motion.div>
-      <motion.div variants={containerMain}>
+      <motion.div variants={container}>
         <motion.h2
           variants={sub}
           className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20"
@@ -146,7 +131,7 @@ export default function Home() {
         </motion.h2>
       </motion.div>
 
-      <motion.div variants={containerMain}>
+      <motion.div variants={container}>
         <motion.div variants={button} className="mt-10 md:mt-12 z-20">
           <Button
             text="Poznaj naszą ofertę"
@@ -176,12 +161,15 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={container}
-        className="w-full flex flex-col items-center bg-gradient-to-t from-[#d0ebff] via-white to-white sm:rounded-t-3xl md:rounded-t-[100px] lg:rounded-t-[200px] pb-6 md:pb-12 sm:-mt-[180px] md:-mt-[200px] lg:-mt-[300px] xl:-mt-[400px] px-4 sm:px-8 md:px-16 z-10"
+        className="w-full flex flex-col items-center bg-gradient-to-t from-[#d0ebff] via-white to-white pb-6 md:pb-12 px-4 sm:px-8 md:px-16 z-10 py-12 md:py-20"
       >
-        <div className="w-full sm:mt-[200px] md:mt-[150px] lg:mt-[250px] xl:mt-[350px]">
+        <div className="w-full">
           <motion.h3
             variants={item}
-            className="mt-12 md:mt-24 text-2xl md:text-3xl font-bold text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-2xl md:text-3xl font-bold text-center"
           >
             Dlaczego warto nam zaufać?
           </motion.h3>
@@ -192,10 +180,13 @@ export default function Home() {
           >
             <motion.div
               variants={itemAltOne}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
               className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full"
             >
-              <div className="flex-shrink-0 bg-blue/10 p-3 rounded-full">
-                <Mail className="text-dark size-8 md:size-12 lg:size-16 stroke-1" />
+              <div className="md:w-12 md:h-12 lg:w-16 lg:h-16 flex justify-center items-center">
+                <EnvelopeIcon />
               </div>
               <div className="flex flex-col gap-4 md:gap-6">
                 <h4 className="text-xl md:text-2xl font-semibold">
@@ -213,10 +204,13 @@ export default function Home() {
 
             <motion.div
               variants={itemAltTwo}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
               className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 w-full"
             >
-              <div className="flex-shrink-0 bg-blue/10 p-3 rounded-full">
-                <Check className="text-dark size-8 md:size-12 lg:size-16 stroke-1" />
+              <div className="md:w-12 md:h-12 lg:w-16 lg:h-16 flex justify-center items-center">
+                <CheckIcon />
               </div>
               <div className="flex flex-col gap-4 md:gap-6">
                 <h4 className="text-xl md:text-2xl font-semibold">
