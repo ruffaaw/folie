@@ -278,7 +278,7 @@ export default function Page() {
       >
         <motion.div
           variants={item}
-          className="flex flex-col items-start justify-start py-7 gap-5 w-full rounded-3xl mt-6 md:mt-8"
+          className="flex flex-col items-start justify-start gap-5 w-full rounded-3xl mt-6 md:mt-8"
         >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <PlacesIcon />
