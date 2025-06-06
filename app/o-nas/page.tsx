@@ -35,14 +35,6 @@ export default function Page() {
     },
   };
 
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { duration: 0.6 },
-    },
-  };
-
   const cardVariants = {
     hidden: { y: 40, opacity: 0, scale: 0.95 },
     visible: (i: number) => ({
