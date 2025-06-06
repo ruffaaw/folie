@@ -22,6 +22,17 @@ const container = {
   },
 };
 
+const containerMain = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
 const item = {
   hidden: { y: 30, opacity: 0, scale: 0.95 },
   visible: {
@@ -102,7 +113,7 @@ export default function Home() {
       <Header />
 
       <motion.div
-        variants={container}
+        variants={containerMain}
         className="w-full px-4 sm:px-8 md:px-16 flex flex-col items-center"
       >
         <motion.h1
@@ -114,13 +125,17 @@ export default function Home() {
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+              transition={{
+                delay: 0.6,
+                duration: 0.8,
+                ease: "easeOut",
+              }}
               className="absolute bottom-0 left-0 w-full h-2 bg-blue-light origin-left"
             />
           </span>
         </motion.h1>
       </motion.div>
-      <motion.div variants={container}>
+      <motion.div variants={containerMain}>
         <motion.h2
           variants={sub}
           className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20"
@@ -131,7 +146,7 @@ export default function Home() {
         </motion.h2>
       </motion.div>
 
-      <motion.div variants={container}>
+      <motion.div variants={containerMain}>
         <motion.div variants={button} className="mt-10 md:mt-12 z-20">
           <Button
             text="Poznaj naszą ofertę"
