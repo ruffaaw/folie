@@ -10,20 +10,6 @@ import ShoppingCentreIcon from "@/public/icons/ShoppingCentereIcon";
 import SunIcon from "@/public/icons/SunIcon";
 import ThermometerIcon from "@/public/icons/ThermometerIcon";
 import ZapIcon from "@/public/icons/ZapIcon";
-import {
-  Home,
-  Building,
-  ShoppingCart,
-  GlassWater,
-  Briefcase,
-  HeartPulse,
-  Sun,
-  EyeOff,
-  Brush,
-  Shield,
-  Thermometer,
-  Zap,
-} from "lucide-react";
 
 export const places = [
   {

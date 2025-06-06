@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Title from "@/components/Title";
 import { features, places } from "@/data/folie-matowe";
-import { Building, Brush, ShieldCheck } from "lucide-react";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
