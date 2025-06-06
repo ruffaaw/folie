@@ -15,7 +15,9 @@ export default function Title({
         type: "spring",
         stiffness: 100,
         damping: 10,
-        duration: 0.6,
+        delay: 0.2,
+        duration: 0.8,
+        ease: "easeOut",
       },
     },
   };
@@ -28,7 +30,9 @@ export default function Title({
         type: "spring",
         stiffness: 100,
         damping: 10,
-        duration: 0.6,
+        delay: 0.2,
+        duration: 0.8,
+        ease: "easeOut",
       },
     },
   };
@@ -41,7 +45,9 @@ export default function Title({
         type: "spring",
         stiffness: 100,
         damping: 10,
-        duration: 0.6,
+        delay: 0.2,
+        duration: 0.8,
+        ease: "easeOut",
       },
     },
   };
