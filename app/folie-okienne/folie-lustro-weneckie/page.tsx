@@ -235,6 +235,24 @@ export default function Page() {
       </motion.div>
 
       <motion.div
+        variants={image}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="w-full relative mt-6 md:mt-8 aspect-video"
+      >
+        <Image
+          src="/lustro-weneckie.webp"
+          alt="Zdjęcie folii lustro weneckie"
+          fill
+          className="object-cover md:px-16"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+          priority
+          unoptimized
+        />
+      </motion.div>
+
+      <motion.div
         variants={container}
         initial="hidden"
         whileInView="visible"
