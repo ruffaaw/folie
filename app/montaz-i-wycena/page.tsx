@@ -3,15 +3,13 @@ import Header from "@/components/Header";
 import Title from "@/components/Title";
 import Footer from "@/components/Footer";
 import BottomContact from "@/components/BottomContact";
-import {
-  MapPin,
-  Ruler,
-  Square,
-  ClipboardList,
-  Image,
-  Mail,
-} from "lucide-react";
 import { motion } from "framer-motion";
+import ClipboardListIcon from "@/public/icons/ClipboardListIcon";
+import RulerIcon from "@/public/icons/RulerIcon";
+import WindowIcon from "@/public/icons/WindowIcon";
+import MapPinIcon from "@/public/icons/MapPinIcon";
+import ImageIcon from "@/public/icons/ImageIcon";
+import EnvelopeIcon from "@/public/icons/EnvelopeIcon";
 
 const container = {
   hidden: { opacity: 0 },
@@ -113,7 +111,7 @@ export default function Page() {
           className="flex flex-col items-start justify-start p-4 sm:p-5 md:p-6 lg:p-7 gap-3 sm:gap-4 md:gap-5 w-full bg-blue-light rounded-2xl lg:rounded-3xl"
         >
           <div className="flex flex-row items-center justify-start gap-2 w-full">
-            <ClipboardList className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11" />
+            <ClipboardListIcon />
             <h3>Do wyceny montażu potrzebujemy:</h3>
           </div>
 
@@ -132,8 +130,8 @@ export default function Page() {
               viewport={{ once: true }}
               className="flex gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 bg-white rounded-xl lg:rounded-3xl items-start"
             >
-              <div className="text-blue p-2 sm:p-3 bg-blue-lighter rounded-full">
-                <Ruler className="w-5 h-5 sm:w-6 sm:h-6" />
+              <div className="p-3 rounded-full flex items-start justify-start shrink-0">
+                <RulerIcon />
               </div>
               <div>
                 <h4>Wymiary szyb</h4>
@@ -152,8 +150,8 @@ export default function Page() {
               viewport={{ once: true }}
               className="flex gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 bg-white rounded-xl lg:rounded-3xl items-start"
             >
-              <div className="text-blue p-2 sm:p-3 bg-blue-lighter rounded-full">
-                <Square className="w-5 h-5 sm:w-6 sm:h-6" />
+              <div className="p-3 rounded-full flex items-start justify-start shrink-0">
+                <WindowIcon />
               </div>
               <div>
                 <h4>Ilość okien</h4>
@@ -172,8 +170,8 @@ export default function Page() {
               viewport={{ once: true }}
               className="flex gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 bg-white rounded-xl lg:rounded-3xl items-start"
             >
-              <div className="text-blue p-2 sm:p-3 bg-blue-lighter rounded-full">
-                <MapPin className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11" />
+              <div className="p-3 rounded-full flex items-start justify-start shrink-0">
+                <MapPinIcon />
               </div>
               <div>
                 <h4>Miejsce montażu</h4>
@@ -192,8 +190,8 @@ export default function Page() {
               viewport={{ once: true }}
               className="flex gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 bg-white rounded-xl lg:rounded-3xl items-start"
             >
-              <div className="text-blue p-2 sm:p-3 bg-blue-lighter rounded-full">
-                <Image className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11" />
+              <div className="p-3 rounded-full flex items-start justify-start shrink-0">
+                <ImageIcon />
               </div>
               <div>
                 <h4>Zdjęcia szyb</h4>
@@ -219,7 +217,7 @@ export default function Page() {
           className="flex flex-col items-start justify-start p-4 sm:p-5 md:p-6 lg:p-7 gap-3 sm:gap-4 md:gap-5 w-full bg-gray rounded-2xl lg:rounded-3xl text-light"
         >
           <div className="flex flex-row items-center justify-start gap-2 w-full">
-            <Mail className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11" />
+            <EnvelopeIcon />
             <h3>Dodatkowe usługi</h3>
           </div>
 
