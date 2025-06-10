@@ -673,7 +673,7 @@ export default function Page() {
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                   {previews.map((preview, index) => (
-                    <div key={index} className="relative">
+                    <div key={index} className="relative group">
                       <div className="aspect-square overflow-hidden rounded-lg border border-gray-200 flex items-center justify-center">
                         {preview === "pdf" ? (
                           <div className="flex flex-col items-center justify-center h-full w-full bg-gray-100 p-2">
