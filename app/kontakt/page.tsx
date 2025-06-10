@@ -13,8 +13,11 @@ import {
   MousePointer,
   Camera,
   Text,
+  UploadCloud,
+  X,
+  FileText,
 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const container = {
@@ -87,27 +90,256 @@ export default function Page() {
     location: "",
     foilType: "",
     message: "",
-    attachments: null,
+    attachments: [] as File[],
     privacyPolicy: false,
   });
+
+  const [previews, setPreviews] = useState<string[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [lastSubmissionTime] = useState<number | null>(null);
+  // const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
+  //   null
+  // );
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    const { name, value, type, checked, files } = e.target as HTMLInputElement;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : type === "file" ? files : value,
-    }));
+    const target = e.target as HTMLInputElement;
+    const { name, value, type, checked } = target;
+
+    if (type === "file") {
+      if (!target.files) return;
+
+      const newFiles = Array.from(target.files);
+      const validFiles = newFiles.filter((file) => {
+        const isValidSize = file.size <= 5 * 1024 * 1024; // 5MB
+        const isValidType = [
+          "image/jpeg",
+          "image/png",
+          "image/webp",
+          "image/gif",
+          "application/pdf",
+        ].includes(file.type);
+        return isValidSize && isValidType;
+      });
+
+      // Łączenie nowych plików z istniejącymi (limit 5)
+      const updatedFiles = [...formData.attachments, ...validFiles].slice(0, 5);
+      setFormData((prev) => ({
+        ...prev,
+        attachments: updatedFiles,
+      }));
+
+      // Czyszczenie poprzednich podglądów
+      previews.forEach((preview) => {
+        if (preview !== "pdf") URL.revokeObjectURL(preview);
+      });
+
+      // Generowanie nowych podglądów
+      const newPreviews = updatedFiles.map((file) => {
+        if (file.type === "application/pdf") {
+          return "pdf";
+        }
+        return URL.createObjectURL(file);
+      });
+
+      setPreviews(newPreviews);
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: type === "checkbox" ? checked : value,
+      }));
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Tutaj logika wysyłania formularza
-    console.log(formData);
+  const removeAttachment = (index: number) => {
+    const updatedFiles = formData.attachments.filter((_, i) => i !== index);
+    const updatedPreviews = previews.filter((_, i) => i !== index);
+
+    // Czyszczenie pamięci dla podglądu (jeśli to obraz)
+    if (previews[index] !== "pdf") {
+      URL.revokeObjectURL(previews[index]);
+    }
+
+    setFormData((prev) => ({
+      ...prev,
+      attachments: updatedFiles,
+    }));
+    setPreviews(updatedPreviews);
+
+    // Reset inputa
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
   };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
+    // Walidacja podstawowych pól
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.privacyPolicy
+    ) {
+      alert("Proszę wypełnić wymagane pola!");
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Ograniczenie liczby plików
+    if (formData.attachments.length > 5) {
+      alert("Możesz przesłać maksymalnie 5 plików");
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Ograniczenie rozmiaru pojedynczego pliku
+    const maxFileSize = 5 * 1024 * 1024; // 5MB
+    const oversizedFiles = formData.attachments.filter(
+      (file) => file.size > maxFileSize
+    );
+
+    if (oversizedFiles.length > 0) {
+      alert(
+        `Następujące pliki są zbyt duże (max 5MB): ${oversizedFiles
+          .map((f) => f.name)
+          .join(", ")}`
+      );
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Ograniczenie rozmiaru plików do 25MB
+    const maxTotalSize = 25 * 1024 * 1024; // 25MB
+    const totalSize = formData.attachments.reduce(
+      (sum, file) => sum + file.size,
+      0
+    );
+
+    if (totalSize > maxTotalSize) {
+      alert(`Łączny rozmiar załączników nie może przekraczać 25MB`);
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Ograniczenie typów plików
+    const allowedTypes = [
+      "image/jpeg",
+      "image/png",
+      "image/webp",
+      "image/gif",
+      "application/pdf",
+    ];
+    const invalidFiles = formData.attachments.filter(
+      (file) => !allowedTypes.includes(file.type)
+    );
+
+    if (invalidFiles.length > 0) {
+      alert(
+        `Następujące pliki mają nieobsługiwany format: ${invalidFiles
+          .map((f) => f.name)
+          .join(", ")}`
+      );
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Ograniczenie częstotliwości wysyłania
+    const now = Date.now();
+    if (lastSubmissionTime && now - lastSubmissionTime < 60000) {
+      alert(
+        "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej."
+      );
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // const emailBody = `
+      //   Imię i nazwisko: ${formData.name}
+      //   Email: ${formData.email}
+      //   Telefon: ${formData.phone}
+      //   Wymiary: ${formData.dimensions || "Nie podano"}
+      //   Ilość okien: ${formData.windowsCount || "Nie podano"}
+      //   Lokalizacja: ${formData.location || "Nie podano"}
+      //   Rodzaj folii: ${formData.foilType || "Nie wybrano"}
+      //   Wiadomość:
+      //   ${formData.message || "Brak"}
+      // `;
+      // const attachmentsBase64 = await Promise.all(
+      //   formData.attachments.map(async (file) => {
+      //     const base64 = await convertToBase64(file);
+      //     return {
+      //       filename: file.name,
+      //       content_type: file.type,
+      //       base64: base64.split(",")[1],
+      //     };
+      //   })
+      // );
+      // const response = await fetch(
+      //   "https://jc5vg6se5e.execute-api.eu-north-1.amazonaws.com/dev/send-mail",
+      //   {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       "x-api-key": "_just-a'test\"key,or>is<it?",
+      //     },
+      //     body: JSON.stringify({
+      //       email: "",
+      //       subject: `Zapytanie od ${formData.name}`,
+      //       message: emailBody,
+      //       attachments: attachmentsBase64,
+      //       metadata: {
+      //         name: formData.name,
+      //         email: formData.email,
+      //         phone: formData.phone,
+      //       },
+      //     }),
+      //   }
+      // );
+      // if (response.ok) {
+      //   alert("Wiadomość wysłana pomyślnie!");
+      //   setFormData({
+      //     name: "",
+      //     email: "",
+      //     phone: "",
+      //     dimensions: "",
+      //     windowsCount: "",
+      //     location: "",
+      //     foilType: "",
+      //     message: "",
+      //     attachments: [],
+      //     privacyPolicy: false,
+      //   });
+      //   setPreviews([]);
+      //   setLastSubmissionTime(now);
+      // }
+    } catch (error) {
+      alert(
+        "Wystąpił błąd: " +
+          (error instanceof Error ? error.message : String(error))
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // const convertToBase64 = (file: File): Promise<string> => {
+  //   return new Promise((resolve, reject) => {
+  //     const reader = new FileReader();
+  //     reader.readAsDataURL(file);
+  //     reader.onload = () => resolve(reader.result as string);
+  //     reader.onerror = (error) => reject(error);
+  //   });
+  // };
 
   return (
     <motion.div
@@ -335,7 +567,7 @@ export default function Page() {
                 <select
                   id="foilType"
                   name="foilType"
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue focus:border-blue bg-light"
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue focus:border-blue bg-light cursor-pointer"
                   value={formData.foilType}
                   onChange={handleChange}
                 >
@@ -373,19 +605,105 @@ export default function Page() {
                   htmlFor="attachments"
                   className="block text-sm md:text-lg font-medium mb-1"
                 >
-                  Zdjęcia okien (opcjonalne)
+                  Zdjęcia okien lub pliki PDF (max 5 plików, do 5MB każdy)
                 </label>
+
+                <div
+                  className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-blue-500 transition-colors cursor-pointer"
+                  onClick={() => fileInputRef.current?.click()}
+                  onDragOver={(e) => {
+                    e.preventDefault();
+                    e.currentTarget.classList.add(
+                      "border-blue-500",
+                      "bg-blue-50"
+                    );
+                  }}
+                  onDragLeave={(e) => {
+                    e.preventDefault();
+                    e.currentTarget.classList.remove(
+                      "border-blue-500",
+                      "bg-blue-50"
+                    );
+                  }}
+                  onDrop={(e) => {
+                    e.preventDefault();
+                    e.currentTarget.classList.remove(
+                      "border-blue-500",
+                      "bg-blue-50"
+                    );
+                    if (e.dataTransfer.files.length > 0) {
+                      handleChange({
+                        target: {
+                          files: e.dataTransfer.files,
+                          name: "attachments",
+                          type: "file",
+                        },
+                      } as React.ChangeEvent<HTMLInputElement>);
+                    }
+                  }}
+                >
+                  <div className="flex flex-col items-center justify-center gap-2">
+                    <UploadCloud className="w-10 h-10 text-gray-400" />
+                    <p className="text-sm text-gray-600">
+                      Przeciągnij i upuść pliki tutaj lub kliknij, aby wybrać
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      Obsługiwane formaty: JPG, PNG, WEBP, GIF, PDF (max 5MB)
+                    </p>
+                  </div>
+                </div>
+
                 <input
                   type="file"
                   id="attachments"
                   name="attachments"
                   multiple
-                  accept="image/*"
-                  className="w-full px-4 py-2 border rounded-lg file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-light file:text-blue hover:file:bg-blue-lighter bg-light"
+                  accept="image/jpeg,image/png,image/webp,image/gif,application/pdf"
+                  className="hidden"
                   onChange={handleChange}
+                  ref={fileInputRef}
                 />
               </div>
             </motion.div>
+
+            {previews.length > 0 && (
+              <div className="mt-4">
+                <h3 className="text-sm font-medium mb-2">
+                  Wybrane pliki ({previews.length}/5):
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                  {previews.map((preview, index) => (
+                    <div key={index} className="relative group">
+                      <div className="aspect-square overflow-hidden rounded-lg border border-gray-200 flex items-center justify-center">
+                        {preview === "pdf" ? (
+                          <div className="flex flex-col items-center justify-center h-full w-full bg-gray-100">
+                            <FileText className="w-10 h-10 text-gray-400" />
+                            <span className="text-xs text-gray-600 truncate px-2">
+                              {formData.attachments[index]?.name || "Plik PDF"}
+                            </span>
+                          </div>
+                        ) : (
+                          <img
+                            src={preview}
+                            alt={`Podgląd ${index + 1}`}
+                            className="h-full w-full object-cover"
+                          />
+                        )}
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => removeAttachment(index)}
+                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-8 h-8 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-red-600"
+                        aria-label="Usuń plik"
+                      >
+                        <X className="w-6 h-6" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
             <motion.div
               variants={card}
               custom={8}
@@ -427,7 +745,7 @@ export default function Page() {
                   name="privacyPolicy"
                   type="checkbox"
                   required
-                  className="w-4 h-4 text-blue border rounded focus:ring-blue"
+                  className="w-4 h-4 text-blue border rounded focus:ring-blue cursor-pointer"
                   checked={formData.privacyPolicy}
                   onChange={handleChange}
                 />
@@ -453,9 +771,17 @@ export default function Page() {
               whileInView="visible"
               viewport={{ once: true }}
               type="submit"
-              className="w-full bg-blue text-white py-3 px-6 rounded-lg hover:bg-blue-dark transition-colors font-medium text-sm md:text-lg"
+              className={`w-full bg-blue text-white py-3 px-6 rounded-lg hover:bg-blue-dark transition-colors font-medium text-sm md:text-lg ${
+                isSubmitting ? "cursor-not-allowed" : "cursor-pointer"
+              }`}
             >
-              Wyślij wiadomość
+              {isSubmitting ? (
+                <div className="inset-0 flex items-center justify-center bg-green z-50">
+                  <div className="animate-spin rounded-full h-7 w-7 border-t-4 border-blue-light"></div>
+                </div>
+              ) : (
+                "Wyślij wiadomość"
+              )}
             </motion.button>
           </motion.form>
         </motion.div>
