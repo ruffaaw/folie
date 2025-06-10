@@ -106,14 +106,28 @@ export default function Header() {
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex flex-row gap-2 items-center"
+          className="flex flex-row gap-2 items-center relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
         >
           <Image
-            src="/logo-białe.webp"
+            src="/logo.png"
             alt="logo"
             width={80}
             height={80}
-            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+            className="absolute top-0 left-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+          />
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={80}
+            height={80}
+            className="absolute top-0 left-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+          />
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={80}
+            height={80}
+            className="absolute top-0 left-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
           />
         </motion.div>
       </Link>

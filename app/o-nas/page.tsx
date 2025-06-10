@@ -190,11 +190,11 @@ export default function Page() {
           className="w-full lg:w-1/3 flex justify-center lg:justify-end"
         >
           <Image
-            src="/logo-czarne.webp"
+            src="/logo.png"
             alt="Logo Dragon Folie"
             width={400}
             height={400}
-            className="w-full max-w-[350px] md:max-w-[400px] rounded-lg drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+            className="w-full max-w-[350px] md:max-w-[400px] rounded-lg"
             priority
             unoptimized
           />
