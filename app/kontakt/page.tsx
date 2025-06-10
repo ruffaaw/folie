@@ -345,7 +345,7 @@ export default function Page() {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="mt-[100px] flex flex-col items-center justify-center "
+      className="mt-[100px] flex flex-col items-center justify-center overflow-hidden"
     >
       <Header />
       <motion.h1 variants={headline} className="mt-4 md:mt-7">
@@ -645,7 +645,7 @@ export default function Page() {
                   <div className="flex flex-col items-center justify-center gap-2">
                     <UploadCloud className="w-10 h-10 text-gray-400" />
                     <p className="text-sm text-gray-600">
-                      Przeciągnij i upuść pliki tutaj lub kliknij, aby wybrać
+                      Dodaj pliki lub kliknij, aby wybrać
                     </p>
                     <p className="text-xs text-gray-500">
                       Obsługiwane formaty: JPG, PNG, WEBP, GIF, PDF (max 5MB)
@@ -673,12 +673,12 @@ export default function Page() {
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                   {previews.map((preview, index) => (
-                    <div key={index} className="relative group">
+                    <div key={index} className="relative">
                       <div className="aspect-square overflow-hidden rounded-lg border border-gray-200 flex items-center justify-center">
                         {preview === "pdf" ? (
-                          <div className="flex flex-col items-center justify-center h-full w-full bg-gray-100">
-                            <FileText className="w-10 h-10 text-gray-400" />
-                            <span className="text-xs text-gray-600 truncate px-2">
+                          <div className="flex flex-col items-center justify-center h-full w-full bg-gray-100 p-2">
+                            <FileText className="w-8 h-8 text-gray-400 sm:w-10 sm:h-10" />
+                            <span className="text-xs text-gray-600 truncate px-2 text-center">
                               {formData.attachments[index]?.name || "Plik PDF"}
                             </span>
                           </div>
@@ -694,7 +694,7 @@ export default function Page() {
                       <button
                         type="button"
                         onClick={() => removeAttachment(index)}
-                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-8 h-8 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-red-600"
+                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-md hover:bg-red-600 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity"
                         aria-label="Usuń plik"
                       >
                         <X className="w-6 h-6" />
