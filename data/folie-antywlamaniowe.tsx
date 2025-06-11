@@ -15,32 +15,32 @@ export const features = [
   {
     icon: <ShieldIcon />,
     title: "Odporność na uderzenia",
-    description: `Wytrzymałość na rozbicie i${"\u00A0"}rozciąganie`,
+    description: `Wytrzymałość na rozbicie i${"\u00A0"}rozciąganie.`,
   },
   {
     icon: <EyeOffIcon />,
     title: "Niewidoczna ochrona",
-    description: `Zachowuje przejrzystość i${"\u00A0"}estetykę okna`,
+    description: `Zachowuje przejrzystość i${"\u00A0"}estetykę okna.`,
   },
   {
     icon: <ZapIcon />,
     title: "Ochrona przed wybuchem",
-    description: "Zabezpieczenie przed falą uderzeniową",
+    description: "Zabezpieczenie przed falą uderzeniową.",
   },
   {
     icon: <ClockIcon />,
     title: "Długotrwałość",
-    description: `Trwałość porównywalna z${"\u00A0"}żywotnością okna`,
+    description: `Trwałość porównywalna z${"\u00A0"}żywotnością okna.`,
   },
   {
     icon: <LockIcon />,
     title: "Zalecana przez ubezpieczycieli",
-    description: "Możliwość obniżenia składek ubezpieczeniowych",
+    description: "Możliwość obniżenia składek ubezpieczeniowych.",
   },
   {
     icon: <TriangleAlert />,
     title: "Psychologiczny efekt",
-    description: "Zniechęca włamywaczy do prób sforsowania",
+    description: "Zniechęca włamywaczy do prób sforsowania.",
   },
 ];
 

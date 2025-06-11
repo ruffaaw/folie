@@ -15,32 +15,32 @@ export const features = [
   {
     icon: <ThermometerIcon />,
     title: "Redukcja temperatury",
-    description: `Obniżenie temperatury wewnątrz hali o${"\u00A0"}3-5°C`,
+    description: `Obniżenie temperatury wewnątrz hali o${"\u00A0"}3-5°C.`,
   },
   {
     icon: <ShieldIcon />,
     title: "Ochrona UV",
-    description: "Zapobieganie żółknięciu poliwęglanu",
+    description: "Zapobieganie żółknięciu poliwęglanu.",
   },
   {
     icon: <ZapIcon />,
     title: "Oszczędność energii",
-    description: "Znaczne zmniejszenie kosztów klimatyzacji",
+    description: "Znaczne zmniejszenie kosztów klimatyzacji.",
   },
   {
     icon: <DropletsIcon />,
     title: "Dopasowanie termiczne",
-    description: `Mikrospory identyczne jak w${"\u00A0"}poliwęglanie`,
+    description: `Mikrospory identyczne jak w${"\u00A0"}poliwęglanie.`,
   },
   {
     icon: <ColorPaletteIcon />,
     title: "Dostępne kolory",
-    description: `Biały i${"\u00A0"}srebrny do wyboru`,
+    description: `Biały i${"\u00A0"}srebrny do wyboru.`,
   },
   {
     icon: <ClockIcon />,
     title: "Trwałość",
-    description: "Długoletnia ochrona świetlików",
+    description: "Długoletnia ochrona świetlików.",
   },
 ];
 

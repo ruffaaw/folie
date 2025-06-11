@@ -126,7 +126,6 @@ export default function Page() {
               custom={0}
               initial="hidden"
               whileInView="visible"
-              whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
               className="flex gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 bg-white rounded-xl lg:rounded-3xl items-start"
             >
@@ -136,7 +135,7 @@ export default function Page() {
               <div>
                 <h4>Wymiary szyb</h4>
                 <p style={{ textAlign: "justify" }}>
-                  Dokładne wymiary szyb okiennych w cm
+                  Dokładne wymiary szyb okiennych w cm.
                 </p>
               </div>
             </motion.div>
@@ -146,7 +145,6 @@ export default function Page() {
               custom={1}
               initial="hidden"
               whileInView="visible"
-              whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
               className="flex gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 bg-white rounded-xl lg:rounded-3xl items-start"
             >
@@ -156,7 +154,7 @@ export default function Page() {
               <div>
                 <h4>Ilość okien</h4>
                 <p style={{ textAlign: "justify" }}>
-                  Liczba okien do oklejenia
+                  Liczba okien do oklejenia.
                 </p>
               </div>
             </motion.div>
@@ -166,7 +164,6 @@ export default function Page() {
               custom={2}
               initial="hidden"
               whileInView="visible"
-              whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
               className="flex gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 bg-white rounded-xl lg:rounded-3xl items-start"
             >
@@ -176,7 +173,7 @@ export default function Page() {
               <div>
                 <h4>Miejsce montażu</h4>
                 <p style={{ textAlign: "justify" }}>
-                  Adres lub lokalizacja montażu
+                  Adres lub lokalizacja montażu.
                 </p>
               </div>
             </motion.div>
@@ -186,7 +183,6 @@ export default function Page() {
               custom={3}
               initial="hidden"
               whileInView="visible"
-              whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
               className="flex gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 bg-white rounded-xl lg:rounded-3xl items-start"
             >
@@ -224,7 +220,6 @@ export default function Page() {
           <motion.div
             variants={item}
             custom={1}
-            whileHover={{ scale: 1.03 }}
             viewport={{ once: true }}
             initial="hidden"
             whileInView="visible"

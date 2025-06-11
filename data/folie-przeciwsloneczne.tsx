@@ -15,32 +15,32 @@ export const features = [
   {
     icon: <ThermometerIcon />,
     title: "Obniżenie temperatury",
-    description: "Redukcja nagrzewania pomieszczeń",
+    description: "Redukcja nagrzewania pomieszczeń.",
   },
   {
     icon: <ZapIcon />,
     title: "Oszczędność energii",
-    description: "Znaczne zmniejszenie kosztów klimatyzacji",
+    description: "Znaczne zmniejszenie kosztów klimatyzacji.",
   },
   {
     icon: <ShieldIcon />,
     title: "Ochrona UV",
-    description: "Ochrona przed szkodliwymi promieniami UV",
+    description: "Ochrona przed szkodliwymi promieniami UV.",
   },
   {
     icon: <LeafIcon />,
     title: "Ochrona wnętrz",
-    description: `Zapobiega blaknięciu mebli i${"\u00A0"}podłóg`,
+    description: `Zapobiega blaknięciu mebli i${"\u00A0"}podłóg.`,
   },
   {
     icon: <DropletsIcon />,
     title: "Eliminacja refleksów",
-    description: `Poprawa widoczności w${"\u00A0"}słoneczne dni`,
+    description: `Poprawa widoczności w${"\u00A0"}słoneczne dni.`,
   },
   {
     icon: <ClockIcon />,
     title: "Długotrwałość",
-    description: `Żywotność 5-10 lat w${"\u00A0"}zależności od produktu`,
+    description: `Żywotność 5-10 lat w${"\u00A0"}zależności od produktu.`,
   },
 ];
 

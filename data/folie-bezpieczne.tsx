@@ -15,32 +15,32 @@ export const features = [
   {
     icon: <ShieldIcon />,
     title: "Zatrzymuje odłamki",
-    description: "Zapobiega rozprzestrzenianiu się stłuczonego szkła",
+    description: "Zapobiega rozprzestrzenianiu się stłuczonego szkła.",
   },
   {
     icon: <ShieldCheckIcon />,
     title: "Certyfikat HACCP",
-    description: "Spełnia wymagania dla przemysłu spożywczego",
+    description: "Spełnia wymagania dla przemysłu spożywczego.",
   },
   {
     icon: <EyeOffIcon />,
     title: "Niewidoczna ochrona",
-    description: `Zachowuje przejrzystość i${"\u00A0"}estetykę szkła`,
+    description: `Zachowuje przejrzystość i${"\u00A0"}estetykę szkła.`,
   },
   {
     icon: <AlertIcon />,
     title: "Ochrona przed zarysowaniami",
-    description: "Zabezpiecza szklane powierzchnie przed uszkodzeniami",
+    description: "Zabezpiecza szklane powierzchnie przed uszkodzeniami.",
   },
   {
     icon: <UsersIcon />,
     title: "Bezpieczeństwo publiczne",
-    description: `Chroni przed wypadkami w${"\u00A0"}miejscach użyteczności publicznej`,
+    description: `Chroni przed wypadkami w${"\u00A0"}miejscach użyteczności publicznej.`,
   },
   {
     icon: <ZapIcon />,
     title: "Łatwa konserwacja",
-    description: `Prosta w${"\u00A0"}czyszczeniu i${"\u00A0"}utrzymaniu w${"\u00A0"}czystości`,
+    description: `Prosta w${"\u00A0"}czyszczeniu i${"\u00A0"}utrzymaniu w${"\u00A0"}czystości.`,
   },
 ];
 
@@ -48,32 +48,32 @@ export const places = [
   {
     icon: <HomeIcon />,
     title: `Domy z${"\u00A0"}dziećmi`,
-    description: `Ochrona przed skaleczeniami w${"\u00A0"}przypadku stłuczenia szyb`,
+    description: `Ochrona przed skaleczeniami w${"\u00A0"}przypadku stłuczenia szyb.`,
   },
   {
     icon: <UtensilsIcon />,
     title: "Przemysł spożywczy",
     description:
-      "Zgodność z HACCP - zabezpieczenie żywności przed odłamkami szkła",
+      "Zgodność z HACCP - zabezpieczenie żywności przed odłamkami szkła.",
   },
   {
     icon: <SchoolIcon />,
     title: "Obiekty publiczne",
-    description: "Szkoły, przedszkola, urzędy - ochrona wielu osób naraz",
+    description: "Szkoły, przedszkola, urzędy - ochrona wielu osób naraz.",
   },
   {
     icon: <RestaurantIcon />,
     title: "Restauracje",
-    description: `Bezpieczeństwo gości i${"\u00A0"}spełnienie wymogów sanitarnych`,
+    description: `Bezpieczeństwo gości i${"\u00A0"}spełnienie wymogów sanitarnych.`,
   },
   {
     icon: <ShoppingCentreIcon />,
     title: "Obiekty handlowe",
-    description: `Ochrona witryn sklepowych i${"\u00A0"}stref gastronomicznych`,
+    description: `Ochrona witryn sklepowych i${"\u00A0"}stref gastronomicznych.`,
   },
   {
     icon: <AirportIcon />,
     title: "Lotniska/dworce",
-    description: `Zabezpieczenie dużych przeszkleń w${"\u00A0"}miejscach publicznych`,
+    description: `Zabezpieczenie dużych przeszkleń w${"\u00A0"}miejscach publicznych.`,
   },
 ];

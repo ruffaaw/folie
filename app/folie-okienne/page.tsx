@@ -98,7 +98,7 @@ export default function Page() {
           variants={sub}
           className="mt-4 md:mt-7 mx-auto leading-relaxed"
         >
-          Nowoczesne rozwiązania dostosowane do Twoich potrzeb
+          Nowoczesne rozwiązania dostosowane do Twoich potrzeb.
         </motion.h2>
       </motion.div>
 

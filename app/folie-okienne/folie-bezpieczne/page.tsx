@@ -157,7 +157,6 @@ export default function Page() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              whileHover={{ scale: 1.03 }}
               className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
             >
               <h4 className="font-semibold">Co to jest HACCP?</h4>
@@ -174,7 +173,6 @@ export default function Page() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              whileHover={{ scale: 1.03 }}
               className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
             >
               <h4 className="font-semibold">Wymagania prawne</h4>
@@ -216,7 +214,6 @@ export default function Page() {
                 variants={card}
                 initial="hidden"
                 whileInView="visible"
-                whileHover={{ scale: 1.03 }}
                 viewport={{ once: true }}
                 className="flex flex-col sm:flex-row gap-4 p-4 sm:p-5 bg-white rounded-3xl"
               >
@@ -261,7 +258,6 @@ export default function Page() {
                 variants={card}
                 initial="hidden"
                 whileInView="visible"
-                whileHover={{ scale: 1.03 }}
                 viewport={{ once: true }}
                 className="flex flex-col sm:flex-row gap-4 p-4 sm:p-5 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] card"
               >
@@ -318,7 +314,7 @@ export default function Page() {
 
             <p className="text-center mt-6">
               Cena obejmuje folię spełniającą standard HACCP oraz profesjonalny
-              montaż
+              montaż.
             </p>
           </motion.div>
         </motion.div>

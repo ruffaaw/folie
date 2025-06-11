@@ -164,7 +164,6 @@ export default function Page() {
               custom={0}
               initial="hidden"
               whileInView="visible"
-              whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-100px" }}
               className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
             >
@@ -180,7 +179,6 @@ export default function Page() {
               variants={card}
               initial="hidden"
               whileInView="visible"
-              whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-100px" }}
               className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
             >
@@ -218,7 +216,6 @@ export default function Page() {
               variants={card}
               initial="hidden"
               whileInView="visible"
-              whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-100px" }}
               className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl flex-1"
             >
@@ -280,7 +277,6 @@ export default function Page() {
                 variants={card}
                 initial="hidden"
                 whileInView="visible"
-                whileHover={{ scale: 1.03 }}
                 viewport={{ once: true, margin: "-100px" }}
                 className="flex flex-col lg:flex-row gap-4 p-4 sm:p-5 bg-white rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] card"
               >
@@ -336,7 +332,7 @@ export default function Page() {
             </div>
 
             <p className="text-center mt-6">
-              Cena zależy od wybranego wariantu i&nbsp;powierzchni montażu{" "}
+              Cena zależy od wybranego wariantu i&nbsp;powierzchni montażu.
             </p>
           </motion.div>
         </motion.div>

@@ -115,7 +115,7 @@ export default function Page() {
         variants={sub}
         className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 "
       >
-        Zobacz przykłady naszych prac i&nbsp;inspiracje dla Twojego projektu
+        Zobacz przykłady naszych prac i&nbsp;inspiracje dla Twojego projektu.
       </motion.h2>
 
       <motion.div

@@ -111,7 +111,7 @@ export default function Page() {
     {
       icon: <SunIcon />,
       head: "Miła atmosfera",
-      description: `Nasi monterzy przeprowadzają prace w${"\u00A0"}ciszy i${"\u00A0"}czystości. Spełniają przy tym Państwa oczekiwania w${"\u00A0"}zakresie kultury osobistej jednocześnie zachowując profesjonalne podejście`,
+      description: `Nasi monterzy przeprowadzają prace w${"\u00A0"}ciszy i${"\u00A0"}czystości. Spełniają przy tym Państwa oczekiwania w${"\u00A0"}zakresie kultury osobistej jednocześnie zachowując profesjonalne podejście.`,
     },
   ];
   return (

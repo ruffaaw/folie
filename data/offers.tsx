@@ -2,7 +2,7 @@ export const offers = [
   {
     image: "/antyUV.webp",
     title: "Folie anty UV",
-    description: "Ochrona przed szkodliwym promieniowaniem UV do 99%",
+    description: "Ochrona przed szkodliwym promieniowaniem UV do 99%.",
     advantages: [
       "Zapobiega żółknięciu mebli",
       "Chroni przed szkodliwym UV",
@@ -21,7 +21,7 @@ export const offers = [
   {
     image: "/przeciwsloneczne.webp",
     title: "Folie przeciwsłoneczne",
-    description: `Redukcja nagrzewania pomieszczeń nawet o${"\u00A0"}86%`,
+    description: `Redukcja nagrzewania pomieszczeń nawet o${"\u00A0"}86%.`,
     advantages: [
       "Obniża temperaturę",
       "Redukuje koszty klimatyzacji",
@@ -42,7 +42,7 @@ export const offers = [
   {
     image: "/swietliki.webp",
     title: `Folie na świetliki z${"\u00A0"}poliwęglanu`,
-    description: `Obniżenie temperatury pod świetlikami o${"\u00A0"}3-5°C`,
+    description: `Obniżenie temperatury pod świetlikami o${"\u00A0"}3-5°C.`,
     advantages: [
       "Zapobiega żółknięciu poliwęglanu",
       "Specjalna rozszerzalność cieplna",
@@ -60,7 +60,7 @@ export const offers = [
   {
     image: "/antywlamaniowe.webp",
     title: "Folie antywłamaniowe",
-    description: `Zabezpieczenie przed wtargnięciem i${"\u00A0"}rozbiciem szkła`,
+    description: `Zabezpieczenie przed wtargnięciem i${"\u00A0"}rozbiciem szkła.`,
     advantages: [
       "Niewidoczne zabezpieczenie",
       "Odporność na uderzenia",
@@ -78,7 +78,7 @@ export const offers = [
   {
     image: "/bezpieczne.webp",
     title: "Folie bezpieczne",
-    description: "Zapobiegają rozprzestrzenianiu się odłamków szkła",
+    description: "Zapobiegają rozprzestrzenianiu się odłamków szkła.",
     advantages: [
       "Spełniają standard HACCP",
       "Ochrona przed odłamkami",
@@ -96,7 +96,7 @@ export const offers = [
   {
     image: "/lustro-weneckie.webp",
     title: "Folie lustro weneckie",
-    description: `Efekt lustra z${"\u00A0"}zachowaniem widoczności od wewnątrz`,
+    description: `Efekt lustra z${"\u00A0"}zachowaniem widoczności od wewnątrz.`,
     advantages: [
       `Prywatność w${"\u00A0"}dzień`,
       "3 stopnie intensywności",
@@ -114,7 +114,7 @@ export const offers = [
   {
     image: "/matowe.webp",
     title: "Folie matowe",
-    description: `Dekoracyjne rozwiązanie z${"\u00A0"}zachowaniem prywatności`,
+    description: `Dekoracyjne rozwiązanie z${"\u00A0"}zachowaniem prywatności.`,
     advantages: [
       "Przepuszczalność światła 18-72%",
       "Łatwe w utrzymaniu czystości",
@@ -132,7 +132,7 @@ export const offers = [
   {
     image: "/mrozone.webp",
     title: "Folie mrożone",
-    description: `Efekt mrożonej szyby z${"\u00A0"}możliwością personalizacji`,
+    description: `Efekt mrożonej szyby z${"\u00A0"}możliwością personalizacji.`,
     advantages: [
       "Możliwość zadruku",
       `Łatwy montaż i${"\u00A0"}demontaż`,
