@@ -190,7 +190,7 @@ export default function Page() {
           className="w-full lg:w-1/3 flex justify-center lg:justify-end"
         >
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="Logo Dragon Folie"
             width={400}
             height={400}
