@@ -245,7 +245,7 @@ export default function Page() {
         >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <PlacesIcon />
-            <h3> Gdzie najczęściej stosujemy folie przeciwsłoneczne?</h3>
+            <h3> Gdzie najczęściej montujemy folie bezpieczne?</h3>
           </div>
           <motion.div
             variants={container}

@@ -119,9 +119,9 @@ export default function Page() {
         Unikalne folie stworzone dla tych, którzy cenią sobie prywatność
         i&nbsp;elegancki wygląd. Działają na zasadzie lustra weneckiego -
         widzisz na zewnątrz, podczas gdy osoby z&nbsp;zewnątrz widzą tylko swoje
-        odbicie. Idealne rozwiązanie łączące funkcjonalność z&nbsp;designem.Jest
-        to rodzaj folii przeciwsłonecznej, dlatego jej właściwości będą takie
-        same jak foli przeciwsłonecznych o&nbsp;których możecie Państwo
+        odbicie. Idealne rozwiązanie łączące funkcjonalność z&nbsp;designem.
+        Jest to rodzaj folii przeciwsłonecznej, dlatego jej właściwości będą
+        takie same jak foli przeciwsłonecznych o&nbsp;których możecie Państwo
         przeczytać{" "}
         <a
           href="/folie-okienne/folie-przeciwsloneczne"
@@ -330,10 +330,6 @@ export default function Page() {
               <h3 className="text-2xl md:text-3xl font-bold ">230-280</h3>
               <p>zł/m²</p>
             </div>
-
-            <p className="text-center mt-6">
-              Cena zależy od wybranego wariantu i&nbsp;powierzchni montażu.
-            </p>
           </motion.div>
         </motion.div>
       </motion.div>

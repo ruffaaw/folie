@@ -148,8 +148,7 @@ export default function Page() {
             className="text-justify"
             style={{ textAlign: "justify" }}
           >
-            <span id="dragonH2">Dragon Folie </span>
-            to nowa firma na Polskim rynku, jednak w montażu folii możemy
+            To nowa firma na Polskim rynku, jednak w montażu folii możemy
             pochwalić się wieloletnim doświadczeniem. <br />
             Nasi monterzy to wykwalifikowani specjaliści, którzy:
             <motion.div

@@ -125,7 +125,7 @@ export default function Page() {
       <BeforeAfterSlider
         before="/swietliki.webp"
         altBefore="Szyba biblioteki przed aplikacją folii"
-        after="/swietliki.webp"
+        after="/swietliki_po_aplikacji.webp"
         altAfter="Szyba biblioteki po aplikacji folii anty UV"
         sliderPos={40}
       />
@@ -156,9 +156,9 @@ export default function Page() {
             >
               <h4 className="font-semibold">Specjalna konstrukcja</h4>
               <p className="text-justify">
-                Mikrospory w folii zapewniają rozszerzalność cieplną identyczną
-                jak płyta poliwęglanowa, pozwalając na swobodne ulatnianie się
-                gazów i idealne dopasowanie do powierzchni.
+                Nasze folie są specjalnie zaprojektowane do idealnego
+                dopasowania do powierzchni poliwęglanowych, zapewniając
+                trwałą&nbsp;i skuteczną ochronę.
               </p>
             </motion.div>
             <motion.div
@@ -172,7 +172,7 @@ export default function Page() {
               <h4 className="font-semibold">Kompleksowa ochrona</h4>
               <p className="text-justify">
                 Zapobiega żółknięciu poliwęglanu dzięki cząsteczkom odbijającym
-                UV. Dostępne w wersji białej i srebrnej dla różnych potrzeb
+                UV. Dostępne w wersji białej i&nbsp;srebrnej dla różnych potrzeb
                 estetycznych.
               </p>
             </motion.div>
@@ -235,7 +235,7 @@ export default function Page() {
         >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <LayoutIcon />
-            <h3>Gdzie najczęściej stosujemy folie anty-UV?</h3>
+            <h3>Gdzie stosujemy folie na poliwęglan?</h3>
           </div>
           <motion.div
             variants={container}
@@ -271,7 +271,7 @@ export default function Page() {
         className="flex flex-col items-center justify-center mt-6 md:mt-8 w-full px-4 sm:px-8"
       >
         <motion.h3 variants={item} className="text-xl md:text-2xl text-center">
-          Cena folii na świetliki z montażem
+          Cena folii na świetliki z&nbsp;montażem
         </motion.h3>
 
         <motion.div

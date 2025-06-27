@@ -219,7 +219,7 @@ export default function Home() {
                 <p className="text-justify text-base md:text-lg">
                   Zapewniamy, że montaż folii to inwestycja na długie lata,
                   ponieważ używamy folii najwyższej jakości. Do swojej oferty
-                  dobraliśmy folie, które są łatwe w utrzymaniu
+                  dobraliśmy folie, które są łatwe w&nbsp;utrzymaniu
                   i&nbsp;czyszczeniu, odporne na uszkodzenia i&nbsp;działanie
                   czynników atmosferycznych.
                 </p>

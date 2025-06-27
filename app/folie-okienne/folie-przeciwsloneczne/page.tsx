@@ -132,7 +132,7 @@ export default function Page() {
       <BeforeAfterSlider
         before="/przezroczysta-wewnatrz.webp"
         altBefore="Szyba domu przed aplikacją folii"
-        after="/przezroczysta-wewnatrz.webp"
+        after="/przeciwsloneczna-wewnatrz.webp"
         altAfter="Szyba biblioteki po aplikacji folii przeciwsłonecznej"
         sliderPos={70}
       />

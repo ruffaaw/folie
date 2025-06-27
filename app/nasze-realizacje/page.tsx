@@ -167,7 +167,7 @@ export default function Page() {
             viewport={{ once: true }}
             className="text-center mb-4 md:mb-6"
           >
-            Śledź nasze najnowsze realizacje w&nbsp;social media
+            Śledź najnowsze realizacje w&nbsp;naszych mediach społecznościowych
           </motion.h3>
           <div className="flex gap-6 md:gap-8">
             <motion.a

@@ -340,7 +340,7 @@ export default function Page() {
                   </div>
 
                   <p style={{ color: "#333333" }}>
-                    Zabezpieczenie przed przypadkowym stłuczeniem szkła
+                    Zabezpieczenie przed włamaniem
                   </p>
                 </li>
                 <li className="flex items-center gap-2">
@@ -373,7 +373,7 @@ export default function Page() {
         >
           <div className="flex flex-row items-center justify-start gap-2.5 w-full">
             <PlacesIcon />
-            <h3> Gdzie najczęściej stosujemy folie przeciwsłoneczne?</h3>
+            <h3> Gdzie najczęściej stosujemy folie antywłamaniowe?</h3>
           </div>
           <motion.div
             variants={container}
@@ -466,10 +466,6 @@ export default function Page() {
               </motion.div>
             </motion.div>
           </motion.div>
-
-          <p className="text-center">
-            Cena zależy od grubości folii i&nbsp;klasy zabezpieczenia.
-          </p>
         </motion.div>
       </motion.div>
 

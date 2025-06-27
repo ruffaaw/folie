@@ -339,7 +339,6 @@ export default function Page() {
               priority
             />
           </motion.div>
-
           <motion.div
             variants={item}
             className="w-full md:w-1/2 flex flex-col justify-center"
@@ -351,6 +350,9 @@ export default function Page() {
 
             <p className="text-center mt-6">
               Cena obejmuje folię anty-UV oraz profesjonalny montaż.
+            </p>
+            <p className="text-center mt-2 text-sm font-medium text-blue">
+              REKOMENDOWANE PRZEZ FUNDACJE przeciwnowotworowe
             </p>
           </motion.div>
         </motion.div>

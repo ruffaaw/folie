@@ -332,10 +332,6 @@ export default function Page() {
               <h3 className="text-2xl md:text-3xl font-bold ">120-160</h3>
               <p>zł/m²</p>
             </div>
-
-            <p className="text-center mt-6">
-              Cena zależy od wybranego koloru i&nbsp;powierzchni montażu.
-            </p>
           </motion.div>
         </motion.div>
       </motion.div>

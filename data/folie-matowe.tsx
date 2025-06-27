@@ -74,6 +74,6 @@ export const features = [
   {
     icon: <ZapIcon />,
     title: "Łatwa pielęgnacja",
-    description: `Odporna na zarysowania, nie pozostawia śladów po dotknięciu - łatwa do utrzymania w czystości.`,
+    description: `Nie pozostawia śladów po dotknięciu - łatwa do utrzymania w czystości.`,
   },
 ];

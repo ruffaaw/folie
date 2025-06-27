@@ -63,6 +63,6 @@ export const places = [
   {
     icon: <OfficeIcon />,
     title: `Biura i${"\u00A0"}przestrzenie biurowe`,
-    description: `Zmniejszenie nagrzewania pomieszczeń i${"\u00A0"}ochrona pracowników przed szkodliwym promieniowaniem.`,
+    description: `Ochrona pracowników przed szkodliwym promieniowaniem.`,
   },
 ];
