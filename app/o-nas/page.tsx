@@ -148,7 +148,7 @@ export default function Page() {
             className="text-justify"
             style={{ textAlign: "justify" }}
           >
-            To nowa firma na Polskim rynku, jednak w montażu folii możemy
+            To nowa firma na Polskim rynku, jednak w&nbsp;montażu folii możemy
             pochwalić się wieloletnim doświadczeniem. <br />
             Nasi monterzy to wykwalifikowani specjaliści, którzy:
             <motion.div

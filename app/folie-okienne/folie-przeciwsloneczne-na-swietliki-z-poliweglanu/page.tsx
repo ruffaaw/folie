@@ -157,8 +157,8 @@ export default function Page() {
               <h4 className="font-semibold">Specjalna konstrukcja</h4>
               <p className="text-justify">
                 Nasze folie są specjalnie zaprojektowane do idealnego
-                dopasowania do powierzchni poliwęglanowych, zapewniając
-                trwałą&nbsp;i skuteczną ochronę.
+                dopasowania do powierzchni poliwęglanowych, zapewniając trwałą
+                i&nbsp;skuteczną ochronę.
               </p>
             </motion.div>
             <motion.div

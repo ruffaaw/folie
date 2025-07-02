@@ -48,7 +48,7 @@ export const places = [
   {
     icon: <BankIcon />,
     title: "Placówki bankowe",
-    description: `Podstawowe zabezpieczenie szyb i${"\u00A0"}witryn w obiektach finansowych.`,
+    description: `Podstawowe zabezpieczenie szyb i${"\u00A0"}witryn w${"\u00A0"}obiektach finansowych.`,
   },
   {
     icon: <PublishInstitutionIcon />,

@@ -30,8 +30,7 @@ export const places = [
   {
     icon: <ShoppingCentreIcon />,
     title: `Sklepy i${"\u00A0"}witryny`,
-    description:
-      "Oryginalne tło dla ekspozycji produktów z jednoczesnym ograniczeniem przejrzystości.",
+    description: `Oryginalne tło dla ekspozycji produktów z${"\u00A0"}jednoczesnym ograniczeniem przejrzystości.`,
   },
   {
     icon: <RestaurantIcon />,
@@ -40,7 +39,7 @@ export const places = [
   },
   {
     icon: <DoorIcon />,
-    title: "Drzwi i przeszklenia wejściowe",
+    title: `Drzwi i${"\u00A0"}przeszklenia wejściowe`,
     description: `Zapobieganie kolizjom + efekt wizualny - szczególnie w${"\u00A0"}obiektach komercyjnych.`,
   },
 ];
@@ -54,7 +53,7 @@ export const features = [
   {
     icon: <SunIcon />,
     title: "Ochrona przeciwsłoneczna",
-    description: `Redukcja nagrzewania pomieszczeń i ochrona przed promieniowaniem UV nawet do 99%.`,
+    description: `Redukcja nagrzewania pomieszczeń i${"\u00A0"}ochrona przed promieniowaniem UV nawet do 99%.`,
   },
   {
     icon: <BrushIcon />,
