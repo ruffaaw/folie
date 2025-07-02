@@ -124,9 +124,9 @@ export default function Page() {
         zadruku.
       </motion.h2>
       <BeforeAfterSlider
-        before="/mrozone.webp"
+        before="/folia_mrozonawer2.webp"
         altBefore="Folia przeźroczysta na oknie zewnątrz"
-        after="/folia_mrozonawer2.jpg"
+        after="/mrozone.webp"
         altAfter="Folia Mrożona na oknie zewnątrz"
         sliderPos={30}
       />
