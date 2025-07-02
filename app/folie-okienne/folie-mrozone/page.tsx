@@ -124,11 +124,11 @@ export default function Page() {
         zadruku.
       </motion.h2>
       <BeforeAfterSlider
-        before="/przezroczysta_zewnatrz.webp"
+        before="/mrozone.webp"
         altBefore="Folia przeźroczysta na oknie zewnątrz"
-        after="/folia_mrozona_zewnatrz.webp"
+        after="/folia_mrozonawer2.jpg"
         altAfter="Folia Mrożona na oknie zewnątrz"
-        sliderPos={40}
+        sliderPos={30}
       />
       <motion.div
         variants={container}
@@ -192,7 +192,7 @@ export default function Page() {
         className="w-full relative mt-6 md:mt-8 aspect-video"
       >
         <Image
-          src="/mrozone.webp"
+          src="/folia_mrozona_zewnatrz.webp"
           alt="Zdjęcie folii mrożonych"
           fill
           className="object-cover md:px-16"
