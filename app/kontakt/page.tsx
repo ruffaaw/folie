@@ -827,10 +827,10 @@ export default function Page() {
             >
               <Mail className="text-blue mr-2" />
               <a
-                href="mailto:dragon.folie2025@gmil.com"
+                href="mailto:dragon.folie2025@gmail.com"
                 className="hover:text-blue"
               >
-                dragon.folie2025@gmil.com
+                dragon.folie2025@gmail.com
               </a>
             </motion.div>
 
