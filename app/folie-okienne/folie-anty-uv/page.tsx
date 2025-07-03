@@ -119,15 +119,6 @@ export default function Page() {
         </span>
       </motion.h1>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-        className="mt-4 md:mt-6 bg-blue-light px-6 py-2 rounded-full text-sm font-semibold text-dark"
-      >
-        REKOMENDOWANE PRZEZ FUNDACJE przeciwnowotworowe
-      </motion.div>
-
       <motion.h2
         variants={sub}
         className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 "

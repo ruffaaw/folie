@@ -7,7 +7,7 @@ export const offers = [
       "Zapobiega żółknięciu mebli",
       "Chroni przed szkodliwym UV",
       "Zachowuje widoczność",
-      "Rekomendowane przez fundacje przeciwrakowe",
+      "Rekomendowane przez fundacje przeciwnowotworowe",
     ],
     places: [
       `Muzea i${"\u00A0"}biblioteki`,
@@ -45,7 +45,6 @@ export const offers = [
     description: `Obniżenie temperatury pod świetlikami o${"\u00A0"}3-5°C.`,
     advantages: [
       "Zapobiega żółknięciu poliwęglanu",
-      "Specjalna rozszerzalność cieplna",
       "Montaż na wysokościach",
       `Dostępne w${"\u00A0"}wersji białej i${"\u00A0"}srebrnej`,
     ],
@@ -60,7 +59,7 @@ export const offers = [
   {
     image: "/antywlamaniowe.webp",
     title: "Folie antywłamaniowe",
-    description: `Zabezpieczenie przed wtargnięciem i${"\u00A0"}rozbiciem szkła.`,
+    description: `Zabezpieczenie przed włamaniem i${"\u00A0"}rozbiciem szkła.`,
     advantages: [
       "Niewidoczne zabezpieczenie",
       "Odporność na uderzenia",

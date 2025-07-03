@@ -466,6 +466,9 @@ export default function Page() {
               </motion.div>
             </motion.div>
           </motion.div>
+          <p className="text-center mt-6">
+            Cena obejmuje folię antywłamaniową oraz profesjonalny montaż.
+          </p>
         </motion.div>
       </motion.div>
 

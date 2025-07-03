@@ -96,10 +96,9 @@ export default function Page() {
 
   const [previews, setPreviews] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [lastSubmissionTime] = useState<number | null>(null);
-  // const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
-  //   null
-  // );
+  const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
+    null
+  );
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (
@@ -263,65 +262,65 @@ export default function Page() {
     }
 
     try {
-      // const emailBody = `
-      //   Imię i nazwisko: ${formData.name}
-      //   Email: ${formData.email}
-      //   Telefon: ${formData.phone}
-      //   Wymiary: ${formData.dimensions || "Nie podano"}
-      //   Ilość okien: ${formData.windowsCount || "Nie podano"}
-      //   Lokalizacja: ${formData.location || "Nie podano"}
-      //   Rodzaj folii: ${formData.foilType || "Nie wybrano"}
-      //   Wiadomość:
-      //   ${formData.message || "Brak"}
-      // `;
-      // const attachmentsBase64 = await Promise.all(
-      //   formData.attachments.map(async (file) => {
-      //     const base64 = await convertToBase64(file);
-      //     return {
-      //       filename: file.name,
-      //       content_type: file.type,
-      //       base64: base64.split(",")[1],
-      //     };
-      //   })
-      // );
-      // const response = await fetch(
-      //   "https://jc5vg6se5e.execute-api.eu-north-1.amazonaws.com/dev/send-mail",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //       "x-api-key": "_just-a'test\"key,or>is<it?",
-      //     },
-      //     body: JSON.stringify({
-      //       email: "",
-      //       subject: `Zapytanie od ${formData.name}`,
-      //       message: emailBody,
-      //       attachments: attachmentsBase64,
-      //       metadata: {
-      //         name: formData.name,
-      //         email: formData.email,
-      //         phone: formData.phone,
-      //       },
-      //     }),
-      //   }
-      // );
-      // if (response.ok) {
-      //   alert("Wiadomość wysłana pomyślnie!");
-      //   setFormData({
-      //     name: "",
-      //     email: "",
-      //     phone: "",
-      //     dimensions: "",
-      //     windowsCount: "",
-      //     location: "",
-      //     foilType: "",
-      //     message: "",
-      //     attachments: [],
-      //     privacyPolicy: false,
-      //   });
-      //   setPreviews([]);
-      //   setLastSubmissionTime(now);
-      // }
+      const emailBody = `
+        Imię i nazwisko: ${formData.name}
+        Email: ${formData.email}
+        Telefon: ${formData.phone}
+        Wymiary: ${formData.dimensions || "Nie podano"}
+        Ilość okien: ${formData.windowsCount || "Nie podano"}
+        Lokalizacja: ${formData.location || "Nie podano"}
+        Rodzaj folii: ${formData.foilType || "Nie wybrano"}
+        Wiadomość:
+        ${formData.message || "Brak"}
+      `;
+      const attachmentsBase64 = await Promise.all(
+        formData.attachments.map(async (file) => {
+          const base64 = await convertToBase64(file);
+          return {
+            filename: file.name,
+            content_type: file.type,
+            base64: base64.split(",")[1],
+          };
+        })
+      );
+      const response = await fetch(
+        "https://jc5vg6se5e.execute-api.eu-north-1.amazonaws.com/dev/send-mail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-api-key": "_just-a'test\"key,or>is<it?",
+          },
+          body: JSON.stringify({
+            email: "dragon.folie2025@gmail.com",
+            subject: `Zapytanie od ${formData.name}`,
+            message: emailBody,
+            attachments: attachmentsBase64,
+            metadata: {
+              name: formData.name,
+              email: formData.email,
+              phone: formData.phone,
+            },
+          }),
+        }
+      );
+      if (response.ok) {
+        alert("Wiadomość wysłana pomyślnie!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          dimensions: "",
+          windowsCount: "",
+          location: "",
+          foilType: "",
+          message: "",
+          attachments: [],
+          privacyPolicy: false,
+        });
+        setPreviews([]);
+        setLastSubmissionTime(now);
+      }
     } catch (error) {
       alert(
         "Wystąpił błąd: " +
@@ -332,14 +331,14 @@ export default function Page() {
     }
   };
 
-  // const convertToBase64 = (file: File): Promise<string> => {
-  //   return new Promise((resolve, reject) => {
-  //     const reader = new FileReader();
-  //     reader.readAsDataURL(file);
-  //     reader.onload = () => resolve(reader.result as string);
-  //     reader.onerror = (error) => reject(error);
-  //   });
-  // };
+  const convertToBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = (error) => reject(error);
+    });
+  };
 
   return (
     <motion.div
@@ -803,22 +802,38 @@ export default function Page() {
           </motion.h3>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-6">
-            <motion.div
-              custom={1}
-              variants={card}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="flex items-center hover:scale-110"
-            >
-              <Phone className="text-blue mr-2" />
-              <a href="tel:607935863" className="hover:text-blue">
-                607 935 863
-              </a>
-            </motion.div>
+            <div className="flex flex-col lg:flex-row gap-6">
+              <motion.div
+                custom={1}
+                variants={card}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="flex items-center hover:scale-110"
+              >
+                <Phone className="text-blue mr-2" />
+                <a href="tel:+48665333625" className="hover:text-blue">
+                  +48&nbsp;665&nbsp;333&nbsp;625
+                </a>
+              </motion.div>
+
+              <motion.div
+                custom={2}
+                variants={card}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="flex items-center hover:scale-110"
+              >
+                <Phone className="text-blue mr-2" />
+                <a href="tel:+48665333771" className="hover:text-blue">
+                  +48&nbsp;665&nbsp;333&nbsp;771
+                </a>
+              </motion.div>
+            </div>
 
             <motion.div
-              custom={2}
+              custom={3}
               variants={card}
               initial="hidden"
               whileInView="visible"
@@ -835,7 +850,7 @@ export default function Page() {
             </motion.div>
 
             <motion.div
-              custom={3}
+              custom={4}
               variants={card}
               initial="hidden"
               whileInView="visible"
@@ -856,7 +871,7 @@ export default function Page() {
 
           <div className="flex justify-center space-x-6">
             <motion.a
-              custom={4}
+              custom={5}
               variants={card}
               initial="hidden"
               whileInView="visible"
@@ -869,7 +884,7 @@ export default function Page() {
               <Instagram className="h-10 w-10" />
             </motion.a>
             <motion.a
-              custom={5}
+              custom={6}
               variants={card}
               initial="hidden"
               whileInView="visible"
