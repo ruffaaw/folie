@@ -158,15 +158,6 @@ function Footer() {
                 +48&nbsp;665&nbsp;333&nbsp;771
               </motion.p>
             </a>
-            <motion.a
-              whileHover={{ color: "#003d66" }}
-              href="https://maps.app.goo.gl/TW4CQtPvfUZrAb5R6"
-              target="_blank"
-              className="w-fit max-lg:text-center"
-            >
-              ul. Polnych kwiatów 9, <br />
-              32-070 Wołowice
-            </motion.a>
             <a
               href="mailto:dragon.folie2025@gmail.com"
               target="_blank"
@@ -176,6 +167,15 @@ function Footer() {
                 dragon.folie2025@gmail.com
               </motion.p>
             </a>
+            <motion.a
+              whileHover={{ color: "#003d66" }}
+              href="https://maps.app.goo.gl/TW4CQtPvfUZrAb5R6"
+              target="_blank"
+              className="w-fit max-lg:text-center"
+            >
+              ul. Polnych kwiatów 9, <br />
+              32-070 Wołowice
+            </motion.a>
           </div>
         </div>
       </div>
