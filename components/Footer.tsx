@@ -162,7 +162,7 @@ function Footer() {
               whileHover={{ color: "#003d66" }}
               href="https://maps.app.goo.gl/TW4CQtPvfUZrAb5R6"
               target="_blank"
-              className="w-fit"
+              className="w-fit max-lg:text-center"
             >
               ul. Polnych kwiatów 9, <br />
               32-070 Wołowice

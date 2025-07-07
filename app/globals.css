@@ -175,7 +175,7 @@ p {
   color: var(--color-light);
 }
 
-#footer-p > div > p {
+#footer-p > div > a {
   font-size: 1.125rem;
   color: var(--color-dark);
 }
