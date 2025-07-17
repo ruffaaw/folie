@@ -876,7 +876,7 @@ export default function Page() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              href="#"
+              href="https://www.instagram.com/dragon_folie?igsh=MWJrdG41eTFpanEwbg%3D%3D"
               target="_blank"
               className="text-blue hover:text-blue hover:scale-110"
               aria-label="Instagram"
@@ -889,7 +889,7 @@ export default function Page() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              href="#"
+              href="https://www.facebook.com/share/19B4vpMnE9/?mibextid=wwXIfr"
               target="_blank"
               className="text-blue hover:text-blue hover:scale-110"
               aria-label="Facebook"

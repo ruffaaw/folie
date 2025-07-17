@@ -177,7 +177,7 @@ export default function Page() {
               whileInView="visible"
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
-              href="https://instagram.com"
+              href="https://www.instagram.com/dragon_folie?igsh=MWJrdG41eTFpanEwbg%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full text-white hover:scale-110 transition-transform"
@@ -192,7 +192,7 @@ export default function Page() {
               whileInView="visible"
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/19B4vpMnE9/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-blue-600 rounded-full text-white hover:scale-110 transition-transform"
