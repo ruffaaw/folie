@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     "lustro weneckie Kraków",
     "folie na świetliki",
     "profesjonalny montaż folii",
+    "folię okienne Kraków",
+    "folię okienne Krakow",
+    "folie okienne Krakow",
+    "folie okienne kraków",
+    "folie okienne krakow",
+    "folię okienne krakow",
   ],
   icons: "/icon.webp",
   openGraph: {
