@@ -16,7 +16,7 @@ export default function Page() {
             </h3>
             <div className="flex items-start mt-4">
               <p>
-                Administratorem Twoich danych osobowych jest Karol Jaskórski
+                Administratorem Twoich danych osobowych jest Karol Jaskorski
                 Dragon Folie z&nbsp;siedzibą w&nbsp;Wołowicach, ul. Polnych
                 Kwiatów&nbsp;9, 32-070, NIP: 9442295511, REGON: 542124248. Dane
                 kontaktowe: e-mail: dragon.folie2025@gmail.com, tel.:
