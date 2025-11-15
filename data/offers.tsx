@@ -1,7 +1,7 @@
 export const offers = [
   {
     image: "/antyUV.webp",
-    title: "Folie anty UV",
+    title: `Folie anty UV w${"\u00A0"}Krakowie`,
     description: "Ochrona przed szkodliwym promieniowaniem UV do 99%.",
     advantages: [
       "Zapobiega żółknięciu mebli",
@@ -20,7 +20,7 @@ export const offers = [
   },
   {
     image: "/przeciwsloneczne.webp",
-    title: "Folie przeciwsłoneczne",
+    title: `Folie przeciwsłoneczne w${"\u00A0"}Krakowie`,
     description: `Redukcja nagrzewania pomieszczeń nawet o${"\u00A0"}86%.`,
     advantages: [
       "Obniża temperaturę",
@@ -41,7 +41,7 @@ export const offers = [
   },
   {
     image: "/swietliki.webp",
-    title: `Folie na świetliki z${"\u00A0"}poliwęglanu`,
+    title: `Folie na świetliki z${"\u00A0"}poliwęglanu w${"\u00A0"}Krakowie`,
     description: `Obniżenie temperatury pod świetlikami o${"\u00A0"}3-5°C.`,
     advantages: [
       "Zapobiega żółknięciu poliwęglanu",
@@ -58,8 +58,8 @@ export const offers = [
   },
   {
     image: "/antywlamaniowe.webp",
-    title: "Folie antywłamaniowe",
-    description: `Zabezpieczenie przed włamaniem i${"\u00A0"}rozbiciem szkła.`,
+    title: `Folie antywłamaniowe w${"\u00A0"}Krakowie`,
+    description: `Skuteczna ochrona szyb przed włamaniem i${"\u00A0"}uszkodzeniem. Profesjonalny montaż w${"\u00A0"}domu i${"\u00A0"}firmie przez Dragon Folie`,
     advantages: [
       "Niewidoczne zabezpieczenie",
       "Odporność na uderzenia",
@@ -76,7 +76,7 @@ export const offers = [
   },
   {
     image: "/bezpieczne.webp",
-    title: "Folie bezpieczne",
+    title: `Folie bezpieczne w${"\u00A0"}Krakowie`,
     description: "Zapobiegają rozprzestrzenianiu się odłamków szkła.",
     advantages: [
       "Spełniają standard HACCP",
@@ -94,7 +94,7 @@ export const offers = [
   },
   {
     image: "/lustro-weneckie.webp",
-    title: "Folie lustro weneckie",
+    title: `Folie lustro weneckie w${"\u00A0"}Krakowie`,
     description: `Efekt lustra z${"\u00A0"}zachowaniem widoczności od wewnątrz.`,
     advantages: [
       `Prywatność w${"\u00A0"}dzień`,
@@ -112,7 +112,7 @@ export const offers = [
   },
   {
     image: "/matowe.webp",
-    title: "Folie matowe",
+    title: `Folie matowe w${"\u00A0"}Krakowie`,
     description: `Dekoracyjne rozwiązanie z${"\u00A0"}zachowaniem prywatności.`,
     advantages: [
       "Przepuszczalność światła 18-72%",
@@ -130,7 +130,7 @@ export const offers = [
   },
   {
     image: "/mrozone.webp",
-    title: "Folie mrożone",
+    title: `Folie mrożone w${"\u00A0"}Krakowie`,
     description: `Efekt mrożonej szyby z${"\u00A0"}możliwością personalizacji.`,
     advantages: [
       "Możliwość zadruku",
