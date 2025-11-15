@@ -150,6 +150,8 @@ export default function Page() {
           >
             To nowa firma na Polskim rynku, jednak w&nbsp;montażu folii możemy
             pochwalić się wieloletnim doświadczeniem. <br />
+            Zajmujemy się montażem folii okiennych na terenie całego województwa
+            małopolskiego i śląskiego. <br />
             Nasi monterzy to wykwalifikowani specjaliści, którzy:
             <motion.div
               variants={checkItem}
