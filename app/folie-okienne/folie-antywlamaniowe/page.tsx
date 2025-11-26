@@ -106,7 +106,8 @@ export default function Page() {
       <motion.h1 variants={headline} className="mt-7 text-center">
         <span className="text-dark relative inline-block">
           <span>
-            FOLIE <span className="text-blue">ANTYWŁAMANIOWE</span>
+            FOLIE{" "}
+            <span className="text-blue">ANTYWŁAMANIOWE W&nbsp;KRAKOWIE</span>
           </span>
           <motion.span
             initial={{ scaleX: 0 }}
@@ -120,10 +121,13 @@ export default function Page() {
         variants={sub}
         className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16 "
       >
-        Przezroczysta folia poliestrowa o wysokiej wytrzymałości, która zamienia
-        zwykłe szyby w skuteczną barierę antywłamaniową. Niewidoczna ochrona,
-        która nie wpływa na estetykę okien, zapewniając bezpieczeństwo
-        i&nbsp;komfort psychiczny.
+        <strong>Folie antywłamaniowe Kraków</strong> – skuteczna ochrona szyb
+        przed włamaniem i&nbsp;uszkodzeniem. Profesjonalny montaż w&nbsp;domu
+        i&nbsp;firmie przez Dragon Folie. Przezroczysta folia poliestrowa
+        o&nbsp;wysokiej wytrzymałości, która zamienia zwykłe szyby
+        w&nbsp;skuteczną barierę antywłamaniową. Niewidoczna ochrona, która nie
+        wpływa na estetykę okien, zapewniając bezpieczeństwo i&nbsp;komfort
+        psychiczny.
       </motion.h2>
 
       <BeforeAfterSlider

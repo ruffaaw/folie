@@ -106,7 +106,10 @@ export default function Home() {
           className="mt-8 sm:mt-12 md:mt-16 text-center"
         >
           <span className="text-dark relative inline-block">
-            <span className="text-dark">Witamy Państwa na naszej stronie!</span>
+            <span className="text-dark">
+              Dragon Folie – Profesjonalny montaż folii okiennych
+              i&nbsp;oklejanie powierzchni w&nbsp;Krakowie.
+            </span>
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -120,15 +123,40 @@ export default function Home() {
           </span>
         </motion.h1>
       </motion.div>
+
       <motion.div variants={container}>
         <motion.h2
           variants={sub}
-          className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20"
+          className="mt-4 md:mt-7 px-4 sm:px-8 md:px-16 text-center text-lg md:text-xl z-20"
           style={{ color: "#333", fontWeight: 500, textAlign: "center" }}
         >
-          Zajmujemy się montażem folii okiennych na terenie całego województwa
-          małopolskiego i&nbsp;śląskiego.
+          Witamy Państwa na stronie <strong>Dragon Folie!</strong>
         </motion.h2>
+
+        <p className="mt-4 md:mt-6 px-4 sm:px-8 md:px-16 text-center text-base md:text-lg text-dark">
+          Specjalizujemy się{" "}
+          <strong>w&nbsp;montażu folii okiennych w&nbsp;Krakowie</strong> oraz
+          na terenie całego województwa małopolskiego i&nbsp;śląskiego.
+          W&nbsp;przypadku większych realizacji dojeżdżamy{" "}
+          <strong>na terenie całej Polski.</strong> Oferujemy{" "}
+          <strong>
+            profesjonalne oklejanie szyb, mebli, drzwi oraz ram okiennych
+          </strong>
+          , wykorzystując folie wysokiej jakości.
+          <br />
+          <br />
+          Dzięki doświadczeniu i&nbsp;precyzji wykonania zapewniamy estetyczny
+          efekt oraz trwałość montażu. Nasze folie pomagają{" "}
+          <strong>
+            chronić wnętrza przed nadmiernym słońcem, poprawić prywatność
+            i&nbsp;nadać pomieszczeniom nowoczesny wygląd.
+          </strong>
+          <br />
+          <br />
+          Poznaj naszą ofertę i&nbsp;przekonaj się, że{" "}
+          <strong>profesjonalny montaż folii</strong> może całkowicie odmienić
+          Twoje wnętrze.
+        </p>
       </motion.div>
 
       <motion.div variants={container}>

@@ -101,7 +101,7 @@ export default function Page() {
       <motion.h1 variants={headline} className="mt-7 text-center">
         <span className="text-dark relative inline-block">
           <span>
-            FOLIE <span className="text-blue">MROŻONE</span>
+            FOLIE <span className="text-blue">MROŻONE W&nbsp;KRAKOWIE</span>
           </span>
           <motion.span
             initial={{ scaleX: 0 }}

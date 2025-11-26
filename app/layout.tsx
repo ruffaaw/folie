@@ -3,9 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dragonfolie.com"),
-  title: "Dragon Folie | Profesjonalne folie okienne w Krakowie i okolicach",
+  title:
+    "Montaż folii okiennej Kraków i oklejanie szyb, mebli i drzwi – Dragon Folie",
   description:
-    "Kompleksowy montaż folii okiennych: przeciwsłonecznych, antywłamaniowych, dekoracyjnych i wiele innych. Działamy na terenie nie tylko Krakowa, ale także całego województwa małopolskiego i śląskiego. Doświadczony zespół, najwyższa jakość materiałów.",
+    "Profesjonalny montaż folii okiennej w Krakowie i Małopolsce. Oklejanie szyb, mebli, drzwi i ram okiennych. Dragon Folie - estetyka, ochrona i precyzja montażu.",
   keywords: [
     "folie okienne Kraków",
     "folie przeciwsłoneczne",
@@ -26,15 +27,16 @@ export const metadata: Metadata = {
   ],
   icons: "/icon.webp",
   openGraph: {
-    title: "Dragon Folie | Profesjonalne folie okienne w Krakowie i okolicach",
+    title:
+      "Montaż folii okiennej Kraków i oklejanie szyb, mebli i drzwi – Dragon Folie",
     description:
-      "Oferujemy montaż wysokiej jakości folii okiennych na terenie nie tylko Krakowa, ale również całego województwa małopolskiego i śląskiego. Folie przeciwsłoneczne, antywłamaniowe, dekoracyjne i wiele innych. Doświadczony zespół montażowy.",
+      "Profesjonalny montaż folii okiennej w Krakowie i Małopolsce. Oklejanie szyb, mebli, drzwi i ram okiennych. Dragon Folie - estetyka, ochrona i precyzja montażu.",
     url: "https://dragonfolie.com/",
     siteName: "Dragon Folie",
     images: [
       {
         url: "/logo-szare.webp",
-        alt: "Dragon Folie | Profesjonalne folie okienne w Krakowie i okolicach",
+        alt: "Montaż folii okiennej Kraków i oklejanie szyb, mebli i drzwi – Dragon Folie",
       },
     ],
     locale: "pl_PL",
