@@ -109,7 +109,8 @@ export default function Page() {
       >
         <span className="text-dark relative inline-block">
           <span>
-            FOLIE <span className="text-blue">PRZECIWSŁONECZNE</span>
+            FOLIE{" "}
+            <span className="text-blue">PRZECIWSŁONECZNE W&nbsp;KRAKOWIE</span>
           </span>
           <motion.span
             initial={{ scaleX: 0 }}

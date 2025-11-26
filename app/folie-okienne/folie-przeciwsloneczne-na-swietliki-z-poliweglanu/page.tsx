@@ -102,7 +102,10 @@ export default function Page() {
       <motion.h1 variants={headline} className="mt-7 text-center">
         <span className="text-dark relative inline-block">
           <span>
-            FOLIE NA <span className="text-blue">ŚWIETLIKI POLIWĘGLANOWE</span>
+            FOLIE NA{" "}
+            <span className="text-blue">
+              ŚWIETLIKI POLIWĘGLANOWE W&nbsp;KRAKOWIE
+            </span>
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
