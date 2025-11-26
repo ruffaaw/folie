@@ -106,7 +106,10 @@ export default function Home() {
           className="mt-8 sm:mt-12 md:mt-16 text-center"
         >
           <span className="text-dark relative inline-block">
-            <span className="text-dark">Witamy Państwa na naszej stronie!</span>
+            <span className="text-dark">
+              Dragon Folie - Profesjonalny montaż folii okiennych
+              i&nbsp;oklejanie powierzchni w&nbsp;Krakowie
+            </span>
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -126,8 +129,7 @@ export default function Home() {
           className="mt-4 md:mt-7 max-w-[90vw] md:max-w-[1030px] text-center text-lg md:text-xl z-20"
           style={{ color: "#333", fontWeight: 500, textAlign: "center" }}
         >
-          Zajmujemy się montażem folii okiennych na terenie całego województwa
-          małopolskiego i&nbsp;śląskiego.
+          Witamy Państwa na stronie <strong>Dragon Folie!</strong>
         </motion.h2>
       </motion.div>
 
