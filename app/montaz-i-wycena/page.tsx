@@ -227,9 +227,14 @@ export default function Page() {
           >
             <h4 className="font-semibold">Pełna obsługa</h4>
             <p className="text-justify">
-              Na życzenie klienta możemy wykonać pomiar samodzielnie.
-              Dysponujemy próbkami wykorzystywanych przez nas folii, dzięki
-              czemu możemy Państwa osobiście zapoznać z&nbsp;naszą ofertą.
+              Na życzenie klienta oferujemy{" "}
+              <strong>pełną obsługę montażu folii</strong> – od{" "}
+              <strong>pomiaru na miejscu</strong>, przez{" "}
+              <strong>dobór odpowiedniej folii</strong>, aż po{" "}
+              <strong>profesjonalny montaż</strong>.
+              <br /> Nasi monterzy dysponują próbkami folii, abyście mogli
+              Państwo zobaczyć je na żywo i&nbsp;dobrać rozwiązanie idealnie
+              dopasowane do wnętrza.
             </p>
           </motion.div>
         </motion.div>
