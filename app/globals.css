@@ -264,3 +264,8 @@ p {
     display: none !important;
   }
 }
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
