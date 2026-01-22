@@ -84,12 +84,12 @@ const imageReveal = {
 
 export default function Page() {
   const galleryImages = [
-    "/biały mat.webp",
-    "/biały mat1.webp",
-    "/bialy mat2.webp",
     "/folia mrożona (2).webp",
     "/folia mrożona (3).webp",
     "/folia mrożona.webp",
+    "/biały mat.webp",
+    "/biały mat1.webp",
+    "/bialy mat2.webp",
     "/folia przeciwsłonecznaprzed i po.webp",
     "/lustro weneckie 1.webp",
     "/lustro weneckie 2.webp",
