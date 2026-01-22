@@ -84,10 +84,28 @@ const imageReveal = {
 
 export default function Page() {
   const galleryImages = [
-    "/folia_lustrzana_zewnatrz.webp",
-    "/fasada.webp",
-    "/folia_mrozona_zewnatrz.webp",
-    "/matowa-wewnatrz.webp",
+    "/biały mat.webp",
+    "/biały mat1.webp",
+    "/bialy mat2.webp",
+    "/folia mrożona (2).webp",
+    "/folia mrożona (3).webp",
+    "/folia mrożona.webp",
+    "/folia przeciwsłonecznaprzed i po.webp",
+    "/lustro weneckie 1.webp",
+    "/lustro weneckie 2.webp",
+    "/lustro weneckie 3.webp",
+    "/lustro weneckie.webp",
+    "/przeciw. na poliwęglan srebrna.webp",
+    "/przeciw. na poliwęglan1.webp",
+    "/przeciw. na poliwęglan2.webp",
+    "/przeciw. na poliwęglan3.webp",
+    "/przeciwsłoneczna.webp",
+    "/przeciwsłoneczna1.webp",
+    "/przeciwsłoneczna2.webp",
+    "/przeciwsłoneczna3.webp",
+    "/przeciwsłoneczna4.webp",
+    "/przeciwsłoneczna5.webp",
+    "/przeciwsłoneczna6.webp",
   ];
 
   return (
@@ -133,16 +151,24 @@ export default function Page() {
             disableOnInteraction: false,
           }}
           loop={true}
-          className="w-full"
+          className="w-full gallery-swiper"
         >
           {galleryImages.map((src, index) => (
-            <SwiperSlide key={index} className="flex justify-center rounded-lg">
+            <SwiperSlide
+              key={index}
+              className="flex justify-center items-center rounded-lg"
+            >
               <Image
-                src={src}
-                alt={`Galeria ${index + 1}`}
+                src={"/gallery/" + src}
+                alt={
+                  src
+                    .split("/")
+                    .pop()
+                    ?.replace(/\.[^/.]+$/, "") || "Zdjęcie"
+                }
                 width={1200}
-                height={500}
-                className="rounded-lg shadow-lg object-cover w-full h-auto"
+                height={1200}
+                className="rounded-lg shadow-lg"
                 unoptimized
               />
             </SwiperSlide>
