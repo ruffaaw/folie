@@ -425,7 +425,7 @@ export default function Page() {
             className="w-full md:w-1/2 flex flex-col justify-center"
           >
             <div className="flex flex-row items-baseline gap-2 justify-center">
-              <h3 className="text-2xl md:text-3xl font-bold ">230-280</h3>
+              <h3 className="text-2xl md:text-3xl font-bold ">250-300</h3>
               <p>zł/m²</p>
             </div>
 
