@@ -197,6 +197,7 @@ export default function Header() {
                         ],
                         ["Matowe", "/folie-okienne/folie-matowe"],
                         ["Mrożone", "/folie-okienne/folie-mrozone"],
+                        ["Dekoracyjne", "/folie-okienne/folie-dekoracyjne"],
                       ].map(([title, href]) => (
                         <motion.div key={href} variants={itemVariants}>
                           <Link
@@ -317,6 +318,7 @@ export default function Header() {
                         ],
                         ["Matowe", "/folie-okienne/folie-matowe"],
                         ["Mrożone", "/folie-okienne/folie-mrozone"],
+                        ["Dekoracyjne", "/folie-okienne/folie-dekoracyjne"],
                       ].map(([title, href]) => (
                         <motion.div key={href} variants={itemVariants}>
                           <Link

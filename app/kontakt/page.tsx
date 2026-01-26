@@ -97,14 +97,14 @@ export default function Page() {
   const [previews, setPreviews] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
-    null
+    null,
   );
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     const target = e.target as HTMLInputElement;
     const { name, value, type, checked } = target;
@@ -203,14 +203,14 @@ export default function Page() {
     // Ograniczenie rozmiaru pojedynczego pliku
     const maxFileSize = 5 * 1024 * 1024; // 5MB
     const oversizedFiles = formData.attachments.filter(
-      (file) => file.size > maxFileSize
+      (file) => file.size > maxFileSize,
     );
 
     if (oversizedFiles.length > 0) {
       alert(
         `Następujące pliki są zbyt duże (max 5MB): ${oversizedFiles
           .map((f) => f.name)
-          .join(", ")}`
+          .join(", ")}`,
       );
       setIsSubmitting(false);
       return;
@@ -220,7 +220,7 @@ export default function Page() {
     const maxTotalSize = 25 * 1024 * 1024; // 25MB
     const totalSize = formData.attachments.reduce(
       (sum, file) => sum + file.size,
-      0
+      0,
     );
 
     if (totalSize > maxTotalSize) {
@@ -238,14 +238,14 @@ export default function Page() {
       "application/pdf",
     ];
     const invalidFiles = formData.attachments.filter(
-      (file) => !allowedTypes.includes(file.type)
+      (file) => !allowedTypes.includes(file.type),
     );
 
     if (invalidFiles.length > 0) {
       alert(
         `Następujące pliki mają nieobsługiwany format: ${invalidFiles
           .map((f) => f.name)
-          .join(", ")}`
+          .join(", ")}`,
       );
       setIsSubmitting(false);
       return;
@@ -255,7 +255,7 @@ export default function Page() {
     const now = Date.now();
     if (lastSubmissionTime && now - lastSubmissionTime < 60000) {
       alert(
-        "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej."
+        "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej.",
       );
       setIsSubmitting(false);
       return;
@@ -281,7 +281,7 @@ export default function Page() {
             content_type: file.type,
             base64: base64.split(",")[1],
           };
-        })
+        }),
       );
       const response = await fetch(
         "https://jc5vg6se5e.execute-api.eu-north-1.amazonaws.com/dev/send-mail",
@@ -302,7 +302,7 @@ export default function Page() {
               phone: formData.phone,
             },
           }),
-        }
+        },
       );
       if (response.ok) {
         alert("Wiadomość wysłana pomyślnie!");
@@ -324,7 +324,7 @@ export default function Page() {
     } catch (error) {
       alert(
         "Wystąpił błąd: " +
-          (error instanceof Error ? error.message : String(error))
+          (error instanceof Error ? error.message : String(error)),
       );
     } finally {
       setIsSubmitting(false);
@@ -587,6 +587,7 @@ export default function Page() {
                   <option value="lustro-weneckie">Folie lustro weneckie</option>
                   <option value="matowe">Folie matowe</option>
                   <option value="mrozone">Folie mrożone</option>
+                  <option value="dekoracyjne">Folie dekoracyjne</option>
                 </select>
               </div>
             </motion.div>
@@ -614,21 +615,21 @@ export default function Page() {
                     e.preventDefault();
                     e.currentTarget.classList.add(
                       "border-blue-500",
-                      "bg-blue-50"
+                      "bg-blue-50",
                     );
                   }}
                   onDragLeave={(e) => {
                     e.preventDefault();
                     e.currentTarget.classList.remove(
                       "border-blue-500",
-                      "bg-blue-50"
+                      "bg-blue-50",
                     );
                   }}
                   onDrop={(e) => {
                     e.preventDefault();
                     e.currentTarget.classList.remove(
                       "border-blue-500",
-                      "bg-blue-50"
+                      "bg-blue-50",
                     );
                     if (e.dataTransfer.files.length > 0) {
                       handleChange({
