@@ -137,7 +137,8 @@ h5 {
   }
 }
 
-p {
+p,
+li {
   font-size: 1.5rem;
   color: var(--color-gray);
   line-height: 1.5;
@@ -155,7 +156,8 @@ p {
   }
 }
 
-.card p {
+.card p,
+li {
   font-size: 1.25rem;
 
   @media (max-width: 1280px) {
