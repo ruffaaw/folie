@@ -8,7 +8,6 @@ import React from "react";
 import { features } from "@/data/folie-dekoracyjne";
 import { motion } from "framer-motion";
 import LayoutIcon from "@/public/icons/LayoutIcon";
-import AlertIcon from "@/public/icons/AlertIcon";
 import CheckIcon from "@/public/icons/CheckIcon";
 import SparkleIcon from "@/public/icons/SparkleIcon";
 import ThumbsUpIcon from "@/public/icons/ThumbsUpIcon";
