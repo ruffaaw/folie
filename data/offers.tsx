@@ -146,4 +146,25 @@ export const offers = [
     ],
     href: "/folie-okienne/folie-mrozone",
   },
+  {
+    image: "/dekoracyjny.webp",
+    title: "Folie dekoracyjne",
+    description:
+      "Nowoczesne oklejanie mebli, drzwi i ram okiennych bez konieczności wymiany.",
+    advantages: [
+      "Szybka metamorfoza bez remontu",
+      "Bogata paleta kolorów i struktur",
+      "Ochrona przed zarysowaniami i wilgocią",
+      "Trwałość i łatwe czyszczenie",
+      "Możliwość montażu wewnątrz i na zewnątrz",
+    ],
+    places: [
+      "Meble kuchenne i zabudowy",
+      "Drzwi wewnętrzne i zewnętrzne",
+      `Ramy okienne${"\u00A0"}PCV, drewniane i${"\u00A0"}aluminiowe`,
+      `Domy i${"\u00A0"}mieszkania`,
+      `Biura i${"\u00A0"}lokale usługowe`,
+    ],
+    href: "/folie-okienne/folie-dekoracyjne",
+  },
 ];

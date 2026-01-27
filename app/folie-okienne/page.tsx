@@ -104,7 +104,7 @@ export default function Page() {
 
       <motion.div
         variants={container}
-        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 w-full justify-items-center px-4 sm:px-8 md:px-16 gap-5 my-10"
+        className="grid grid-cols-1 xl:grid-cols-3 w-full justify-items-center px-4 sm:px-8 md:px-16 gap-5 my-10"
       >
         {offers.map((offer, index) => (
           <motion.div
@@ -113,7 +113,7 @@ export default function Page() {
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            className="bg-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] rounded-[12px] flex flex-col overflow-hidden"
+            className="bg-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] rounded-[12px] flex flex-col overflow-hidden w-full"
           >
             <motion.div
               className="w-full relative"
