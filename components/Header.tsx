@@ -138,6 +138,7 @@ export default function Header() {
           { name: "Folie okienne", href: "/folie-okienne", submenu: true },
           { name: `Montaż i${"\u00A0"}wycena`, href: "/montaz-i-wycena" },
           { name: "Nasze realizacje", href: "/nasze-realizacje" },
+          { name: "Artykuły", href: "/artykuly" },
           { name: "Kontakt", href: "/kontakt" },
         ].map((item) => (
           <div key={item.href} className="relative">
