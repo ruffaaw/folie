@@ -165,7 +165,7 @@ export default function Home() {
             text="Poznaj naszą ofertę"
             primaryColor="#003d66"
             backgroundColor="#d0ebff"
-            href="/folie-okienne"
+            href="/oferta"
           />
         </motion.div>
       </motion.div>

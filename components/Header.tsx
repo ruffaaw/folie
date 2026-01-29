@@ -135,7 +135,7 @@ export default function Header() {
       <nav className="hidden lg:flex flex-row items-center text-light text-xl xl:text-2xl drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
         {[
           { name: "O nas", href: "/o-nas" },
-          { name: "Folie okienne", href: "/folie-okienne", submenu: true },
+          { name: "Oferta", href: "/oferta", submenu: true },
           { name: `Montaż i${"\u00A0"}wycena`, href: "/montaz-i-wycena" },
           { name: "Nasze realizacje", href: "/nasze-realizacje" },
           { name: "Artykuły", href: "/artykuly" },
@@ -154,12 +154,12 @@ export default function Header() {
                   className={`flex items-center gap-1 cursor-pointer px-4 xl:px-7 py-2 ${
                     isSubmenuOpen ? "scale-105" : ""
                   } ${
-                    isActive("/folie-okienne")
+                    isActive("/oferta")
                       ? "bg-blue-light text-dark rounded-lg"
                       : ""
                   }`}
                 >
-                  <Link href="/folie-okienne">Folie okienne</Link>
+                  <Link href="/oferta">Oferta</Link>
                   <motion.div
                     animate={{ rotate: isSubmenuOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
@@ -178,27 +178,27 @@ export default function Header() {
                       className="absolute top-full left-0 mt-1 w-56 bg-white text-dark rounded-md shadow-lg z-50 border border-blue-light"
                     >
                       {[
-                        ["Anty UV", "/folie-okienne/folie-anty-uv"],
+                        ["Folie anty UV", "/oferta/folie-anty-uv"],
                         [
-                          "Przeciwsłoneczne",
-                          "/folie-okienne/folie-przeciwsloneczne",
+                          "Folie przeciwsłoneczne",
+                          "/oferta/folie-przeciwsloneczne",
                         ],
                         [
-                          `Na świetliki z${"\u00A0"}poliwęglanu`,
-                          "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+                          `Folie na świetliki z${"\u00A0"}poliwęglanu`,
+                          "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
                         ],
                         [
-                          "Antywłamaniowe",
-                          "/folie-okienne/folie-antywlamaniowe",
+                          "Folie antywłamaniowe",
+                          "/oferta/folie-antywlamaniowe",
                         ],
-                        ["Bezpieczne", "/folie-okienne/folie-bezpieczne"],
+                        ["Folie bezpieczne", "/oferta/folie-bezpieczne"],
                         [
-                          "Lustro weneckie",
-                          "/folie-okienne/folie-lustro-weneckie",
+                          "Folie lustro weneckie",
+                          "/oferta/folie-lustro-weneckie",
                         ],
-                        ["Matowe", "/folie-okienne/folie-matowe"],
-                        ["Mrożone", "/folie-okienne/folie-mrozone"],
-                        ["Dekoracyjne", "/folie-okienne/folie-dekoracyjne"],
+                        ["Folie matowe", "/oferta/folie-matowe"],
+                        ["Folie mrożone", "/oferta/folie-mrozone"],
+                        ["Dekoracje wnętrz", "/oferta/folie-dekoracyjne"],
                       ].map(([title, href]) => (
                         <motion.div key={href} variants={itemVariants}>
                           <Link
@@ -269,17 +269,14 @@ export default function Header() {
               <div className="relative">
                 <div
                   className={`flex justify-between items-center py-3 px-4 sm:px-8 md:px-16  ${
-                    isActive("/folie-okienne")
+                    isActive("/oferta")
                       ? "bg-blue-light text-dark rounded-lg"
                       : ""
                   }`}
                   onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
                 >
-                  <Link
-                    href="/folie-okienne"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Folie okienne
+                  <Link href="/oferta" onClick={(e) => e.preventDefault()}>
+                    Oferta
                   </Link>
                   <motion.div
                     animate={{ rotate: isSubmenuOpen ? 180 : 0 }}
@@ -299,27 +296,27 @@ export default function Header() {
                       className="bg-blue-dark px-4 sm:px-8 md:px-16 mt-1 mb-2 rounded-lg"
                     >
                       {[
-                        ["Anty UV", "/folie-okienne/folie-anty-uv"],
+                        ["Folie anty UV", "/oferta/folie-anty-uv"],
                         [
-                          "Przeciwsłoneczne",
-                          "/folie-okienne/folie-przeciwsloneczne",
+                          "Folie przeciwsłoneczne",
+                          "/oferta/folie-przeciwsloneczne",
                         ],
                         [
-                          `Na świetliki z${"\u00A0"}poliwęglanu`,
-                          "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+                          `Folie na świetliki z${"\u00A0"}poliwęglanu`,
+                          "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
                         ],
                         [
-                          "Antywłamaniowe",
-                          "/folie-okienne/folie-antywlamaniowe",
+                          "Folie antywłamaniowe",
+                          "/oferta/folie-antywlamaniowe",
                         ],
-                        ["Bezpieczne", "/folie-okienne/folie-bezpieczne"],
+                        ["Folie bezpieczne", "/oferta/folie-bezpieczne"],
                         [
-                          "Lustro weneckie",
-                          "/folie-okienne/folie-lustro-weneckie",
+                          "Folie lustro weneckie",
+                          "/oferta/folie-lustro-weneckie",
                         ],
-                        ["Matowe", "/folie-okienne/folie-matowe"],
-                        ["Mrożone", "/folie-okienne/folie-mrozone"],
-                        ["Dekoracyjne", "/folie-okienne/folie-dekoracyjne"],
+                        ["Folie matowe", "/oferta/folie-matowe"],
+                        ["Folie mrożone", "/oferta/folie-mrozone"],
+                        ["Dekoracje wnętrz", "/oferta/folie-dekoracyjne"],
                       ].map(([title, href]) => (
                         <motion.div key={href} variants={itemVariants}>
                           <Link

@@ -84,7 +84,7 @@ export default function Page() {
       >
         <motion.h1 variants={headline}>
           <span className="text-dark relative inline-block">
-            <span className="relative z-10">Folie okienne</span>
+            <span className="relative z-10">Oferta</span>
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}

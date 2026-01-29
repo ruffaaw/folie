@@ -16,7 +16,7 @@ export const offers = [
       "Drukarnie",
       `Przemysł farmaceutyczny i${"\u00A0"}kosmetyczny`,
     ],
-    href: "/folie-okienne/folie-anty-uv",
+    href: "/oferta/folie-anty-uv",
   },
   {
     image: "/przeciwsloneczne.webp",
@@ -37,7 +37,7 @@ export const offers = [
       "Obiekty zabytkowe",
       "Przeszklone fasady",
     ],
-    href: "/folie-okienne/folie-przeciwsloneczne",
+    href: "/oferta/folie-przeciwsloneczne",
   },
   {
     image: "/swietliki.webp",
@@ -54,7 +54,7 @@ export const offers = [
       "Obiekty sportowe",
       "Dachy przeszkolone",
     ],
-    href: "/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+    href: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
   },
   {
     image: "/antywlamaniowe.webp",
@@ -72,7 +72,7 @@ export const offers = [
       `Sklepy i${"\u00A0"}biura`,
       `Domy i${"\u00A0"}mieszkania`,
     ],
-    href: "/folie-okienne/folie-antywlamaniowe",
+    href: "/oferta/folie-antywlamaniowe",
   },
   {
     image: "/bezpieczne.webp",
@@ -90,7 +90,7 @@ export const offers = [
       `Szpitale i${"\u00A0"}gabinety`,
       `Dom z${"\u00A0"}dziećmi/zwierzętami`,
     ],
-    href: "/folie-okienne/folie-bezpieczne",
+    href: "/oferta/folie-bezpieczne",
   },
   {
     image: "/lustro-weneckie.webp",
@@ -108,7 +108,7 @@ export const offers = [
       "Salony kosmetyczne",
       "Mieszkania (balkony)",
     ],
-    href: "/folie-okienne/folie-lustro-weneckie",
+    href: "/oferta/folie-lustro-weneckie",
   },
   {
     image: "/matowe.webp",
@@ -126,7 +126,7 @@ export const offers = [
       "Szklane ściany",
       `Balkony i${"\u00A0"}tarasy`,
     ],
-    href: "/folie-okienne/folie-matowe",
+    href: "/oferta/folie-matowe",
   },
   {
     image: "/mrozone.webp",
@@ -144,11 +144,11 @@ export const offers = [
       `Toalety i${"\u00A0"}szatnie`,
       "Witryny sklepowe",
     ],
-    href: "/folie-okienne/folie-mrozone",
+    href: "/oferta/folie-mrozone",
   },
   {
     image: "/dekoracyjny.webp",
-    title: "Folie dekoracyjne",
+    title: "Dekoracje wnętrz",
     description:
       "Nowoczesne oklejanie mebli, drzwi i ram okiennych bez konieczności wymiany.",
     advantages: [
@@ -165,6 +165,6 @@ export const offers = [
       `Domy i${"\u00A0"}mieszkania`,
       `Biura i${"\u00A0"}lokale usługowe`,
     ],
-    href: "/folie-okienne/folie-dekoracyjne",
+    href: "/oferta/folie-dekoracyjne",
   },
 ];

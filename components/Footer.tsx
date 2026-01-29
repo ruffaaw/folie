@@ -17,19 +17,19 @@ function Footer() {
           </div>
 
           <div className="w-full lg:w-1/5 flex items-center lg:items-start flex-col">
-            <h4 className="text-lg font-semibold mb-4">Folie okienne</h4>
+            <h4 className="text-lg font-semibold mb-4">Oferta</h4>
             <ul className="space-y-2 flex flex-col items-center lg:items-start">
-              <li>
+              {/* <li>
                 <Link
-                  href="/folie-okienne"
+                  href="/oferta"
                   className="text-dark hover:text-blue transition"
                 >
                   Wszystkie folie
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
-                  href="/folie-okienne/folie-anty-uv"
+                  href="/oferta/folie-anty-uv"
                   className="text-dark hover:text-blue transition"
                 >
                   Folie Anty UV
@@ -37,7 +37,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/folie-okienne/folie-przeciwsloneczne"
+                  href="/oferta/folie-przeciwsloneczne"
                   className="text-dark hover:text-blue transition"
                 >
                   Folie przeciwsłoneczne
@@ -45,7 +45,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/folie-okienne/folie-przeciwsloneczne-na-swietliki-z-poliweglanu"
+                  href="/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu"
                   className="text-dark hover:text-blue transition"
                 >
                   Folie na świetliki
@@ -53,7 +53,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/folie-okienne/folie-antywlamaniowe"
+                  href="/oferta/folie-antywlamaniowe"
                   className="text-dark hover:text-blue transition"
                 >
                   Folie antywłamaniowe
@@ -61,7 +61,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/folie-okienne/folie-bezpieczne"
+                  href="/oferta/folie-bezpieczne"
                   className="text-dark hover:text-blue transition"
                 >
                   Folie bezpieczne
@@ -69,7 +69,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/folie-okienne/folie-lustro-weneckie"
+                  href="/oferta/folie-lustro-weneckie"
                   className="text-dark hover:text-blue transition"
                 >
                   Lustro weneckie
@@ -77,7 +77,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/folie-okienne/folie-matowe"
+                  href="/oferta/folie-matowe"
                   className="text-dark hover:text-blue transition"
                 >
                   Folie matowe
@@ -85,10 +85,18 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/folie-okienne/folie-mrozone"
+                  href="/oferta/folie-mrozone"
                   className="text-dark hover:text-blue transition"
                 >
                   Folie mrożone
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/oferta/folie-dekoracyjne"
+                  className="text-dark hover:text-blue transition"
+                >
+                  Dekoracje wnętrz
                 </Link>
               </li>
             </ul>

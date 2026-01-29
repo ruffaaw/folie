@@ -84,7 +84,7 @@ export default function Page() {
         <div className="flex flex-col gap-5">
           {articles.map((article, index) => (
             <motion.article
-              key={article.slug}
+              key={index}
               variants={item}
               whileHover={{ y: -4 }}
               className="flex flex-col md:flex-row gap-4 p-4 sm:p-5 bg-white
@@ -115,7 +115,6 @@ export default function Page() {
                   className="mt-4 inline-flex items-center gap-2 text-blue underline font-medium"
                 >
                   Czytaj więcej
-                  {/* <CheckIcon /> */}
                 </Link>
               </div>
             </motion.article>
