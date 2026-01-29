@@ -9,7 +9,7 @@ export const articles = [
   {
     slug: "folia-mrozona-czy-matowa",
     title: "FOLIA MROŻONA CZY MATOWA - którą wybrać do oklejania szyb?",
-    excerpt: `W obecnych czasach coraz więcej firm stawia na to, aby pracownicy mogli pracować w komfortowych warunkach, ładnym otoczeniu i estetycznych wnętrzach. Wybór odpowiedniej folii okiennej ma na to ogromny wpływ.  Klienci bardzo często pytają: folia mrożona czy matowa – która będzie lepsza do oklejania szyb? `,
+    excerpt: `W obecnych czasach coraz więcej firm stawia na to, aby pracownicy mogli pracować w${"\u00A0"}komfortowych warunkach, ładnym otoczeniu i${"\u00A0"}estetycznych wnętrzach. Wybór odpowiedniej folii okiennej ma na to ogromny wpływ.  Klienci bardzo często pytają: folia mrożona czy matowa – która będzie lepsza do oklejania szyb? `,
     image: "/artykuł-2-zdjęcie.webp",
   },
 ];

@@ -87,12 +87,13 @@ export default function Page() {
               key={index}
               variants={item}
               whileHover={{ y: -6 }}
-              className="flex flex-col lg:flex-row
-             bg-white rounded-3xl overflow-hidden
-             drop-shadow-[0px_15px_40px_rgba(0,0,0,0.1)]"
+              className={`flex flex-col lg:flex-row
+          ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}
+          bg-white rounded-3xl overflow-hidden
+          drop-shadow-[0px_15px_40px_rgba(0,0,0,0.1)]`}
             >
               {/* ZDJĘCIE */}
-              <div className="lg:w-[60%] w-full flex items-center justify-center p-6">
+              <div className="lg:w-[55%] w-full flex items-center justify-center p-6">
                 <div className="relative w-full max-w-[1080px] max-h-[1350px] aspect-[1080/1350]">
                   <Image
                     src={article.image}
@@ -106,7 +107,7 @@ export default function Page() {
 
               {/* TEKST */}
               <div
-                className="lg:w-[40%] w-full
+                className="lg:w-[45%] w-full
                   flex flex-col justify-between
                   p-6 md:p-8"
               >
