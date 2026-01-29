@@ -7,6 +7,7 @@ import BottomContact from "@/components/BottomContact";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { articles } from "@/data/articles";
 
 const container = {
   hidden: { opacity: 0 },
@@ -43,16 +44,6 @@ const sub = {
     transition: { duration: 0.7, ease: "easeOut", delay: 0.3 },
   },
 };
-
-const articles = [
-  {
-    slug: "faq-folie-dekoracyjne",
-    title: "Najczęściej zadawane pytania o folie dekoracyjne",
-    excerpt: `Zebraliśmy odpowiedzi na najczęstsze pytania dotyczące trwałości, kosztów oraz zastosowania folii dekoracyjnych na meblach, drzwiach i${"\u00A0"}ramach okiennych.`,
-    image: "/faq-image.webp",
-  },
-  // kolejne artykuły w przyszłości
-];
 
 export default function Page() {
   return (
