@@ -1,14 +1,15 @@
 export const articles = [
   {
     slug: "faq-folie-dekoracyjne",
-    title: "Najczęściej zadawane pytania o folie dekoracyjne",
-    excerpt: `Zebraliśmy odpowiedzi na najczęstsze pytania dotyczące trwałości, kosztów oraz zastosowania folii dekoracyjnych na meblach, drzwiach i${"\u00A0"}ramach okiennych.`,
-    image: "/faq-image.webp",
+    title:
+      "NAJCZĘŚCIEJ ZADAWANE PYTANIA (FAQ) – FOLIE DEKORACYJNE/ OKLEINY/ LAMINATY",
+    excerpt: `Czy oklejanie mebli folią jest trwałe? Jak długo utrzymuje się folia dekoracyjna na meblach? Czy folia dekoracyjna nadaje się do mebli kuchennych? Czy można okleić stare drzwi folią?`,
+    image: "/artykuł-1-grafika.webp",
   },
   {
     slug: "folia-mrozona-czy-matowa",
-    title: "Folia mrożona czy matowa – którą wybrać do oklejania szyb?",
-    excerpt: `Wyjaśniamy różnice między folią mrożoną a${"\u00A0"}matową, ich zastosowanie oraz podpowiadamy, które rozwiązanie lepiej sprawdzi się w${"\u00A0"}domu, biurze lub lokalu usługowym.`,
-    image: "/matowe.webp",
+    title: "FOLIA MROŻONA CZY MATOWA - którą wybrać do oklejania szyb?",
+    excerpt: `W obecnych czasach coraz więcej firm stawia na to, aby pracownicy mogli pracować w komfortowych warunkach, ładnym otoczeniu i estetycznych wnętrzach. Wybór odpowiedniej folii okiennej ma na to ogromny wpływ.  Klienci bardzo często pytają: folia mrożona czy matowa – która będzie lepsza do oklejania szyb? `,
+    image: "/artykuł-2-zdjęcie.webp",
   },
 ];

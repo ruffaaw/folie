@@ -81,41 +81,51 @@ export default function Page() {
         variants={container}
         className="w-full px-4 sm:px-8 md:px-16 mt-8 md:mt-12"
       >
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-10">
           {articles.map((article, index) => (
             <motion.article
               key={index}
               variants={item}
-              whileHover={{ y: -4 }}
-              className="flex flex-col md:flex-row gap-4 p-4 sm:p-5 bg-white
-                         rounded-3xl drop-shadow-[0px_0px_4px_rgba(0,0,0,0.3)]"
+              whileHover={{ y: -6 }}
+              className="flex flex-col lg:flex-row
+             bg-white rounded-3xl overflow-hidden
+             drop-shadow-[0px_15px_40px_rgba(0,0,0,0.1)]"
             >
-              {/* Zdjęcie */}
-              <div className="w-full md:w-[260px] h-[180px] rounded-2xl overflow-hidden shrink-0">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  width={520}
-                  height={360}
-                  className="w-full h-full object-contain md:object-cover"
-                />
+              {/* ZDJĘCIE */}
+              <div className="lg:w-[60%] w-full flex items-center justify-center p-6">
+                <div className="relative w-full max-w-[1080px] max-h-[1350px] aspect-[1080/1350]">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    priority={index === 0}
+                    className="object-contain"
+                  />
+                </div>
               </div>
 
-              {/* Treść */}
-              <div className="flex flex-col justify-between">
+              {/* TEKST */}
+              <div
+                className="lg:w-[40%] w-full
+                  flex flex-col justify-between
+                  p-6 md:p-8"
+              >
                 <div>
-                  <h3 className="text-dark">{article.title}</h3>
-                  <p className="mt-2 text-gray-700 line-clamp-3">
-                    {article.excerpt}
+                  <h3 className="text-dark text-xl md:text-2xl leading-snug">
+                    {article.title}
+                  </h3>
+
+                  <p className="mt-4 text-gray-700 text-sm md:text-base leading-relaxed">
+                    {article.excerpt}{" "}
+                    <Link
+                      href={`/artykuly/${article.slug}`}
+                      className="inline-flex items-center
+                 text-blue font-semibold hover:underline"
+                    >
+                      Czytaj dalej
+                    </Link>
                   </p>
                 </div>
-
-                <Link
-                  href={`/artykuly/${article.slug}`}
-                  className="mt-4 inline-flex items-center gap-2 text-blue underline font-medium"
-                >
-                  Czytaj więcej
-                </Link>
               </div>
             </motion.article>
           ))}
