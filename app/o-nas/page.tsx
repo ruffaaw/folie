@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import React from "react";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
 import { motion } from "framer-motion";
 import ShieldIcon from "@/public/icons/ShieldIcon";
 import UserIcon from "@/public/icons/UserIcon";
@@ -253,6 +254,9 @@ export default function Page() {
           ))}
         </motion.div>
       </motion.div>
+
+      {/* Sekcja z opiniami Google */}
+      <GoogleReviews />
 
       <Footer />
     </motion.div>
