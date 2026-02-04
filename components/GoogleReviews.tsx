@@ -133,7 +133,9 @@ export default function GoogleReviews() {
       >
         <h3 className="text-2xl md:text-3xl font-bold text-center mb-4">
           <span className="relative inline-block">
-            <span className="relative z-10">Opinie naszych klientów</span>
+            <span className="relative z-10">
+              Zaufali nam klienci z Krakowa i okolic
+            </span>
             <motion.span
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
