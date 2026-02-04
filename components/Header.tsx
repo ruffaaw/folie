@@ -343,8 +343,11 @@ export default function Header() {
                 Montaż i wycena
               </Link>
 
-              {["Nasze realizacje", "Kontakt"].map((item) => {
-                const path = item.replace(/\s+/g, "-").toLowerCase();
+              {["Nasze realizacje", "Artykuły", "Kontakt"].map((item) => {
+                const path = item
+                  .replace(/\s+/g, "-")
+                  .replace(/ł/g, "l")
+                  .toLowerCase();
                 return (
                   <Link
                     key={path}
