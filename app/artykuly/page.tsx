@@ -94,7 +94,7 @@ export default function Page() {
             >
               {/* ZDJĘCIE */}
               <div className="lg:w-[55%] w-full flex items-center justify-center p-6">
-                <div className="relative w-full max-w-[1080px] max-h-[1350px] aspect-[1080/1350]">
+                <div className="relative w-full max-w-[1080px] max-h-[70vh] aspect-[1080/1350]">
                   <Image
                     src={article.image}
                     alt={article.title}
