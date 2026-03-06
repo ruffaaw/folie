@@ -102,9 +102,9 @@ export default function Page() {
       <motion.h1 variants={headline} className="mt-7 text-center">
         <span className="text-dark relative inline-block">
           <span>
-            FOLIE NA{" "}
+            FOLIE PRZECIWSŁONECZNE NA{" "}
             <span className="text-blue">
-              ŚWIETLIKI POLIWĘGLANOWE W&nbsp;KRAKOWIE
+              ŚWIETLIKI Z&nbsp;POLIWĘGLANU W&nbsp;KRAKOWIE
             </span>
             <motion.span
               initial={{ scaleX: 0 }}
@@ -119,10 +119,32 @@ export default function Page() {
         variants={sub}
         className="mt-4 md:mt-7 text-center px-4 sm:px-8 md:px-16"
       >
-        Specjalistyczne folie przeciwsłoneczne na płyty poliwęglanowe, które
-        redukują nagrzewanie się hal produkcyjnych nawet o&nbsp;3-5°C. Nasze
-        rozwiązanie poprawia komfort pracy, zachowując przy tym właściwości
-        poliwęglanu.
+        Dachy hal produkcyjnych pokryte są najczęściej płytami poliwęglanowymi,
+        przez które promienie światła bez problemu przedostają się do wnętrza
+        gwałtownie zwiększając temperaturę w&nbsp;słoneczne dni. Powoduje to
+        szybkie nagrzewanie się pomieszczeń i&nbsp;obniżenie komfortu pracy
+        pracowników hal.
+        <br />
+        Proponujemy Państwu rozwiązanie w&nbsp;postaci folii przeciwsłonecznych
+        na świetliki poliwęglanowe w&nbsp;dwóch kolorach: białym
+        i&nbsp;srebrnym. Powodują redukcję nagrzewania hali/magazynu obniżając
+        temperaturę wewnątrz najczęściej od 3 do 5&nbsp;°C, jednak w&nbsp;upalne
+        dni różnica może wynieść nawet od 8 do 10&nbsp;°C. Zapraszamy do
+        zapoznania się z&nbsp;
+        <a href="/artykuly" className="text-blue underline">
+          artykułem
+        </a>
+        , w&nbsp;którym opisaliśmy konkretne przykłady efektów montażu. <br />
+        Folie na dach z&nbsp;poliwęglanu posiadają mikrospory, inaczej nazywane
+        rozszerzalnością cieplną, taką jak płyta poliwęglanowa. Dzięki temu
+        folia dostosowuje się do tej specyficznej powierzchni a&nbsp;także
+        pozwala aby gaz wydzielany przez płyty poliwęglanowe ulatniał się.
+        Chroni poliwęglan dzięki cząsteczkom odbijającym promieniowanie UV
+        jednocześnie zapobiegając jego żółknięciu. <br />
+        Montaż folii na świetliki wykonywany jest od zewnątrz. Nasi pracownicy
+        posiadają kwalifikacje do wykonywania prac na wysokościach, dzięki czemu
+        bez względu na wysokość budynku możemy podjąć się montażu folii na
+        oknach dachowych.
       </motion.h2>
 
       <BeforeAfterSlider
@@ -132,56 +154,6 @@ export default function Page() {
         altAfter="Szyba biblioteki po aplikacji folii anty UV"
         sliderPos={40}
       />
-
-      <motion.div variants={container} className="px-4 sm:px-8 md:px-16 w-full">
-        <motion.div
-          variants={item}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col items-start justify-start p-5 lg:p-7 gap-5 w-full bg-blue-light rounded-3xl mt-6 md:mt-8 card"
-        >
-          <div className="flex flex-row items-center justify-start gap-2.5 w-full">
-            <ThermometerIcon />
-            <h3>Dlaczego warto wybrać nasze folie?</h3>
-          </div>
-          <motion.div
-            variants={container}
-            className="flex flex-col md:flex-row gap-4 md:gap-5 card w-full"
-          >
-            <motion.div
-              variants={card}
-              custom={0}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
-            >
-              <h4 className="font-semibold">Specjalna konstrukcja</h4>
-              <p className="text-justify">
-                Nasze folie są specjalnie zaprojektowane do idealnego
-                dopasowania do powierzchni poliwęglanowych, zapewniając trwałą
-                i&nbsp;skuteczną ochronę.
-              </p>
-            </motion.div>
-            <motion.div
-              variants={card}
-              custom={0}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="flex flex-col p-5 lg:p-7 gap-3 bg-light rounded-3xl w-full"
-            >
-              <h4 className="font-semibold">Kompleksowa ochrona</h4>
-              <p className="text-justify">
-                Zapobiega żółknięciu poliwęglanu dzięki cząsteczkom odbijającym
-                UV. Dostępne w wersji białej i&nbsp;srebrnej dla różnych potrzeb
-                estetycznych.
-              </p>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </motion.div>
 
       <motion.div
         variants={container}
