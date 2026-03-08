@@ -297,7 +297,7 @@ export default function Page() {
           variants={item}
           className="bg-blue-light rounded-3xl p-6 md:p-10 flex flex-col gap-5"
         >
-          <h3 className="text-dark text-xl md:text-2xl font-semibold">
+          <h3 className="text-dark text-xl md:text-2xl font-semibold text-center">
             Montaż folii na świetliki z poliwęglanu to:
           </h3>
           <ul className="flex flex-col gap-3 font-bold">
@@ -314,7 +314,7 @@ export default function Page() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="flex items-center gap-3 text-dark text-base md:text-lg"
+                className="flex items-center gap-3 text-dark text-base md:text-lg justify-center"
               >
                 <span className="mt-1 w-2 h-2 rounded-full bg-dark flex-shrink-0" />
                 {point}
