@@ -42,9 +42,40 @@ export default function Page() {
 
   const heroOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const heroY = useTransform(scrollYProgress, [0, 0.6], [0, -80]);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Folia mrożona czy matowa - którą wybrać?",
+    description:
+      "Porównanie folii mrożonej i matowej: różnice, zastosowania oraz praktyczne wskazówki do wyboru folii na szyby.",
+    image: ["https://dragonfolie.com/artykuł-2-zdjęcie.webp"],
+    datePublished: "2026-03-10",
+    dateModified: "2026-04-30",
+    author: {
+      "@type": "Organization",
+      name: "Dragon Folie",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Dragon Folie",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://dragonfolie.com/logo-szare.webp",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id":
+        "https://dragonfolie.com/artykuly/folia-mrozona-czy-matowa",
+    },
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <motion.article
         initial="hidden"
         animate="visible"

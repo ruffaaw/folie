@@ -43,13 +43,46 @@ const sub = {
 };
 
 export default function Page() {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Folie na świetliki z poliwęglanu - efekty montażu",
+    description:
+      "Przykłady wdrożeń folii na świetlikach z poliwęglanu i rzeczywiste efekty: redukcja temperatury, mniejsze olśnienie i większy komfort pracy.",
+    image: ["https://dragonfolie.com/artykuł-3-grafika.webp"],
+    datePublished: "2026-03-20",
+    dateModified: "2026-04-30",
+    author: {
+      "@type": "Organization",
+      name: "Dragon Folie",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Dragon Folie",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://dragonfolie.com/logo-szare.webp",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id":
+        "https://dragonfolie.com/artykuly/folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu",
+    },
+  };
+
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      className="mt-[100px] flex flex-col items-center overflow-hidden"
-    >
-      <Header />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        className="mt-[100px] flex flex-col items-center overflow-hidden"
+      >
+        <Header />
       <Title title="WIEDZA I PORADNIKI" />
 
       <motion.h1 variants={headline} className="mt-4 md:mt-7">
@@ -329,7 +362,8 @@ export default function Page() {
         className="mt-10 md:mt-14"
       />
 
-      <Footer />
-    </motion.div>
+        <Footer />
+      </motion.div>
+    </>
   );
 }

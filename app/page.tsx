@@ -6,6 +6,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import EnvelopeIcon from "@/public/icons/EnvelopeIcon";
 import CheckIcon from "@/public/icons/CheckIcon50";
+import Link from "next/link";
+import { articles } from "@/data/articles";
 
 const container = {
   hidden: { opacity: 0 },
@@ -89,6 +91,25 @@ const imageReveal = {
 };
 
 export default function Home() {
+  const popularServices = [
+    {
+      href: "/oferta/folie-przeciwsloneczne",
+      title: "Folie przeciwsłoneczne",
+    },
+    {
+      href: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+      title: "Folie na świetliki z poliwęglanu",
+    },
+    {
+      href: "/oferta/folie-dekoracyjne",
+      title: "Folie dekoracyjne",
+    },
+    {
+      href: "/oferta/folie-antywlamaniowe",
+      title: "Folie antywłamaniowe",
+    },
+  ];
+
   return (
     <motion.div
       initial="hidden"
@@ -256,6 +277,44 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
+
+      <motion.section
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="w-full px-4 sm:px-8 md:px-16 mt-8 mb-10"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="bg-white rounded-3xl p-6 md:p-8 drop-shadow-[0px_15px_40px_rgba(0,0,0,0.08)]">
+            <h3 className="mb-4">Popularne usługi</h3>
+            <ul className="space-y-3">
+              {popularServices.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-blue hover:underline">
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-white rounded-3xl p-6 md:p-8 drop-shadow-[0px_15px_40px_rgba(0,0,0,0.08)]">
+            <h3 className="mb-4">Najnowsze poradniki</h3>
+            <ul className="space-y-3">
+              {articles.slice(0, 4).map((article) => (
+                <li key={article.slug}>
+                  <Link
+                    href={`/artykuly/${article.slug}`}
+                    className="text-blue hover:underline"
+                  >
+                    {article.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </motion.section>
 
       <Footer />
     </motion.div>

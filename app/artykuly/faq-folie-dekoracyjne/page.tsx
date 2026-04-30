@@ -126,6 +126,44 @@ const sub = {
 
 export default function Page() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "FAQ - folie dekoracyjne, okleiny i laminaty",
+    description:
+      "Najczęściej zadawane pytania o folie dekoracyjne, oklejanie mebli i drzwi oraz trwałość oklein.",
+    image: ["https://dragonfolie.com/artykuł-1-grafika.webp"],
+    datePublished: "2026-03-05",
+    dateModified: "2026-04-30",
+    author: {
+      "@type": "Organization",
+      name: "Dragon Folie",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Dragon Folie",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://dragonfolie.com/logo-szare.webp",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://dragonfolie.com/artykuly/faq-folie-dekoracyjne",
+    },
+  };
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -133,6 +171,14 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <motion.div
         initial="hidden"
         animate="visible"

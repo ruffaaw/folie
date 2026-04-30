@@ -116,6 +116,11 @@ export default function Page() {
                     {article.title}
                   </h3>
 
+                  <p className="mt-2 text-xs md:text-sm text-slate-500">
+                    Autor: {article.author} | Publikacja: {article.publishedAt} |
+                    Aktualizacja: {article.updatedAt}
+                  </p>
+
                   <p className="mt-4 text-gray-700 text-sm md:text-base leading-relaxed">
                     {article.excerpt}{" "}
                     <Link

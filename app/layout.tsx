@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { buildMetadata, SITE_URL } from "@/data/seo";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dragonfolie.com"),
-  title:
-    "Montaż folii okiennej Kraków i oklejanie szyb, mebli i drzwi – Dragon Folie",
-  description:
-    "Profesjonalny montaż folii okiennej w Krakowie i Małopolsce. Oklejanie szyb, mebli, drzwi i ram okiennych. Dragon Folie - estetyka, ochrona i precyzja montażu.",
+  ...buildMetadata("/"),
+  metadataBase: new URL(SITE_URL),
   keywords: [
     "folie okienne Kraków",
     "folie przeciwsłoneczne",
@@ -26,32 +25,48 @@ export const metadata: Metadata = {
     "folię okienne krakow",
   ],
   icons: "/icon.webp",
-  openGraph: {
-    title:
-      "Montaż folii okiennej Kraków i oklejanie szyb, mebli i drzwi – Dragon Folie",
-    description:
-      "Profesjonalny montaż folii okiennej w Krakowie i Małopolsce. Oklejanie szyb, mebli, drzwi i ram okiennych. Dragon Folie - estetyka, ochrona i precyzja montażu.",
-    url: "https://dragonfolie.com/",
-    siteName: "Dragon Folie",
-    images: [
-      {
-        url: "/logo-szare.webp",
-        alt: "Montaż folii okiennej Kraków i oklejanie szyb, mebli i drzwi – Dragon Folie",
-      },
-    ],
-    locale: "pl_PL",
-    type: "website",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+  name: "Dragon Folie",
+  image: `${SITE_URL}/logo-szare.webp`,
+  url: SITE_URL,
+  telephone: "+48 731 347 247",
+  email: "dragonfolie@gmail.com",
+  areaServed: ["Krakow", "Malopolska", "Slask", "Polska"],
+  serviceType: [
+    "Montaż folii okiennych",
+    "Folie przeciwsłoneczne",
+    "Folie dekoracyjne",
+    "Folie antywłamaniowe",
+    "Folie anty-UV",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "PL",
   },
+  sameAs: [
+    "https://www.instagram.com/dragonfolie",
+    "https://www.facebook.com/dragonfolie",
+  ],
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="pl">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

@@ -102,6 +102,45 @@ const sub = {
 
 export default function Page() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "FAQ - folie na świetliki z poliwęglanu",
+    description:
+      "Najczęściej zadawane pytania o folie przeciwsłoneczne na świetliki z poliwęglanu: temperatura, UV, montaż i trwałość.",
+    image: ["https://dragonfolie.com/artykuł-4-grafika.webp"],
+    datePublished: "2026-03-15",
+    dateModified: "2026-04-30",
+    author: {
+      "@type": "Organization",
+      name: "Dragon Folie",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Dragon Folie",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://dragonfolie.com/logo-szare.webp",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id":
+        "https://dragonfolie.com/artykuly/faq-folie-na-swietliki-z-poliweglanu",
+    },
+  };
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -109,6 +148,14 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <motion.div
         initial="hidden"
         animate="visible"
