@@ -43,14 +43,14 @@ function Footer() {
                   Folie przeciwsłoneczne
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu"
-                  className="text-dark hover:text-blue transition"
-                >
-                  Folie na świetliki
-                </Link>
-              </li>
+              //<li>
+              //  <Link
+              //    href="/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu"
+              //    className="text-dark hover:text-blue transition"
+              //  >
+              //    Folie na świetliki
+              //  </Link>
+              //</li>
               <li>
                 <Link
                   href="/oferta/folie-antywlamaniowe"
