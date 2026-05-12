@@ -34,13 +34,13 @@ export const SEO_MAP: Record<string, SeoEntry> = {
       "Folie przeciwsłoneczne na szyby ograniczają ciepło, olśnienie i koszty klimatyzacji. Skuteczny montaż folii przeciwsłonecznych dla domów i firm w Krakowie.",
     path: "/oferta/folie-przeciwsloneczne",
   },
-  "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu": {
-    title:
-      "Folie na świetliki z poliwęglanu - montaż i doradztwo | Dragon Folie",
-    description:
-      "Specjalistyczne folie na świetliki z poliwęglanu dla hal i magazynów. Ograniczenie temperatury, promieni UV i olśnienia przy zachowaniu światła dziennego.",
-    path: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
-  },
+  // "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu": {
+  //   title:
+  //     "Folie na świetliki z poliwęglanu - montaż i doradztwo | Dragon Folie",
+  //   description:
+  //     "Specjalistyczne folie na świetliki z poliwęglanu dla hal i magazynów. Ograniczenie temperatury, promieni UV i olśnienia przy zachowaniu światła dziennego.",
+  //   path: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+  // },
   "/oferta/folie-antywlamaniowe": {
     title: "Folie antywłamaniowe Kraków - wzmocnienie szyb i bezpieczeństwo",
     description:
@@ -89,25 +89,25 @@ export const SEO_MAP: Record<string, SeoEntry> = {
       "Najczęściej zadawane pytania o folie dekoracyjne: trwałość, zastosowania, oklejanie mebli i drzwi oraz koszty wykonania.",
     path: "/artykuly/faq-folie-dekoracyjne",
   },
-  "/artykuly/faq-folie-na-swietliki-z-poliweglanu": {
-    title: "FAQ: folie na świetliki z poliwęglanu - Dragon Folie",
-    description:
-      "Odpowiedzi ekspertów na pytania o folie na świetliki z poliwęglanu: temperatura, UV, montaż i trwałość w obiektach przemysłowych.",
-    path: "/artykuly/faq-folie-na-swietliki-z-poliweglanu",
-  },
+  // "/artykuly/faq-folie-na-swietliki-z-poliweglanu": {
+  //   title: "FAQ: folie na świetliki z poliwęglanu - Dragon Folie",
+  //   description:
+  //     "Odpowiedzi ekspertów na pytania o folie na świetliki z poliwęglanu: temperatura, UV, montaż i trwałość w obiektach przemysłowych.",
+  //   path: "/artykuly/faq-folie-na-swietliki-z-poliweglanu",
+  // },
   "/artykuly/folia-mrozona-czy-matowa": {
     title: "Folia mrożona czy matowa - którą wybrać? Poradnik",
     description:
       "Porównanie folii mrożonej i matowej: różnice, zastosowania, poziom prywatności i rekomendacje do domu, biura oraz lokali usługowych.",
     path: "/artykuly/folia-mrozona-czy-matowa",
   },
-  "/artykuly/folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu": {
-    title:
-      "Folie na świetliki z poliwęglanu - efekty montażu i case study",
-    description:
-      "Zobacz konkretne efekty montażu folii na świetlikach z poliwęglanu: niższa temperatura, mniejsze olśnienie i poprawa komfortu pracy.",
-    path: "/artykuly/folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu",
-  },
+  // "/artykuly/folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu": {
+  //   title:
+  //     "Folie na świetliki z poliwęglanu - efekty montażu i case study",
+  //   description:
+  //     "Zobacz konkretne efekty montażu folii na świetlikach z poliwęglanu: niższa temperatura, mniejsze olśnienie i poprawa komfortu pracy.",
+  //   path: "/artykuly/folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu",
+  // },
   "/kontakt": {
     title: "Kontakt - Dragon Folie | Wycena i doradztwo",
     description:

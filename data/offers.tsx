@@ -39,23 +39,23 @@ export const offers = [
     ],
     href: "/oferta/folie-przeciwsloneczne",
   },
-  {
-    image: "/swietliki.webp",
-    title: `Folie na świetliki z${"\u00A0"}poliwęglanu`,
-    description: `Obniżenie temperatury pod świetlikami o${"\u00A0"}3-5°C.`,
-    advantages: [
-      "Zapobiega żółknięciu poliwęglanu",
-      "Montaż na wysokościach",
-      `Dostępne w${"\u00A0"}wersji białej i${"\u00A0"}srebrnej`,
-    ],
-    places: [
-      "Hale produkcyjne",
-      "Centra handlowe",
-      "Obiekty sportowe",
-      "Dachy przeszkolone",
-    ],
-    href: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
-  },
+  // {
+  //   image: "/swietliki-poliweglanu.webp",
+  //   title: "Folie na świetliki z poliwęglanu",
+  //   description: `Obniżenie temperatury pod świetlikami o${"\u00A0"}3-5°C.`,
+  //   advantages: [
+  //     "Zapobiega żółknięciu poliwęglanu",
+  //     "Montaż na wysokościach",
+  //     `Dostępne w${"\u00A0"}wersji białej i${"\u00A0"}srebrnej`,
+  //   ],
+  //   places: [
+  //     "Hale produkcyjne",
+  //     "Centra handlowe",
+  //     "Obiekty sportowe",
+  //     "Dachy przeszkolone",
+  //   ],
+  //   href: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+  // },
   {
     image: "/antywlamaniowe.webp",
     title: "Folie antywłamaniowe",

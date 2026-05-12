@@ -20,11 +20,11 @@ const offerCatalogSchema = {
       name: "Folie przeciwsłoneczne",
       url: "https://dragonfolie.com/oferta/folie-przeciwsloneczne",
     },
-    {
-      "@type": "Service",
-      name: "Folie na świetliki z poliwęglanu",
-      url: "https://dragonfolie.com/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
-    },
+    // {
+    //   "@type": "Service",
+    //   name: "Folie na świetliki z poliwęglanu",
+    //   url: "https://dragonfolie.com/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+    // },
     {
       "@type": "Service",
       name: "Folie antywłamaniowe",

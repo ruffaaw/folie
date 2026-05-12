@@ -53,6 +53,7 @@ function Footer() {
               </Link>
               </li>
               */}
+              {/* Zakomentowane: folie-przeciwsloneczne-na-swietliki-z-poliweglanu */}
               <li>
                 <Link
                   href="/oferta/folie-antywlamaniowe"
