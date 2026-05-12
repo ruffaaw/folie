@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item -Recurse -Force \"d:/Programowanie/folie/app/artykuly/folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu\")",
+      "Bash(Remove-Item -Recurse -Force \"d:/Programowanie/folie/app/artykuly/faq-folie-na-swietliki-z-poliweglanu\")"
+    ]
+  }
+}

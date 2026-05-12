@@ -18,7 +18,7 @@ export const articles = [
   {
     slug: "folia-mrozona-czy-matowa",
     title: "FOLIA MROŻONA CZY MATOWA - którą wybrać do oklejania szyb?",
-    excerpt: `W obecnych czasach coraz więcej firm stawia na to, aby pracownicy mogli pracować w${"\u00A0"}komfortowych warunkach, ładnym otoczeniu i${"\u00A0"}estetycznych wnętrzach. Wybór odpowiedniej folii okiennej ma na to ogromny wpływ.  Klienci bardzo często pytają: folia mrożona czy matowa – która będzie lepsza do oklejania szyb? `,
+    excerpt: `W obecnych czasach coraz więcej firm stawia na to, aby pracownicy mogli pracować w${" "}komfortowych warunkach, ładnym otoczeniu i${" "}estetycznych wnętrzach. Wybór odpowiedniej folii okiennej ma na to ogromny wpływ.  Klienci bardzo często pytają: folia mrożona czy matowa – która będzie lepsza do oklejania szyb? `,
     image: "/artykuł-2-zdjęcie.webp",
     coverImage: "/artykuł-2-zdjęcie.webp",
     seoTitle: "Folia mrożona czy matowa - poradnik wyboru | Dragon Folie",
@@ -30,5 +30,4 @@ export const articles = [
     relatedArticles: ["faq-folie-dekoracyjne"],
     relatedServices: ["folie-matowe", "folie-mrozone", "folie-dekoracyjne"],
   },
-  // {\n  //   slug: "faq-folie-na-swietliki-z-poliweglanu",\n  //   title:\n  //     "NAJCZĘŚCIEJ ZADAWANE PYTANIA (FAQ) – FOLIE NA ŚWIETLIKI Z POLIWĘGLANU",\n  //   excerpt: `Czy folie na świetliki z${"\u00A0"}poliwęglanu rzeczywiście obniżają temperaturę? Czy montaż wymaga przestoju w${"\u00A0"}pracy obiektu? Dlaczego nie można zamontować zwykłej folii przeciwsłonecznej na poliwęglan? Odpowiadamy na najczęściej zadawane pytania.`,\n  //   image: "/artykuł-4-grafika.webp",\n  //   coverImage: "/artykuł-4-grafika.webp",\n  //   seoTitle: "FAQ: folie na świetliki z poliwęglanu - Dragon Folie",\n  //   seoDescription:\n  //     "Najczęstsze pytania i odpowiedzi o foliach na świetliki z poliwęglanu: skuteczność, bezpieczeństwo materiału, montaż i trwałość.",\n  //   publishedAt: "2026-03-15",\n  //   updatedAt: "2026-04-30",\n  //   author: "Dragon Folie",\n  //   relatedArticles: ["faq-folie-dekoracyjne"],\n  //   relatedServices: [\n  //     "folie-przeciwsloneczne",\n  //   ],\n  // },
 ];

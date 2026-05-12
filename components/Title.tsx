@@ -14,8 +14,6 @@ const labelMap: Record<string, string> = {
   "polityka-prywatnosci": "Polityka prywatności",
   "folie-anty-uv": "Folie anty-UV",
   "folie-przeciwsloneczne": "Folie przeciwsłoneczne",
-  // "folie-przeciwsloneczne-na-swietliki-z-poliweglanu":
-  //   "Folie na świetliki z poliwęglanu",
   "folie-antywlamaniowe": "Folie antywłamaniowe",
   "folie-bezpieczne": "Folie bezpieczne",
   "folie-lustro-weneckie": "Folie lustro weneckie",
@@ -23,10 +21,7 @@ const labelMap: Record<string, string> = {
   "folie-mrozone": "Folie mrożone",
   "folie-dekoracyjne": "Folie dekoracyjne",
   "faq-folie-dekoracyjne": "FAQ folii dekoracyjnych",
-  // "faq-folie-na-swietliki-z-poliweglanu": "FAQ folii na świetliki",
   "folia-mrozona-czy-matowa": "Folia mrożona czy matowa",
-  // "folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu":
-  //   "Efekty montażu folii na świetliki",
 };
 
 export default function Title({

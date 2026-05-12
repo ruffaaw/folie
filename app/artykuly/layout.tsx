@@ -20,16 +20,6 @@ const blogSchema = {
       headline: "Folia mrożona czy matowa",
       url: "https://dragonfolie.com/artykuly/folia-mrozona-czy-matowa",
     },
-    // {
-    //   "@type": "BlogPosting",
-    //   headline: "Folie na świetliki - efekty montażu",
-    //   url: "https://dragonfolie.com/artykuly/folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu",
-    // },
-    // {
-    //   "@type": "BlogPosting",
-    //   headline: "FAQ - folie na świetliki z poliwęglanu",
-    //   url: "https://dragonfolie.com/artykuly/faq-folie-na-swietliki-z-poliweglanu",
-    // },
   ],
 };
 

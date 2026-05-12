@@ -6,10 +6,6 @@ import { usePathname } from "next/navigation";
 
 const serviceLinks = [
   { href: "/oferta/folie-przeciwsloneczne", label: "Folie przeciwsłoneczne" },
-  // {
-  //   href: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
-  //   label: "Folie na świetliki z poliwęglanu",
-  // },
   { href: "/oferta/folie-dekoracyjne", label: "Folie dekoracyjne" },
   { href: "/oferta/folie-antywlamaniowe", label: "Folie antywłamaniowe" },
   { href: "/oferta/folie-anty-uv", label: "Folie anty-UV" },
@@ -21,14 +17,6 @@ const articleLinks = [
     href: "/artykuly/faq-folie-dekoracyjne",
     label: "FAQ: folie dekoracyjne",
   },
-  // {
-  //   href: "/artykuly/faq-folie-na-swietliki-z-poliweglanu",
-  //   label: "FAQ: folie na świetliki z poliwęglanu",
-  // },
-  // {
-  //   href: "/artykuly/folie-przeciwsloneczne-na-swietliki-z-poliweglanu-efekty-montazu",
-  //   label: "Efekty montażu folii na świetlikach",
-  // },
 ];
 
 export default function BottomContact({
