@@ -183,10 +183,10 @@ export default function Header() {
                           "Folie przeciwsłoneczne",
                           "/oferta/folie-przeciwsloneczne",
                         ],
-                        [
-                          `Folie na świetliki z${"\u00A0"}poliwęglanu`,
-                          "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
-                        ],
+                        //[
+                        //  `Folie na świetliki z${"\u00A0"}poliwęglanu`,
+                        //  "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+                        //],
                         [
                           "Folie antywłamaniowe",
                           "/oferta/folie-antywlamaniowe",
