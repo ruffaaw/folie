@@ -96,10 +96,10 @@ export default function Home() {
       href: "/oferta/folie-przeciwsloneczne",
       title: "Folie przeciwsłoneczne",
     },
-    {
-      href: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
-      title: "Folie na świetliki z poliwęglanu",
-    },
+    //{
+    //  href: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+    //  title: "Folie na świetliki z poliwęglanu",
+    //},
     {
       href: "/oferta/folie-dekoracyjne",
       title: "Folie dekoracyjne",
