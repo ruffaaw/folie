@@ -133,6 +133,7 @@ export default function Page() {
         after="/matowa-wewnatrz.webp"
         altAfter="Efekt po aplikacji folii matowej"
         sliderPos={70}
+        caption="Wizualizacja - końcowa realizacja może różnić się pod względem wizualnym."
       />
 
       <motion.div
@@ -237,17 +238,22 @@ export default function Page() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="w-full relative mt-6 md:mt-8 aspect-video"
+        className="w-full mt-6 md:mt-8"
       >
-        <Image
-          src="/matowe.webp"
-          alt="Zdjęcie folii anty włamaniowych"
-          fill
-          className="object-cover md:px-16"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-          priority
-          unoptimized
-        />
+        <div className="w-full relative aspect-video">
+          <Image
+            src="/matowe.webp"
+            alt="Zdjęcie folii anty włamaniowych"
+            fill
+            className="object-cover md:px-16"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-sm italic text-gray-500 mt-2">
+          Zdjęcie poglądowe - końcowa realizacja może różnić się pod względem wizualnym.
+        </p>
       </motion.div>
 
       <motion.div

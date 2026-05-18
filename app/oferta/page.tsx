@@ -132,6 +132,9 @@ export default function Page() {
                 />
               </Link>
             </motion.div>
+            <p className="text-center text-xs italic text-gray-500 mt-2">
+              Zdjęcie poglądowe - końcowa realizacja może różnić się pod względem wizualnym.
+            </p>
 
             <div className="flex flex-col p-6 gap-2 items-stretch h-full justify-between ">
               <div>

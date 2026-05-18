@@ -129,6 +129,7 @@ export default function Page() {
         after="/mrozone.webp"
         altAfter="Folia Mrożona na oknie zewnątrz"
         sliderPos={30}
+        caption="Zdjęcie poglądowe - końcowa realizacja może różnić się pod względem wizualnym."
       />
       <motion.div
         variants={container}
@@ -189,17 +190,22 @@ export default function Page() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="w-full relative mt-6 md:mt-8 aspect-video"
+        className="w-full mt-6 md:mt-8"
       >
-        <Image
-          src="/folia_mrozona_zewnatrz.webp"
-          alt="Zdjęcie folii mrożonych"
-          fill
-          className="object-cover md:px-16"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-          priority
-          unoptimized
-        />
+        <div className="w-full relative aspect-video">
+          <Image
+            src="/folia_mrozona_zewnatrz.webp"
+            alt="Zdjęcie folii mrożonych"
+            fill
+            className="object-cover md:px-16"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-sm italic text-gray-500 mt-2">
+          Wizualizacja - końcowa realizacja może różnić się pod względem wizualnym.
+        </p>
       </motion.div>
 
       <motion.div

@@ -22,12 +22,14 @@ export default function BeforeAfterSlider({
   after = "",
   altAfter = "",
   sliderPos = 50,
+  caption,
 }: {
   before?: string;
   altBefore?: string;
   after?: string;
   altAfter?: string;
   sliderPos?: number;
+  caption?: string;
 }) {
   const [sliderPosition, setSliderPosition] = useState(sliderPos);
   const [isDragging, setIsDragging] = useState(false);
@@ -111,6 +113,11 @@ export default function BeforeAfterSlider({
           <div className="bg-blue-light absolute rounded-full h-3 w-3 -left-1 top-[calc(50%-5px)]" />
         </div>
       </div>
+      {caption && (
+        <p className="text-center text-sm italic text-gray-500 mt-2">
+          {caption}
+        </p>
+      )}
     </motion.div>
   );
 }

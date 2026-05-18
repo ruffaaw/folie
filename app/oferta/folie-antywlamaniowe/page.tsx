@@ -136,6 +136,7 @@ export default function Page() {
         after="/antywlamaniowe.webp"
         altAfter="Szyba biblioteki po aplikacji folii przeciwsłonecznej"
         sliderPos={50}
+        caption="Zdjęcie poglądowe - końcowa realizacja może różnić się pod względem wizualnym."
       />
 
       <motion.div
@@ -240,17 +241,22 @@ export default function Page() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="w-full relative mt-6 md:mt-8 aspect-video"
+        className="w-full mt-6 md:mt-8"
       >
-        <Image
-          src="/anty-wlamaniowe.webp"
-          alt="Zdjęcie folii anty włamaniowych"
-          fill
-          className="object-cover md:px-16"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-          priority
-          unoptimized
-        />
+        <div className="w-full relative aspect-video">
+          <Image
+            src="/anty-wlamaniowe.webp"
+            alt="Zdjęcie folii anty włamaniowych"
+            fill
+            className="object-cover md:px-16"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-sm italic text-gray-500 mt-2">
+          Zdjęcie poglądowe - końcowa realizacja może różnić się pod względem wizualnym.
+        </p>
       </motion.div>
       <motion.div
         variants={container}

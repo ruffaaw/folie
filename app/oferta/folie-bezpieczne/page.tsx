@@ -128,6 +128,7 @@ export default function Page() {
         after="/bezpieczne.webp"
         altAfter="Szyba po aplikacji folii bezpiecznej"
         sliderPos={50}
+        caption="Zdjęcie poglądowe - końcowa realizacja może różnić się pod względem wizualnym."
       />
 
       <motion.div
