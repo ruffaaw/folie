@@ -34,6 +34,13 @@ export const SEO_MAP: Record<string, SeoEntry> = {
       "Folie przeciwsłoneczne na szyby ograniczają ciepło, olśnienie i koszty klimatyzacji. Skuteczny montaż folii przeciwsłonecznych dla domów i firm w Krakowie.",
     path: "/oferta/folie-przeciwsloneczne",
   },
+  "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu": {
+    title:
+      "Folie na świetliki z poliwęglanu - montaż i doradztwo | Dragon Folie",
+    description:
+      "Specjalistyczne folie na świetliki z poliwęglanu dla hal i magazynów. Ograniczenie temperatury, promieni UV i olśnienia przy zachowaniu światła dziennego.",
+    path: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+  },
   "/oferta/folie-antywlamaniowe": {
     title: "Folie antywłamaniowe Kraków - wzmocnienie szyb i bezpieczeństwo",
     description:

@@ -14,6 +14,8 @@ const labelMap: Record<string, string> = {
   "polityka-prywatnosci": "Polityka prywatności",
   "folie-anty-uv": "Folie anty-UV",
   "folie-przeciwsloneczne": "Folie przeciwsłoneczne",
+  "folie-przeciwsloneczne-na-swietliki-z-poliweglanu":
+    "Folie na świetliki z poliwęglanu",
   "folie-antywlamaniowe": "Folie antywłamaniowe",
   "folie-bezpieczne": "Folie bezpieczne",
   "folie-lustro-weneckie": "Folie lustro weneckie",

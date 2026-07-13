@@ -6,6 +6,10 @@ import { usePathname } from "next/navigation";
 
 const serviceLinks = [
   { href: "/oferta/folie-przeciwsloneczne", label: "Folie przeciwsłoneczne" },
+  {
+    href: "/oferta/folie-przeciwsloneczne-na-swietliki-z-poliweglanu",
+    label: "Folie na świetliki z poliwęglanu",
+  },
   { href: "/oferta/folie-dekoracyjne", label: "Folie dekoracyjne" },
   { href: "/oferta/folie-antywlamaniowe", label: "Folie antywłamaniowe" },
   { href: "/oferta/folie-anty-uv", label: "Folie anty-UV" },
