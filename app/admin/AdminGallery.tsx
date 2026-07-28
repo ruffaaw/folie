@@ -82,6 +82,7 @@ export default function AdminGallery({
   const [images, setImages] = useState<ImageItem[]>(initialImages);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [progress, setProgress] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const sensors = useSensors(
@@ -134,31 +135,41 @@ export default function AdminGallery({
   }
 
   async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
-    const files = e.target.files;
-    if (!files || files.length === 0) return;
-
-    const formData = new FormData();
-    for (const file of Array.from(files)) formData.append("files", file);
+    const files = Array.from(e.target.files ?? []);
+    if (files.length === 0) return;
 
     setBusy(true);
     setError("");
 
-    const res = await fetch("/api/admin/images", {
-      method: "POST",
-      body: formData,
-    });
+    // Wysyłamy pojedynczo, po jednym pliku na żądanie - Amplify Hosting
+    // (Lambda pod spodem) odrzuca zbyt duże żądania (413), więc zbiorczy
+    // upload kilku zdjęć naraz w jednym POST zawodzi nawet gdy każdy plik
+    // osobno mieści się w limicie.
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      setProgress(`Wysyłanie ${i + 1}/${files.length}: ${file.name}`);
 
-    setBusy(false);
-    if (fileInputRef.current) fileInputRef.current.value = "";
+      const formData = new FormData();
+      formData.append("files", file);
 
-    if (!res.ok) {
-      const data = await res.json().catch(() => ({}));
-      setError(data.error || "Nie udało się dodać zdjęć");
-      return;
+      const res = await fetch("/api/admin/images", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data.error || `Nie udało się dodać pliku ${file.name}`);
+        break;
+      }
+
+      const data = await res.json();
+      setImages(data.images as ImageItem[]);
     }
 
-    const data = await res.json();
-    setImages(data.images as ImageItem[]);
+    setProgress("");
+    setBusy(false);
+    if (fileInputRef.current) fileInputRef.current.value = "";
   }
 
   return (
@@ -177,7 +188,11 @@ export default function AdminGallery({
             className="hidden"
           />
         </label>
-        {busy && <span className="text-gray text-sm!">Przetwarzanie...</span>}
+        {busy && (
+          <span className="text-gray text-sm!">
+            {progress || "Przetwarzanie..."}
+          </span>
+        )}
       </div>
 
       {error && <p className="text-red-600 text-sm! mb-4">{error}</p>}
