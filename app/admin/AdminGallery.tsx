@@ -16,6 +16,7 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { Trash2, GripVertical, ImagePlus } from "lucide-react";
+import { compressImageToWebp } from "./compressImage";
 
 interface ImageItem {
   key: string;
@@ -146,7 +147,10 @@ export default function AdminGallery({
     // upload kilku zdjęć naraz w jednym POST zawodzi nawet gdy każdy plik
     // osobno mieści się w limicie.
     for (let i = 0; i < files.length; i++) {
-      const file = files[i];
+      const original = files[i];
+      setProgress(`Kompresja ${i + 1}/${files.length}: ${original.name}`);
+      const file = await compressImageToWebp(original);
+
       setProgress(`Wysyłanie ${i + 1}/${files.length}: ${file.name}`);
 
       const formData = new FormData();
