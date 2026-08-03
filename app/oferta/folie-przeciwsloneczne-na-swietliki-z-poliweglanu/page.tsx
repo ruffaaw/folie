@@ -141,15 +141,6 @@ export default function Page() {
         oknach dachowych.
       </motion.h2>
 
-      <BeforeAfterSlider
-        before="/swietliki.webp"
-        altBefore="Świetlik dachowy przed aplikacją folii przeciwsłonecznej"
-        after="/swietliki_po_aplikacji.webp"
-        altAfter="Świetlik dachowy po aplikacji folii przeciwsłonecznej"
-        sliderPos={40}
-        caption="Poglądowa wizualizacja - końcowa realizacja może różnić się pod względem wizualnym."
-      />
-
       <motion.div
         variants={container}
         initial="hidden"
