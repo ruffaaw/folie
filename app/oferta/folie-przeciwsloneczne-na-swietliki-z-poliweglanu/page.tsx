@@ -7,7 +7,6 @@ import Image from "next/image";
 import React from "react";
 import { features, places } from "@/data/swietliki-z-poliweglanu";
 import { motion } from "framer-motion";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import ShieldIcon from "@/public/icons/ShieldIcon";
 import LayoutIcon from "@/public/icons/LayoutIcon";
 
